@@ -1,0 +1,63 @@
+.conteiner__menu-bar {
+  max-width: 980px;
+  margin: 0 auto;
+  background: linear-gradient(-55.54deg, #c6ebc9, #8ab197, #f0e2d0, #a15122);
+
+}
+
+.menu-bar__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.menu-bar__header>.menu-bar__logo>img {
+  width: 308px;
+  height: 100%;
+}
+
+.menu-bar__phrase {
+  width: 500px;
+}
+
+.menu-bar__phrase>.phraseOne>h3 {
+  margin-top: 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: 15px;
+  font-size: 2.3rem;
+  color: #00340C;
+}
+
+.menu-bar__phrase>.phraseTwo>h5 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+}
+
+/* Menu */
+.menu-bar__menu>ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu-bar__menu>ul>li {
+  list-style: none;
+  background: rgb(163, 216, 176);
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 104px;
+  height: 38px;
+  text-align: center;
+}
+
+.menu-bar__menu>ul>li>a{
+  color: #00340c;
+  font-size: 24px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  text-decoration: none;
+}
