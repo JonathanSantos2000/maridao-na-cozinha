@@ -11,7 +11,7 @@
   align-items: flex-end;
 }
 
-.menu-bar__header>.menu-bar__logo>img {
+.menu-bar__header>.menu-bar__logo>a>img {
   width: 308px;
   height: 100%;
 }
@@ -54,7 +54,7 @@
   text-align: center;
 }
 
-.menu-bar__menu>ul>li>a{
+.menu-bar__menu>ul>li>a {
   color: #00340c;
   font-size: 24px;
   text-align: center;

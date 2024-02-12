@@ -1,7 +1,9 @@
 <div class="conteiner__menu-bar">
   <div class="menu-bar__header">
     <div class="menu-bar__logo">
-      <img src="../../../assets/IMG/Icons/logo.png" alt="" />
+      <a [routerLink]="['']">
+        <img src="../../../assets/IMG/Icons/logo.png" alt="" />
+      </a>
     </div>
     <div class="menu-bar__phrase">
       <div class="phraseOne">
@@ -15,15 +17,15 @@
   </div>
   <div class="menu-bar__menu">
     <ul>
-      <li><a href="">Carne</a></li>
-      <li><a href="">Aves</a></li>
-      <li><a href="">Do Mar</a></li>
-      <li><a href="">Doces</a></li>
-      <li><a href="">Massas</a></li>
-      <li><a href="">Bebidas</a></li>
-      <li><a href="">Sopas</a></li>
-      <li><a href="">Tem +</a></li>
-      <li><a href="">Dicas</a></li>
+      <li><a [routerLink]="['categoria', 'Carne']">Carne</a></li>
+      <li><a [routerLink]="['categoria', 'Aves']">Aves</a></li>
+      <li><a [routerLink]="['categoria', 'Do Mar']">Do Mar</a></li>
+      <li><a [routerLink]="['categoria', 'Doces']">Doces</a></li>
+      <li><a [routerLink]="['categoria', 'Massas']">Massas</a></li>
+      <li><a [routerLink]="['categoria', 'Bebidas']">Bebidas</a></li>
+      <li><a [routerLink]="['categoria', 'Sopas']">Sopas</a></li>
+      <li><a [routerLink]="['categoria', 'Tem +']">Tem +</a></li>
+      <li><a [routerLink]="['categoria', 'Dicas']">Dicas</a></li>
     </ul>
   </div>
 </div>
