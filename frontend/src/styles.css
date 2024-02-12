@@ -8,3 +8,6 @@ body{
   background: linear-gradient(255.54deg, #70af85,  #f0e2d0);
 }
 
+a{
+  text-decoration: none;
+}

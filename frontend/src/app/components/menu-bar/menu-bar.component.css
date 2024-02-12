@@ -2,7 +2,6 @@
   max-width: 980px;
   margin: 0 auto;
   background: linear-gradient(-55.54deg, #c6ebc9, #8ab197, #f0e2d0, #a15122);
-
 }
 
 .menu-bar__header {
@@ -42,6 +41,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menu-bar__menu>ul>li {
