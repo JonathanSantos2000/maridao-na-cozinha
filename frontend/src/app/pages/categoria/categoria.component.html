@@ -26,14 +26,13 @@
         </li>
       </ul>
     </div>
-    <div class="box-recipe__recipe">
-      <app-card-recipe></app-card-recipe>
-    </div>
   </div>
   <div class="categoria__box-recipe">
-    <app-card-recipe></app-card-recipe>
-    <app-card-recipe></app-card-recipe>
-    <app-card-recipe></app-card-recipe>
-    <app-card-recipe></app-card-recipe>
+    <div *ngFor="let recipe of recipes">
+      <app-card-recipe
+        urlImg="{{ recipe.Foto }}"
+        titleReceita="{{ recipe.NomeDaReceita }}"
+      ></app-card-recipe>
+    </div>
   </div>
 </div>
