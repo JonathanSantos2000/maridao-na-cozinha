@@ -221,7 +221,6 @@ export const recipe_foods: Recipe[] = [
           'Noz-moscada',
           'Pimenta-do-reino',
           'Sal',
-          '',
         ],
         ModoDeFazer:
           'Bata no liquidificador o leite, o trigo e a manteiga derretida. Leve ao fogo e mexa bastante até engrossar a mistura. Finalmente, junte o creme de leite, a noz-moscada, a pimenta-do-reino, o sal e o ovo batido.  Unte um pirex grande com azeite depois de ter esfregado por dentro dele um dente de alho. Deixa um gosto bom. Arrume em camadas alternadas o bacalhau, a batata e a cenoura. Cubra tudo com molho e leve ao forno para gratinar. Ao sair do forno, enfeite com azeitonas e salsa. Sirva com arroz branco.,',
@@ -328,8 +327,7 @@ export const recipe_foods: Recipe[] = [
       '5 a 6 bifes',
       '2 colheres de chá de pimenta e cominho',
       '1 dente de alho',
-      '2 ovos batidos (claras',
-      'depois as gemas)',
+      '2 ovos batidos (claras depois as gemas)',
       'Farinha de rosca',
       'Sal a gosto',
     ],
@@ -857,14 +855,13 @@ export const recipe_foods: Recipe[] = [
     id: 39,
     NomeDaReceita: 'Bolo Chifon',
     Ingredientes: [
-      '1/2 xícara de chocolate do padre dissolvida em 3/4 de xícara de água morna',
+      '1/2 xícara de chocolate em 3/4 de xícara de água morna',
       '5 ovos',
       '1 xícara e 3/4 de açúcar',
       '1 xícara e 3/4 de farinha de trigo',
       '1/2 xícara de óleo',
       '2 colheres de sobremesa de fermento em pó',
       '1 colher de chá de baunilha',
-      '',
     ],
     ModoDeFazer:
       'Bata as claras em neve com 1 colher de fermento e reserve.Bata as gemas com o açúcar por uns 10 minutos, acrescente a farinha, o óleo e o chocolate dissolvido e frio e 1 colher de fermento em pó e a baunilha.Bata uns 2 minutos.Pare de bater e misture as claras lentamente à massa sem bater.Unte uma forma de aro removível, coloque papel manteiga ou alumínio no fundo e coloque a massa.Asse em forno pré-aquecido por uns 40 minutos a 180º graus.',
@@ -878,18 +875,25 @@ export const recipe_foods: Recipe[] = [
       {
         NomeDaReceitaExtra: 'CALDA',
         Ingredientes: [
-          '2 copos de águan2 colheres de açúcarn2 paus de canelan10 cravos da ìndia mais ou menos',
+          '2 copos de águan',
+          '2 colheres de açúcar',
+          '2 paus de canela',
+          '10 cravos da ìndia mais ou menos',
         ],
         ModoDeFazer:
-          'Ferva todos os ingredientes até ficar cor de guaraná.nCorte o bolo ao meio regue com a calda e recheie.',
+          'Ferva todos os ingredientes até ficar cor de guaraná. Corte o bolo ao meio regue com a calda e recheie.',
       },
       {
         NomeDaReceitaExtra: 'RECHEIO',
         Ingredientes: [
-          '2 ovosn2 xícaras de açúcar de confeiteiron1 xícara de chocolate em pón100 g de manteiga sem saln1 cálice de run ou licor de cacau',
+          '2 ovos',
+          '2 xícaras de açúcar de confeiteiro',
+          '1 xícara de chocolate em pó',
+          '100 g de manteiga sem sal',
+          '1 cálice de run ou licor de cacau',
         ],
         ModoDeFazer:
-          'Bata bem até ficar um glacê liso e claro.nCubra o bolo com esse glacê também e enfeite com cerejas',
+          'Bata bem até ficar um glacê liso e claro. Cubra o bolo com esse glacê também e enfeite com cerejas',
       },
     ],
   },

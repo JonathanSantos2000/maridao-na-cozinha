@@ -9,8 +9,18 @@ export class CardRecipeComponent implements OnInit {
   @Input()
   titleReceita: string = '';
   @Input()
-  urlImg = '';
+  urlImg: string = '';
+
+  @Input()
+  typeCategoria: string = '';
+
+  @Input()
+  idRecipe: string = '';
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.typeCategoria);
+    console.log(this.idRecipe);
+  }
 }

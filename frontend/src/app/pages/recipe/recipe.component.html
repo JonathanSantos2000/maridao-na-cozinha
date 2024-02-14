@@ -1,0 +1,127 @@
+<div class="conteiner__recipe">
+  <div class="recipe__header">
+    <div class="recipe__header__name">
+      <h1>{{ recipes[0].NomeDaReceita }}</h1>
+    </div>
+    <div class="recipe__header__photo">
+      <img
+        src="../../../assets/IMG/img-receitas/{{ recipes[0].Foto }}.jpg"
+        alt=""
+      />
+      <h5 class="notificacoes">
+        * Essas estimativas podem variar dependendo das técnicas de cozinha
+        individuais e dos ingredientes específicos utilizados.
+      </h5>
+    </div>
+  </div>
+  <div class="recipe__description">
+    <ul>
+      <li>
+        <img src="../../../assets/IMG/Icons/icon-tempo.png" alt="" />
+        <h5>{{ recipes[0].TempoDePreparo }}</h5>
+      </li>
+      <li>
+        <img src="../../../assets/IMG/Icons/icon-porcoes.png" alt="" />
+        <h5>{{ recipes[0].Porcoes }}</h5>
+      </li>
+      <li>
+        <img src="../../../assets/IMG/Icons/icon-dificuldade.png" alt="" />
+        <h5>{{ recipes[0].NivelDeDificuldade }}</h5>
+      </li>
+    </ul>
+  </div>
+  <div class="recipe">
+    <div class="recipe__ingredient">
+      <div class="ingredient__icon">
+        <img src="../../../assets/IMG/Icons/icon-ingredientes.png" alt="" />
+        <h5>Ingredientes:</h5>
+      </div>
+      <!-- ### Lista Ingredientes ### -->
+      <div class="ingredient__list">
+        <div class="mainlist">
+          <ul>
+            <li
+              *ngFor="
+                let ingredient of recipes[0].Ingredientes.slice(
+                  0,
+                  recipes[0].Ingredientes.length / 2 + 1
+                );
+                let i = index
+              "
+            >
+              {{ i + 1 }}) {{ ingredient }}
+            </li>
+          </ul>
+
+          <ul>
+            <li
+              *ngFor="
+                let ingredient of recipes[0].Ingredientes.slice(
+                  getSecondColumnIndex(recipes[0].Ingredientes.length)
+                );
+                let i = index
+              "
+            >
+              {{
+                i + 1 + getSecondColumnIndex(recipes[0].Ingredientes.length)
+              }}) {{ ingredient }}
+            </li>
+          </ul>
+        </div>
+        <div class="extra-recipe" *ngIf="hasExtra">
+          <div *ngFor="let extra of recipes[0].Extra">
+            <h5>{{ extra.NomeDaReceitaExtra }}:</h5>
+            <div class="secondaryList">
+              <ul>
+                <li
+                  *ngFor="
+                    let ingredient of extra.Ingredientes.slice(
+                      0,
+                      (extra.Ingredientes.length / 2) + 1
+                    );
+                    let i = index
+                  "
+                >
+                  {{ i + 1 }}) {{ ingredient }}
+                </li>
+              </ul>
+
+              <ul>
+                <li
+                  *ngFor="
+                    let ingredient of extra.Ingredientes.slice(
+                      getSecondColumnIndex(extra.Ingredientes.length)
+                    );
+                    let i = index
+                  "
+                >
+                  {{ i + 1 + getSecondColumnIndex(extra.Ingredientes.length) }})
+                  {{ ingredient }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="recipe__method-of-preparation">
+        <div class="method-of-preparation__icon">
+          <img src="../../../assets/IMG/Icons/icon-preparo.png" alt="" />
+          <h5>Modo de fazer:</h5>
+        </div>
+        <div class="method-of-preparation">
+          <p>{{ recipes[0].ModoDeFazer }}</p>
+          <!-- extra recipe Modo de fazer -->
+          <div class="extra-recipe" *ngIf="hasExtra">
+            <div *ngFor="let extra of recipes[0].Extra">
+              <hr />
+              <h5>{{ extra.NomeDaReceitaExtra }}:</h5>
+              <div class="method-of-preparation">
+                <p>{{ extra.ModoDeFazer }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

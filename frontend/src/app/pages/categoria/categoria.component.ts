@@ -23,6 +23,7 @@ export class CategoriaComponent implements OnInit {
         this.recipes = this.recipeService.getAllRecipeByCategory(this.titleCat);
       }
     });
+    console.log(this.recipes[0].id);
   }
 
   ngOnInit(): void {}
