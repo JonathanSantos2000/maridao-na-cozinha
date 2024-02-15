@@ -17,3 +17,13 @@ interface Extra {
   Ingredientes: string[];
   ModoDeFazer: string;
 }
+
+export class Category {
+  idCategory!: number;
+  nomeCategory!: string;
+  nomeSubCategory!: nomeSubCategory[];
+}
+interface nomeSubCategory {
+  nome: string;
+  urlImg: string;
+}

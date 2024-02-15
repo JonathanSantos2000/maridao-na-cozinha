@@ -20,7 +20,5 @@ export class CardRecipeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.typeCategoria);
-    console.log(this.idRecipe);
   }
 }

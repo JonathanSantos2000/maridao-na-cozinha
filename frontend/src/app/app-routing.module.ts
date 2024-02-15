@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'categoria/:categoria/recipe/:id',
     component: RecipeComponent,
   },
+  {
+    path: 'categoria/:categoria/filter/:subCategory',
+    component: CategoriaComponent,
+  },
 ];
 
 @NgModule({

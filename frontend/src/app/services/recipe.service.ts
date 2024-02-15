@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Recipe } from '../shared/models/recipe';
+import { Category, Recipe } from '../shared/models/recipe';
 import { recipe_foods } from '../data/recipe';
+import { category_recipe } from '../data/category';
 
 @Injectable({
   providedIn: 'root',
@@ -15,6 +16,30 @@ export class RecipeService {
   }
 
   getAllRecipeByCategory(category: string): Recipe[] {
-    return this.getAll().filter((recipe) => recipe.Categoria.toLocaleLowerCase().includes(category.toLocaleLowerCase()));
+    return this.getAll().filter((recipe) =>
+      recipe.Categoria.toLocaleLowerCase().includes(
+        category.toLocaleLowerCase()
+      )
+    );
+  }
+  getAllCategoryRecipe() {
+    return category_recipe;
+  }
+
+  getAllCategoryRecipeByName(category: string): Category[] {
+    return this.getAllCategoryRecipe().filter((recipeCategory) =>
+      recipeCategory.nomeCategory
+        .toLocaleLowerCase()
+        .includes(category.toLocaleLowerCase())
+    );
+  }
+
+  getAllRecipeBySubCategory(category: string, subCategory: string): Recipe[] {
+    return this.getAll().filter(
+      (recipe) =>
+        recipe.Categoria.toLocaleLowerCase() === category.toLocaleLowerCase() &&
+        recipe.Subcategoria.toLocaleLowerCase() ===
+          subCategory.toLocaleLowerCase()
+    );
   }
 }
