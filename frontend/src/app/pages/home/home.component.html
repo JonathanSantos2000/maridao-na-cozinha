@@ -3,13 +3,18 @@
     <h1>Receitas</h1>
   </div>
   <div class="main-box__recipes">
-    <div *ngFor="let recipe of recipes">
-      <app-card-recipe
-        typeCategoria="{{ recipe.Categoria }}"
-        idRecipe="{{ recipe.id }}"
-        urlImg="{{ recipe.Foto }}"
-        titleReceita="{{ recipe.NomeDaReceita }}"
-      ></app-card-recipe>
+    <div class="home-desktop">
+      <div *ngFor="let recipe of recipes">
+        <app-card-recipe
+          typeCategoria="{{ recipe.Categoria }}"
+          idRecipe="{{ recipe.id }}"
+          urlImg="{{ recipe.Foto }}"
+          titleReceita="{{ recipe.NomeDaReceita }}"
+        ></app-card-recipe>
+      </div>
+    </div>
+    <div class="home-mobile">
+      <app-carousel></app-carousel>
     </div>
   </div>
 </div>

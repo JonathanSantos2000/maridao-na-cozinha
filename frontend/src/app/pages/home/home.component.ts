@@ -5,7 +5,7 @@ import { Recipe } from 'src/app/shared/models/recipe';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.css', './home.responsive.component.css'],
 })
 export class HomeComponent implements OnInit {
   numberOfRecipes: number[] = [];

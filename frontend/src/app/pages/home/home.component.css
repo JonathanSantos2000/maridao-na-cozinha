@@ -1,15 +1,26 @@
 .conteiner__main-box {
+  min-height: 600px;
   max-width: 980px;
   margin: 2rem auto;
 }
-.main-box__title{
+
+.main-box__title {
   text-align: center;
   font-family: "Dancing Script", cursive;
   font-size: 24px;
 }
-.main-box__recipes{
+
+.main-box__recipes {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.home-desktop {
+  display: block;
+}
+
+.home-mobile {
+  display: none;
 }

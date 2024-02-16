@@ -4,6 +4,21 @@
       <a [routerLink]="['']">
         <img src="../../../assets/IMG/Icons/logo.png" alt="" />
       </a>
+      <button
+        [class.btnOpen]="menuVariable"
+        class="btn-open-menu"
+        (click)="openMenu()"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+
+      <button
+        [class.btnclose]="menuVariable"
+        class="btn-close-menu"
+        (click)="openMenu()"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
     </div>
     <div class="menu-bar__phrase">
       <div class="phraseOne">
@@ -15,17 +30,41 @@
       </div>
     </div>
   </div>
-  <div class="menu-bar__menu">
+  <div class="menu-bar__menu" [class.menuClass]="menuVariable">
     <ul>
-      <li><a [routerLink]="['categoria', 'Carne']">Carne</a></li>
-      <li><a [routerLink]="['categoria', 'Aves']">Aves</a></li>
-      <li><a [routerLink]="['categoria', 'Do Mar']">Do Mar</a></li>
-      <li><a [routerLink]="['categoria', 'Doces']">Doces</a></li>
-      <li><a [routerLink]="['categoria', 'Massas']">Massas</a></li>
-      <li><a [routerLink]="['categoria', 'Bebidas']">Bebidas</a></li>
-      <li><a [routerLink]="['categoria', 'Sopas']">Sopas</a></li>
-      <li><a [routerLink]="['categoria', 'Tem +']">Tem +</a></li>
-      <li><a [routerLink]="['']">Dicas</a></li>
+      <li>
+        <a [routerLink]="['categoria', 'Carne']" (click)="openMenu()">Carne</a>
+      </li>
+      <li>
+        <a [routerLink]="['categoria', 'Aves']" (click)="openMenu()">Aves</a>
+      </li>
+      <li>
+        <a [routerLink]="['categoria', 'Do Mar']" (click)="openMenu()"
+          >Do Mar</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['categoria', 'Doces']" (click)="openMenu()">Doces</a>
+      </li>
+      <li>
+        <a [routerLink]="['categoria', 'Massas']" (click)="openMenu()"
+          >Massas</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['categoria', 'Bebidas']" (click)="openMenu()"
+          >Bebidas</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['categoria', 'Sopas']" (click)="openMenu()">Sopas</a>
+      </li>
+      <li>
+        <a [routerLink]="['categoria', 'Tem +']" (click)="openMenu()">Tem +</a>
+      </li>
+      <li><a [routerLink]="['']" (click)="openMenu()">Dicas</a></li>
     </ul>
   </div>
+
+  <div [class.overlay-menu]="overlayVariable"></div>
 </div>

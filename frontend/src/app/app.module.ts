@@ -9,6 +9,7 @@ import { FooterBoxComponent } from './components/footer-box/footer-box.component
 import { CategoriaComponent } from './pages/categoria/categoria.component';
 import { CardRecipeComponent } from './components/card-recipe/card-recipe.component';
 import { RecipeComponent } from './pages/recipe/recipe.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,10 @@ import { RecipeComponent } from './pages/recipe/recipe.component';
     CategoriaComponent,
     CardRecipeComponent,
     RecipeComponent,
+    CarouselComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

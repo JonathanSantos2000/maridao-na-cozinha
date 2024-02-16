@@ -48,7 +48,7 @@ export const category_recipe: Category[] = [
     nomeCategory: 'Tem +',
     nomeSubCategory: [
       {
-        nome: 'Padaria e Confeitaria:',
+        nome: 'Padaria-Confeitaria',
         urlImg: 'temmais/icon-padaria-confeitaria.png',
       },
       {

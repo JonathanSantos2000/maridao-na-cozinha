@@ -2,7 +2,18 @@
   max-width: 980px;
   margin: 0 auto;
   background: linear-gradient(-55.54deg, #c6ebc9, #8ab197, #f0e2d0, #a15122);
+  z-index: 99999;
+  position: relative;
 }
+
+.btn-open-menu,
+.btn-close-menu {
+  background-color: #000;
+  color: #f1f1f1;
+  border: none;
+  display: none;
+}
+
 
 .menu-bar__header {
   display: flex;
@@ -23,7 +34,6 @@
 .menu-bar__phrase>.phraseOne>h3 {
   margin-top: 0;
   font-family: "Dancing Script", cursive;
-  font-size: 1rem;
   font-weight: 700;
   margin-left: 15px;
   font-size: 2.3rem;
