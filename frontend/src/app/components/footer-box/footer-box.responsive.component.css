@@ -1,0 +1,19 @@
+@media only screen and (max-width: 900px) {
+  .conteiner__footer-box {
+    height: 300px;
+  }
+
+  .footer-box__logo>img {
+    width: 313px;
+    height: 45px;
+  }
+
+  .footer-box__contatos {
+    flex-direction: column;
+  }
+
+  .footer-box__contact>a>h1 {
+    font-size: 30px;
+    margin-top: 50px;
+  }
+}

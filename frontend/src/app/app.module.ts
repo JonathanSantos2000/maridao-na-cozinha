@@ -10,6 +10,7 @@ import { CategoriaComponent } from './pages/categoria/categoria.component';
 import { CardRecipeComponent } from './components/card-recipe/card-recipe.component';
 import { RecipeComponent } from './pages/recipe/recipe.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     RecipeComponent,
     CarouselComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, SlickCarouselModule],
   providers: [],
   bootstrap: [AppComponent],
 })

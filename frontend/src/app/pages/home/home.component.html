@@ -2,8 +2,8 @@
   <div class="main-box__title">
     <h1>Receitas</h1>
   </div>
-  <div class="main-box__recipes">
-    <div class="home-desktop">
+  <div class="home-desktop">
+    <div class="main-box__recipes">
       <div *ngFor="let recipe of recipes">
         <app-card-recipe
           typeCategoria="{{ recipe.Categoria }}"
@@ -13,8 +13,8 @@
         ></app-card-recipe>
       </div>
     </div>
-    <div class="home-mobile">
-      <app-carousel></app-carousel>
-    </div>
+  </div>
+  <div class="home-mobile">
+    <app-carousel></app-carousel>
   </div>
 </div>

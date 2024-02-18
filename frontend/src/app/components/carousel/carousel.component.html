@@ -1,17 +1,192 @@
 <div class="conteiner__carousel">
-  <div class="carousel__title">
+  <div class="carousel-box">
     <h1>Carne</h1>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModalCarne="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div ngxSlickItem *ngFor="let recipe of recipesCarne">
+        <div class="slide">
+          <img
+            src="../../../assets/IMG/img-receitas/{{ recipe.Foto }}.jpg"
+            alt=""
+          />
+          <h5>{{ recipe.NomeDaReceita }}</h5>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+    <div class="navigation-container">
+      <button (click)="slickModalCarne.slickPrev()" class="prevArrow">
+        <i class="bi bi-caret-left"></i>
+      </button>
+      <button (click)="slickModalCarne.slickNext()" class="nextArrow">
+        <i class="bi bi-caret-right"></i>
+      </button>
+    </div>
   </div>
 
   <div class="carousel-box">
-    <div class="carousel">
-      <div class="carousel-item">
-        <img src="../../../assets/IMG/Icons/{{ imgOne }}" alt="" />
-
-        <img src="../../../assets/IMG/Icons/{{ imgTwo }}" alt="" />
+    <h1>Aves</h1>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModalAves="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div ngxSlickItem *ngFor="let recipe of recipesAves">
+        <div class="slide">
+          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+          <h5>{{ recipe.NomeDaReceita }}</h5>
+        </div>
       </div>
+    </ngx-slick-carousel>
+    <div class="navigation-container">
+      <button (click)="slickModalAves.slickPrev()" class="prevArrow">
+        <i class="bi bi-caret-left"></i>
+      </button>
+      <button (click)="slickModalAves.slickNext()" class="nextArrow">
+        <i class="bi bi-caret-right"></i>
+      </button>
     </div>
-    <button (click)="prevSlide()" class="prev-btn">❮</button>
-    <button (click)="nextSlide()" class="next-btn">❯</button>
+  </div>
+
+  <div class="carousel-box">
+    <h1>Do Mar</h1>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModalDoMar="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div ngxSlickItem *ngFor="let recipe of recipesDoMar">
+        <div class="slide">
+          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+          <h5>{{ recipe.NomeDaReceita }}</h5>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+    <div class="navigation-container">
+      <button (click)="slickModalDoMar.slickPrev()" class="prevArrow">
+        <i class="bi bi-caret-left"></i>
+      </button>
+      <button (click)="slickModalDoMar.slickNext()" class="nextArrow">
+        <i class="bi bi-caret-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="carousel-box">
+    <h1>Doces</h1>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModalDoces="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div ngxSlickItem *ngFor="let recipe of recipesDoces">
+        <div class="slide">
+          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+          <h5>{{ recipe.NomeDaReceita }}</h5>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+    <div class="navigation-container">
+      <button (click)="slickModalDoces.slickPrev()" class="prevArrow">
+        <i class="bi bi-caret-left"></i>
+      </button>
+      <button (click)="slickModalDoces.slickNext()" class="nextArrow">
+        <i class="bi bi-caret-right"></i>
+      </button>
+    </div>
+  </div>
+  <div class="carousel-box">
+    <h1>Massas</h1>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModalMassas="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div ngxSlickItem *ngFor="let recipe of recipesMassas">
+        <div class="slide">
+          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+          <h5>{{ recipe.NomeDaReceita }}</h5>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+    <div class="navigation-container">
+      <button (click)="slickModalMassas.slickPrev()" class="prevArrow">
+        <i class="bi bi-caret-left"></i>
+      </button>
+      <button (click)="slickModalMassas.slickNext()" class="nextArrow">
+        <i class="bi bi-caret-right"></i>
+      </button>
+    </div>
+  </div>
+  <div class="carousel-box">
+    <h1>Bebidas</h1>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModalBebidas="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div ngxSlickItem *ngFor="let recipe of recipesBebidas">
+        <div class="slide">
+          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+          <h5>{{ recipe.NomeDaReceita }}</h5>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+    <div class="navigation-container">
+      <button (click)="slickModalBebidas.slickPrev()" class="prevArrow">
+        <i class="bi bi-caret-left"></i>
+      </button>
+      <button (click)="slickModalBebidas.slickNext()" class="nextArrow">
+        <i class="bi bi-caret-right"></i>
+      </button>
+    </div>
+  </div>
+  <div class="carousel-box">
+    <h1>Sopas:</h1>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModalSopas="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div ngxSlickItem *ngFor="let recipe of recipesSopas">
+        <div class="slide">
+          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+          <h5>{{ recipe.NomeDaReceita }}</h5>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+    <div class="navigation-container">
+      <button (click)="slickModalSopas.slickPrev()" class="prevArrow">
+        <i class="bi bi-caret-left"></i>
+      </button>
+      <button (click)="slickModalSopas.slickNext()" class="nextArrow">
+        <i class="bi bi-caret-right"></i>
+      </button>
+    </div>
+  </div>
+  <div class="carousel-box">
+    <h1>Tem +:</h1>
+    <ngx-slick-carousel
+      class="carousel"
+      #slickModalTemMais="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div ngxSlickItem *ngFor="let recipe of recipesTemMais">
+        <div class="slide">
+          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+          <h5>{{ recipe.NomeDaReceita }}</h5>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+    <div class="navigation-container">
+      <button (click)="slickModalTemMais.slickPrev()" class="prevArrow">
+        <i class="bi bi-caret-left"></i>
+      </button>
+      <button (click)="slickModalTemMais.slickNext()" class="nextArrow">
+        <i class="bi bi-caret-right"></i>
+      </button>
+    </div>
   </div>
 </div>

@@ -1,39 +1,76 @@
-.carousel-box {
-  position: relative;
-  overflow: hidden;
-  width: 400px;
-}
-
-.carousel {
+.conteiner__carousel {
   display: flex;
-  transition: transform 0.5s ease;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.carousel-item {
+.slide {
+  position: relative;
   margin-right: 12px;
-  flex: 0 0 auto;
+  width: 160px;
+  height: 200px;
+
 }
 
-.carousel-item>img {
-  width: 188px;
+.slide>img {
+  width: 160px;
   height: 135px;
 }
 
-.prev-btn,
-.next-btn {
+.slide>h5 {
+  font-family: "Dancing Script", cursive;
+  margin: 0 5px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.carousel-box {
+  position: relative;
+  width: 85%;
+}
+
+.navigation-container {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
+  width: 100%;
+  height: 169px;
+  top: 20px;
+  transform: translateX(-50%);
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-container>.prevArrow {
+  left: 135px;
+}
+
+.navigation-container>.nextArrow {
+  right: -204px;
+}
+
+.navigation-container button {
+  position: absolute;
+  width: 50px;
+  height: 100%;
   border: none;
-  font-size: 24px;
-  cursor: pointer;
+  background: none;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 50px;
 }
 
-.prev-btn {
-  left: 10px;
+.navigation-container>button>i {
+  height: 135px;
 }
 
-.next-btn {
-  right: 10px;
+.navigation-container>button:hover {
+  background: rgba(0, 0, 0, .5);
+}
+
+.navigation-container>button>i::before {
+  height: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

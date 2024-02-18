@@ -1,0 +1,11 @@
+@media only screen and (max-width: 900px) {
+  .conteiner__card-recipe {
+    width: 323px;
+    height: 371px;
+    margin: 0 15px 15px;
+  }
+
+  .card-recipe__img>img {
+    width: 323px;
+  }
+}

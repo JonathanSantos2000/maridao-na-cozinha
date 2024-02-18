@@ -42,4 +42,19 @@ export class RecipeService {
           subCategory.toLocaleLowerCase()
     );
   }
+
+  getFiveRecipes(category: string): Recipe[] {
+    const recipesInCategory = this.getAllRecipeByCategory(category);
+    const shuffledRecipes = this.shuffleArray(recipesInCategory);
+    return shuffledRecipes.slice(0, 5);
+  }
+
+  // Função para embaralhar um array
+  private shuffleArray(array: any[]): any[] {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
 }
