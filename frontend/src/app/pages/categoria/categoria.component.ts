@@ -6,7 +6,10 @@ import { Category, Recipe } from 'src/app/shared/models/recipe';
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.component.html',
-  styleUrls: ['./categoria.component.css'],
+  styleUrls: [
+    './categoria.component.css',
+    './categoria.resposive.component.css',
+  ],
 })
 export class CategoriaComponent implements OnInit {
   titleCat: string = '';

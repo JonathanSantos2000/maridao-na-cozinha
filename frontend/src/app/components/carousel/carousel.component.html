@@ -1,4 +1,5 @@
 <div class="conteiner__carousel">
+  <!-- Inicio carrossel Carne -->
   <div class="carousel-box">
     <h1>Carne</h1>
     <ngx-slick-carousel
@@ -7,13 +8,15 @@
       [config]="slideConfig"
     >
       <div ngxSlickItem *ngFor="let recipe of recipesCarne">
-        <div class="slide">
-          <img
-            src="../../../assets/IMG/img-receitas/{{ recipe.Foto }}.jpg"
-            alt=""
-          />
-          <h5>{{ recipe.NomeDaReceita }}</h5>
-        </div>
+        <a routerLink="/categoria/Carne/recipe/{{ recipe.id }}">
+          <div class="slide">
+            <img
+              src="../../../assets/IMG/img-receitas/{{ recipe.Foto }}.jpg"
+              alt=""
+            />
+            <h5>{{ recipe.NomeDaReceita }}</h5>
+          </div>
+        </a>
       </div>
     </ngx-slick-carousel>
     <div class="navigation-container">
@@ -25,7 +28,7 @@
       </button>
     </div>
   </div>
-
+  <!-- Inicio carrossel Aves -->
   <div class="carousel-box">
     <h1>Aves</h1>
     <ngx-slick-carousel
@@ -34,10 +37,12 @@
       [config]="slideConfig"
     >
       <div ngxSlickItem *ngFor="let recipe of recipesAves">
-        <div class="slide">
-          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-          <h5>{{ recipe.NomeDaReceita }}</h5>
-        </div>
+        <a routerLink="/categoria/Aves/recipe/{{ recipe.id }}">
+          <div class="slide">
+            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+            <h5>{{ recipe.NomeDaReceita }}</h5>
+          </div>
+        </a>
       </div>
     </ngx-slick-carousel>
     <div class="navigation-container">
@@ -49,7 +54,7 @@
       </button>
     </div>
   </div>
-
+  <!-- Inicio carrossel Do Mar -->
   <div class="carousel-box">
     <h1>Do Mar</h1>
     <ngx-slick-carousel
@@ -58,10 +63,12 @@
       [config]="slideConfig"
     >
       <div ngxSlickItem *ngFor="let recipe of recipesDoMar">
-        <div class="slide">
-          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-          <h5>{{ recipe.NomeDaReceita }}</h5>
-        </div>
+        <a routerLink="/categoria/Do Mar/recipe/{{ recipe.id }}">
+          <div class="slide">
+            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+            <h5>{{ recipe.NomeDaReceita }}</h5>
+          </div>
+        </a>
       </div>
     </ngx-slick-carousel>
     <div class="navigation-container">
@@ -73,7 +80,7 @@
       </button>
     </div>
   </div>
-
+  <!-- Inicio carrossel Doces -->
   <div class="carousel-box">
     <h1>Doces</h1>
     <ngx-slick-carousel
@@ -82,10 +89,12 @@
       [config]="slideConfig"
     >
       <div ngxSlickItem *ngFor="let recipe of recipesDoces">
-        <div class="slide">
-          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-          <h5>{{ recipe.NomeDaReceita }}</h5>
-        </div>
+        <a routerLink="/categoria/Doces/recipe/{{ recipe.id }}">
+          <div class="slide">
+            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+            <h5>{{ recipe.NomeDaReceita }}</h5>
+          </div>
+        </a>
       </div>
     </ngx-slick-carousel>
     <div class="navigation-container">
@@ -97,6 +106,7 @@
       </button>
     </div>
   </div>
+  <!-- Inicio carrossel Massas -->
   <div class="carousel-box">
     <h1>Massas</h1>
     <ngx-slick-carousel
@@ -105,10 +115,12 @@
       [config]="slideConfig"
     >
       <div ngxSlickItem *ngFor="let recipe of recipesMassas">
-        <div class="slide">
-          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-          <h5>{{ recipe.NomeDaReceita }}</h5>
-        </div>
+        <a routerLink="/categoria/Massas/recipe/{{ recipe.id }}">
+          <div class="slide">
+            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+            <h5>{{ recipe.NomeDaReceita }}</h5>
+          </div>
+        </a>
       </div>
     </ngx-slick-carousel>
     <div class="navigation-container">
@@ -120,6 +132,7 @@
       </button>
     </div>
   </div>
+  <!-- Inicio carrossel Bebidas -->
   <div class="carousel-box">
     <h1>Bebidas</h1>
     <ngx-slick-carousel
@@ -128,10 +141,12 @@
       [config]="slideConfig"
     >
       <div ngxSlickItem *ngFor="let recipe of recipesBebidas">
-        <div class="slide">
-          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-          <h5>{{ recipe.NomeDaReceita }}</h5>
-        </div>
+        <a routerLink="/categoria/Bebidas/recipe/{{ recipe.id }}">
+          <div class="slide">
+            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+            <h5>{{ recipe.NomeDaReceita }}</h5>
+          </div>
+        </a>
       </div>
     </ngx-slick-carousel>
     <div class="navigation-container">
@@ -143,6 +158,7 @@
       </button>
     </div>
   </div>
+  <!-- Inicio carrossel Sopas -->
   <div class="carousel-box">
     <h1>Sopas:</h1>
     <ngx-slick-carousel
@@ -151,10 +167,12 @@
       [config]="slideConfig"
     >
       <div ngxSlickItem *ngFor="let recipe of recipesSopas">
-        <div class="slide">
-          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-          <h5>{{ recipe.NomeDaReceita }}</h5>
-        </div>
+        <a routerLink="/categoria/Sopas/recipe/{{ recipe.id }}">
+          <div class="slide">
+            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+            <h5>{{ recipe.NomeDaReceita }}</h5>
+          </div>
+        </a>
       </div>
     </ngx-slick-carousel>
     <div class="navigation-container">
@@ -166,6 +184,7 @@
       </button>
     </div>
   </div>
+  <!-- Inicio carrossel Tem + -->
   <div class="carousel-box">
     <h1>Tem +:</h1>
     <ngx-slick-carousel
@@ -174,10 +193,12 @@
       [config]="slideConfig"
     >
       <div ngxSlickItem *ngFor="let recipe of recipesTemMais">
-        <div class="slide">
-          <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-          <h5>{{ recipe.NomeDaReceita }}</h5>
-        </div>
+        <a routerLink="/categoria/tem +/recipe/{{ recipe.id }}">
+          <div class="slide">
+            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
+            <h5>{{ recipe.NomeDaReceita }}</h5>
+          </div>
+        </a>
       </div>
     </ngx-slick-carousel>
     <div class="navigation-container">

@@ -5,7 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './menu-bar.component.html',
   styleUrls: [
     './menu-bar.component.css',
-    './menu-bar.responsive.component.css',
+    './menu-bar.responsive.tablet.component.css',
+    './menu-bar.responsive.mobile.component.css',
   ],
 })
 export class MenuBarComponent implements OnInit {
@@ -21,5 +22,4 @@ export class MenuBarComponent implements OnInit {
     this.menuVariable = !this.menuVariable;
     this.overlayVariable = !this.overlayVariable;
   }
-
 }

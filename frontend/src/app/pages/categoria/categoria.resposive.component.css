@@ -1,0 +1,6 @@
+@media only screen and (max-width: 400px) {
+  .categoria__box-recipe {
+    flex-direction: column;
+    align-items: center;
+  }
+}
