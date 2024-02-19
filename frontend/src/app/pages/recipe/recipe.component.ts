@@ -6,7 +6,7 @@ import { Recipe } from 'src/app/shared/models/recipe';
 @Component({
   selector: 'app-recipe',
   templateUrl: './recipe.component.html',
-  styleUrls: ['./recipe.component.css'],
+  styleUrls: ['./recipe.component.css', './recipe.responsive.component.css'],
 })
 export class RecipeComponent implements OnInit {
   recipes: Recipe[] = [];
@@ -32,6 +32,6 @@ export class RecipeComponent implements OnInit {
   }
 
   getSecondColumnIndex(n: number): number {
-    return Math.floor((n / 2) + 1);
+    return Math.floor(n / 2 + 1);
   }
 }
