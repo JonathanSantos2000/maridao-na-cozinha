@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CategoriaComponent } from './pages/categoria/categoria.component';
 import { RecipeComponent } from './pages/recipe/recipe.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'categoria/:categoria/filter/:subCategory',
     component: CategoriaComponent,
+  },
+  {
+    path: 'contato',
+    component: ContactComponent,
   },
 ];
 

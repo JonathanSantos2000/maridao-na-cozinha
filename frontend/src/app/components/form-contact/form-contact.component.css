@@ -1,0 +1,57 @@
+.conteiner__form-contato {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteiner__form-contato>form {
+  width: 600px;
+}
+
+.conteiner__form-contato>form>.input-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+
+.conteiner__form-contato>form>.input-group>input,
+.conteiner__form-contato>form>.input-group>textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #00340C;
+  color: #00340C;
+  background: transparent;
+  font-size: 15px;
+}
+
+.conteiner__form-contato>form>.input-group>label {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: #00340C;
+  cursor: text;
+  transition: .2s ease-in-out;
+}
+
+.conteiner__form-contato>form>button {
+  margin-bottom: 15px;
+  padding: 10px 0;
+  color: #00340C;
+  outline: none;
+  background: transparent;
+  border: 1px solid #00340C;
+  width: 100%;
+  cursor: pointer;
+}
+
+.conteiner__form-contato>form>.input-group>input:focus~label,
+.conteiner__form-contato>form>.input-group>input:valid~label,
+.conteiner__form-contato>form>.input-group>textarea:focus~label,
+.conteiner__form-contato>form>.input-group>textarea:valid~label {
+  top: -35px;
+  font-size: 14px;
+
+}

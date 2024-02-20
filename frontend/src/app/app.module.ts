@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,9 @@ import { CardRecipeComponent } from './components/card-recipe/card-recipe.compon
 import { RecipeComponent } from './pages/recipe/recipe.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { FormContactComponent } from './components/form-contact/form-contact.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { FormRecipeComponent } from './components/form-recipe/form-recipe.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +26,11 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     CardRecipeComponent,
     RecipeComponent,
     CarouselComponent,
+    ContactComponent,
+    FormContactComponent,
+    FormRecipeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SlickCarouselModule],
+  imports: [BrowserModule, AppRoutingModule, SlickCarouselModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

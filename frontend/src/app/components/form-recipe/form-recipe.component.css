@@ -1,0 +1,186 @@
+/* Form css */
+.conteiner__form-recipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteiner__form-recipe>form {
+  width: 670px;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  text-align: center;
+
+  margin-top: 0;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 32px;
+  color: #00340C;
+}
+
+form>fieldset>.input-group,
+.column-inputs>.left-column>.input-group,
+.column-inputs>.right-column>.input-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+form>fieldset>.input-group>input,
+form>fieldset>.input-group>textarea,
+.column-inputs>.left-column>.input-group>input,
+.column-inputs>.left-column>.input-group>textarea,
+.column-inputs>.right-column>.input-group>input,
+.column-inputs>.right-column>.input-group>textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #00340C;
+  color: #00340C;
+  background: transparent;
+  font-size: 15px;
+}
+
+form>fieldset>.input-group>label,
+.column-inputs>.left-column>.input-group>label,
+.column-inputs>.right-column>.input-group>label {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: #00340C;
+  cursor: text;
+  transition: .2s ease-in-out;
+}
+
+form>fieldset>button {
+  margin-bottom: 30px;
+  padding: 10px 0;
+  color: #00340C;
+  outline: none;
+  background: transparent;
+  border: 1px solid #00340C;
+  width: 100%;
+  cursor: pointer;
+}
+
+form>fieldset>.input-group>input:focus~label,
+form>fieldset>.input-group>input:valid~label,
+form>fieldset>.input-group>textarea:focus~label,
+form>fieldset>.input-group>textarea:valid~label,
+.column-inputs>.left-column>.input-group>input:focus~label,
+.column-inputs>.left-column>.input-group>input:valid~label,
+.column-inputs>.right-column>.input-group>input:focus~label,
+.column-inputs>.right-column>.input-group>input:valid~label {
+  top: -35px;
+  font-size: 14px;
+
+}
+
+.column-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 210px;
+}
+
+.column-inputs>.left-column,
+.column-inputs>.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.column-inputs>.left-column {
+  width: 56%;
+  height: 100%;
+  margin-right: 15px;
+}
+
+.column-inputs>.right-column {
+  width: 44%;
+  height: 100%;
+}
+
+.column-inputs>.left-column>.input-group>input,
+.column-inputs>.right-column>.input-group>input {
+  height: 45px;
+}
+
+.modal {
+  width: 670px;
+  display: none;
+}
+
+.btnsModel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: .4rem 0;
+  cursor: pointer;
+}
+
+.btnsModel>button {
+  margin-bottom: 30px;
+  padding: 10px 0;
+  color: #00340C;
+  outline: none;
+  background: transparent;
+  border: 1px solid #00340C;
+  width: 45%;
+  cursor: pointer;
+}
+
+.lista-extra-recipe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #00340C;
+  margin-bottom: 30px;
+}
+
+.lista-extra-recipe>li {
+  border-right: 1px solid #00340C;
+  list-style: none;
+  padding: .2rem 1rem;
+}
+
+.lista-extra-recipe>.item-list {
+  width: 85%;
+}
+
+.lista-extra-recipe>.list-btn {
+  width: 15%;
+}
+
+.lista-extra-recipe>li>button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+  width: 64px;
+  height: 64px;
+}
+
+@media only screen and (max-width: 900px) {
+  .conteiner__form-recipe>form, .modal {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .column-inputs{
+    height: 290px;
+  }
+  .column-inputs>.left-column>.input-group>input,
+  .column-inputs>.right-column>.input-group>input {
+    height: 65px;
+  }
+
+}

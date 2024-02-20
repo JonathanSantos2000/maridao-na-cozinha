@@ -1,0 +1,46 @@
+<div class="conteiner__contact">
+  <div class="contact">
+    <div class="contact__header">
+      <h1>Contato:</h1>
+      <button
+        class="btn-showFormContact"
+        [class.btnOpenFormContact]="formContact"
+        (click)="showHideFormContact()"
+      >
+        <i class="bi bi-plus-lg"></i>
+      </button>
+      <button
+        class="btn-hideFormContact"
+        [class.btnCloseFormContact]="formContact"
+        (click)="showHideFormContact()"
+      >
+        <i class="bi bi-dash"></i>
+      </button>
+    </div>
+    <div class="contact__form" [class.ShowForContact]="formContact">
+      <app-form-contact></app-form-contact>
+    </div>
+  </div>
+  <div class="contact__recipe">
+    <div class="contact__header">
+      <h1>Mande sua Receita:</h1>
+      <button
+        class="btn-showFormRecipe"
+        [class.btnOpenFormRecipe]="formRecipe"
+        (click)="showHideFormRecipe()"
+      >
+        <i class="bi bi-plus-lg"></i>
+      </button>
+      <button
+        class="btn-hideFormRecipe"
+        [class.btnCloseFormRecipe]="formRecipe"
+        (click)="showHideFormRecipe()"
+      >
+        <i class="bi bi-dash"></i>
+      </button>
+    </div>
+    <div class="contact__formRecipe" [class.ShowForRecipe]="formRecipe">
+      <app-form-recipe></app-form-recipe>
+    </div>
+  </div>
+</div>
