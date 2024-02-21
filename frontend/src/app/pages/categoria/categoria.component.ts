@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { Category, Recipe } from 'src/app/shared/models/recipe';
 
@@ -24,24 +25,30 @@ export class CategoriaComponent implements OnInit {
     private recipeService: RecipeService
   ) {
     this.router.paramMap.subscribe((value) => {
+      let recipeObservable: Observable<Recipe[]>;
       const categoria = value.get('categoria');
       const subCategory = value.get('subCategory');
       if (categoria !== null) {
         this.titleCat = categoria;
+
         if (subCategory !== null) {
-          this.recipes = this.recipeService.getAllRecipeBySubCategory(
-            this.titleCat,
-            subCategory
-          );
+          recipeService
+            .getAllRecipeBySubCategory(this.titleCat, subCategory)
+            .subscribe((serverRecipe) => {
+              this.recipes = serverRecipe;
+            });
         } else {
-          this.recipes = this.recipeService.getAllRecipeByCategory(
-            this.titleCat
-          );
+          recipeService
+            .getAllRecipeByCategory(this.titleCat)
+            .subscribe((serverRecipe) => {
+              this.recipes = serverRecipe;
+            });
         }
-        // Move a atribuição para dentro do escopo do subscribe
-        this.category = this.recipeService.getAllCategoryRecipeByName(
-          this.titleCat
-        );
+        recipeService
+          .getAllCategoryRecipeByName(this.titleCat)
+          .subscribe((serverRecipe) => {
+            this.category = serverRecipe;
+          });
       }
     });
   }

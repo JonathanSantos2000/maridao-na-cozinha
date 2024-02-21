@@ -15,6 +15,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { FormContactComponent } from './components/form-contact/form-contact.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormRecipeComponent } from './components/form-recipe/form-recipe.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,13 @@ import { FormRecipeComponent } from './components/form-recipe/form-recipe.compon
     FormContactComponent,
     FormRecipeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SlickCarouselModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SlickCarouselModule,
+    FormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

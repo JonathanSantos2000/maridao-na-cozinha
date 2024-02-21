@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+
 import { RecipeService } from 'src/app/services/recipe.service';
 import { Recipe } from 'src/app/shared/models/recipe';
 
@@ -9,27 +11,22 @@ import { Recipe } from 'src/app/shared/models/recipe';
   styleUrls: ['./recipe.component.css', './recipe.responsive.component.css'],
 })
 export class RecipeComponent implements OnInit {
-  recipes: Recipe[] = [];
+  recipes!: Recipe | any;
   hasExtra: boolean = false;
+
   constructor(
-    private router: ActivatedRoute,
+    activatedRoute: ActivatedRoute,
     private recipeService: RecipeService
   ) {
-    this.router.paramMap.subscribe((value) => {
-      let idS = value.get('id');
-      let id: number;
-      if (idS !== null) {
-        id = parseInt(idS);
-        this.recipes = this.recipeService.getRecipebyId(id);
-      }
+    activatedRoute.params.subscribe((params) => {
+      if (params.id)
+        recipeService.getRecipebyId(params.id).subscribe((serverRecipe) => {
+          this.recipes = serverRecipe;
+        });
     });
   }
 
-  ngOnInit(): void {
-    if (this.recipes[0].Extra != null) {
-      this.hasExtra = true;
-    }
-  }
+  ngOnInit(): void {}
 
   getSecondColumnIndex(n: number): number {
     return Math.floor(n / 2 + 1);

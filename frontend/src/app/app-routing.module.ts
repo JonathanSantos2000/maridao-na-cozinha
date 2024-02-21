@@ -19,7 +19,7 @@ const routes: Routes = [
     component: RecipeComponent,
   },
   {
-    path: 'categoria/:categoria/filter/:subCategory',
+    path: 'categoria/:categoria/subcategoria/:subCategory',
     component: CategoriaComponent,
   },
   {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Route } from '@angular/router';
+import { Observable } from 'rxjs';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { Recipe } from 'src/app/shared/models/recipe';
 
@@ -10,23 +12,36 @@ import { Recipe } from 'src/app/shared/models/recipe';
 export class HomeComponent implements OnInit {
   numberOfRecipes: number[] = [];
   recipes: Recipe[] = [];
+  recipesAll: Recipe[] = [];
+  recipebyId!: Recipe | any;
 
-  constructor(private recipeService: RecipeService) {
-    this.randomRecipes(recipeService.getAll().length);
-
-    this.numberOfRecipes.forEach((id) => {
-      this.recipes.push(...this.recipeService.getRecipebyId(id));
+  constructor(
+    activatedRoute: ActivatedRoute,
+    private recipeService: RecipeService
+  ) {
+    let recipeObservable: Observable<Recipe[]>;
+    recipeObservable = this.recipeService.getAll();
+    recipeObservable.subscribe((serverRecipe) => {
+      this.recipesAll = serverRecipe;
+      this.randomRecipes(this.recipesAll.length);
     });
   }
 
   ngOnInit(): void {}
-  randomRecipes(maxNumber: number) {
-    while (this.numberOfRecipes.length < 8) {
-      let randomNumber: number = Math.floor(Math.random() * maxNumber) + 1;
 
-      if (!this.numberOfRecipes.includes(randomNumber)) {
-        this.numberOfRecipes.push(randomNumber);
-      }
+  fetchRecipesByIds() {
+    this.numberOfRecipes.forEach((id) => {
+      this.recipes.push(this.recipesAll[id]);
+    });
+  }
+
+  randomRecipes(maxNumber: number) {
+    const selectedRecipes = new Set<number>();
+    while (selectedRecipes.size < 8) {
+      let randomNumber: number = Math.floor(Math.random() * maxNumber);
+      selectedRecipes.add(randomNumber);
     }
+    this.numberOfRecipes = Array.from(selectedRecipes);
+    this.fetchRecipesByIds();
   }
 }

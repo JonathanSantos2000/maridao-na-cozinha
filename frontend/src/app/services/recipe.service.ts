@@ -1,52 +1,72 @@
 import { Injectable } from '@angular/core';
 import { Category, Recipe } from '../shared/models/recipe';
-import { recipe_foods } from '../data/recipe';
-import { category_recipe } from '../data/category';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators'; // Importar o operador map
+import {
+  CATEGORY_NAME_URL,
+  CATEGORY_URL,
+  RECIPE_CATEGORY_SUBCATEGORY_URL,
+  RECIPE_CATEGORY_URL,
+  RECIPE_ID_URL,
+  RECIPE_URL,
+} from '../shared/constants/urls';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RecipeService {
-  constructor() {}
-  getAll(): Recipe[] {
-    return recipe_foods;
-  }
-  getRecipebyId(id: number): Recipe[] {
-    return this.getAll().filter((recipe) => recipe.id == id);
+  constructor(private http: HttpClient) {}
+
+  /* Pegar todas as receitas */
+  getAll(): Observable<Recipe[]> {
+    return this.http.get<Recipe[]>(RECIPE_URL);
   }
 
-  getAllRecipeByCategory(category: string): Recipe[] {
-    return this.getAll().filter((recipe) =>
-      recipe.Categoria.toLocaleLowerCase().includes(
-        category.toLocaleLowerCase()
-      )
-    );
-  }
-  getAllCategoryRecipe() {
-    return category_recipe;
-  }
-
-  getAllCategoryRecipeByName(category: string): Category[] {
-    return this.getAllCategoryRecipe().filter((recipeCategory) =>
-      recipeCategory.nomeCategory
-        .toLocaleLowerCase()
-        .includes(category.toLocaleLowerCase())
+  /* Filtrar por id */
+  getRecipebyId(id: number): Observable<Recipe> {
+    return this.http.get<Recipe>(
+      `${RECIPE_ID_URL.replace(':id', id.toString())}`
     );
   }
 
-  getAllRecipeBySubCategory(category: string, subCategory: string): Recipe[] {
-    return this.getAll().filter(
-      (recipe) =>
-        recipe.Categoria.toLocaleLowerCase() === category.toLocaleLowerCase() &&
-        recipe.Subcategoria.toLocaleLowerCase() ===
-          subCategory.toLocaleLowerCase()
+  /* Filtrar por categoria */
+  getAllRecipeByCategory(category: string): Observable<Recipe[]> {
+    return this.http.get<Recipe[]>(
+      `${RECIPE_CATEGORY_URL.replace(':categoria', category)}`
     );
   }
 
-  getFiveRecipes(category: string): Recipe[] {
-    const recipesInCategory = this.getAllRecipeByCategory(category);
-    const shuffledRecipes = this.shuffleArray(recipesInCategory);
-    return shuffledRecipes.slice(0, 5);
+  /* Pegar todas as categorias */
+  getAllCategoryRecipe(): Observable<Category[]> {
+    return this.http.get<Category[]>(CATEGORY_URL);
+  }
+
+  /* Filtrar categorias pelo nome */
+  getAllCategoryRecipeByName(category: string): Observable<Category[]> {
+    return this.http.get<Category[]>(
+      `${CATEGORY_NAME_URL.replace(':categoria', category)}`
+    );
+  }
+
+  /* Filtrar receita por categoria e sub categoria */
+  getAllRecipeBySubCategory(
+    category: string,
+    subCategory: string
+  ): Observable<Recipe[]> {
+    const url = `${RECIPE_CATEGORY_SUBCATEGORY_URL.replace(
+      ':categoria',
+      category
+    ).replace(':subcategoria', subCategory)}`;  
+
+    return this.http.get<Recipe[]>(url);
+  }
+
+  /* Filtrar 5 receitas aleatorias de uma categoria */
+  getFiveRecipes(category: string): Observable<Recipe[]> {
+    return this.getAllRecipeByCategory(category).pipe(
+      map((recipes: Recipe[]) => this.shuffleArray(recipes).slice(0, 5))
+    );
   }
 
   // Função para embaralhar um array
