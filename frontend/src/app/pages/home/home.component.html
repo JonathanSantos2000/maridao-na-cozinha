@@ -6,10 +6,10 @@
     <div class="main-box__recipes">
       <div *ngFor="let recipe of recipes">
         <app-card-recipe
-          typeCategoria="{{ recipe.Categoria }}"
+          typeCategoria="{{ recipe.categoria }}"
           idRecipe="{{ recipe.id }}"
-          urlImg="{{ recipe.Foto }}"
-          titleReceita="{{ recipe.NomeDaReceita }}"
+          urlImg="{{ recipe.foto[0] }}"
+          titleReceita="{{ recipe.nomeDaReceita }}"
         ></app-card-recipe>
       </div>
     </div>

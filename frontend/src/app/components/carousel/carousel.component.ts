@@ -47,25 +47,25 @@ export class CarouselComponent implements OnInit {
       this.recipesCarne = serverRecipe;
     });
     recipesAvesObservable.subscribe((serverRecipe) => {
-      this.recipesCarne = serverRecipe;
+      this.recipesAves = serverRecipe;
     });
     recipesDoMarObservable.subscribe((serverRecipe) => {
-      this.recipesCarne = serverRecipe;
+      this.recipesDoMar = serverRecipe;
     });
     recipesDocesObservable.subscribe((serverRecipe) => {
-      this.recipesCarne = serverRecipe;
+      this.recipesDoces = serverRecipe;
     });
     recipesMassasObservable.subscribe((serverRecipe) => {
-      this.recipesCarne = serverRecipe;
+      this.recipesMassas = serverRecipe;
     });
     recipesBebidasObservable.subscribe((serverRecipe) => {
-      this.recipesCarne = serverRecipe;
+      this.recipesBebidas = serverRecipe;
     });
     recipesSopasObservable.subscribe((serverRecipe) => {
-      this.recipesCarne = serverRecipe;
+      this.recipesSopas = serverRecipe;
     });
     recipesTemMaisObservable.subscribe((serverRecipe) => {
-      this.recipesCarne = serverRecipe;
+      this.recipesTemMais = serverRecipe;
     });
   }
 

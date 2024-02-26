@@ -11,10 +11,10 @@
         <a routerLink="/categoria/Carne/recipe/{{ recipe.id }}">
           <div class="slide">
             <img
-              src="../../../assets/IMG/img-receitas/{{ recipe.Foto }}.jpg"
+              src="../../../assets/IMG/img-receitas/{{ recipe.foto[0] }}.jpg"
               alt=""
             />
-            <h5>{{ recipe.NomeDaReceita }}</h5>
+            <h5>{{ recipe.nomeDaReceita }}</h5>
           </div>
         </a>
       </div>
@@ -39,8 +39,11 @@
       <div ngxSlickItem *ngFor="let recipe of recipesAves">
         <a routerLink="/categoria/Aves/recipe/{{ recipe.id }}">
           <div class="slide">
-            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-            <h5>{{ recipe.NomeDaReceita }}</h5>
+            <img
+              src="../../../assets/IMG/img-receitas/{{ recipe.foto[0] }}.jpg"
+              alt=""
+            />
+            <h5>{{ recipe.nomeDaReceita }}</h5>
           </div>
         </a>
       </div>
@@ -65,8 +68,11 @@
       <div ngxSlickItem *ngFor="let recipe of recipesDoMar">
         <a routerLink="/categoria/Do Mar/recipe/{{ recipe.id }}">
           <div class="slide">
-            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-            <h5>{{ recipe.NomeDaReceita }}</h5>
+            <img
+              src="../../../assets/IMG/img-receitas/{{ recipe.foto[0] }}.jpg"
+              alt=""
+            />
+            <h5>{{ recipe.nomeDaReceita }}</h5>
           </div>
         </a>
       </div>
@@ -91,8 +97,11 @@
       <div ngxSlickItem *ngFor="let recipe of recipesDoces">
         <a routerLink="/categoria/Doces/recipe/{{ recipe.id }}">
           <div class="slide">
-            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-            <h5>{{ recipe.NomeDaReceita }}</h5>
+            <img
+              src="../../../assets/IMG/img-receitas/{{ recipe.foto[0] }}.jpg"
+              alt=""
+            />
+            <h5>{{ recipe.nomeDaReceita }}</h5>
           </div>
         </a>
       </div>
@@ -117,8 +126,11 @@
       <div ngxSlickItem *ngFor="let recipe of recipesMassas">
         <a routerLink="/categoria/Massas/recipe/{{ recipe.id }}">
           <div class="slide">
-            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-            <h5>{{ recipe.NomeDaReceita }}</h5>
+            <img
+              src="../../../assets/IMG/img-receitas/{{ recipe.foto[0] }}.jpg"
+              alt=""
+            />
+            <h5>{{ recipe.nomeDaReceita }}</h5>
           </div>
         </a>
       </div>
@@ -143,8 +155,11 @@
       <div ngxSlickItem *ngFor="let recipe of recipesBebidas">
         <a routerLink="/categoria/Bebidas/recipe/{{ recipe.id }}">
           <div class="slide">
-            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-            <h5>{{ recipe.NomeDaReceita }}</h5>
+            <img
+              src="../../../assets/IMG/img-receitas/{{ recipe.foto[0] }}.jpg"
+              alt=""
+            />
+            <h5>{{ recipe.nomeDaReceita }}</h5>
           </div>
         </a>
       </div>
@@ -169,8 +184,11 @@
       <div ngxSlickItem *ngFor="let recipe of recipesSopas">
         <a routerLink="/categoria/Sopas/recipe/{{ recipe.id }}">
           <div class="slide">
-            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-            <h5>{{ recipe.NomeDaReceita }}</h5>
+            <img
+              src="../../../assets/IMG/img-receitas/{{ recipe.foto[0] }}.jpg"
+              alt=""
+            />
+            <h5>{{ recipe.nomeDaReceita }}</h5>
           </div>
         </a>
       </div>
@@ -195,8 +213,11 @@
       <div ngxSlickItem *ngFor="let recipe of recipesTemMais">
         <a routerLink="/categoria/tem +/recipe/{{ recipe.id }}">
           <div class="slide">
-            <img src="../../../assets/IMG/img-receitas/Foto-NI.jpg" alt="" />
-            <h5>{{ recipe.NomeDaReceita }}</h5>
+            <img
+              src="../../../assets/IMG/img-receitas/{{ recipe.foto[0] }}.jpg"
+              alt=""
+            />
+            <h5>{{ recipe.nomeDaReceita }}</h5>
           </div>
         </a>
       </div>

@@ -1,13 +1,21 @@
 <div class="conteiner__recipe">
   <div class="recipe__header">
     <div class="recipe__header__name">
-      <h1>{{ recipes?.[0]?.NomeDaReceita }}</h1>
+      <h1>{{ recipes?.nomeDaReceita }}</h1>
     </div>
     <div class="recipe__header__photo">
-      <img
-        src="../../../assets/IMG/img-receitas/{{ recipes?.[0]?.Foto }}.jpg"
-        alt=""
-      />
+      <ng-container *ngIf="recipes?.foto[0] === 'Foto-NI'; else normalImage">
+        <img
+          src="../../../assets/IMG/img-receitas/{{ recipes?.foto[0] }}.jpg"
+          alt=""
+        />
+      </ng-container>
+      <ng-template #normalImage>
+        <img
+          src="../../../assets/IMG/img-receitas/{{ recipes?.foto[0] }}"
+          alt="Normal"
+        />
+      </ng-template>
       <h5 class="notificacoes">
         * Essas estimativas podem variar dependendo das técnicas de cozinha
         individuais e dos ingredientes específicos utilizados.
@@ -18,19 +26,21 @@
     <ul>
       <li>
         <img src="../../../assets/IMG/Icons/icon-tempo.png" alt="" />
-        <h5>{{ recipes?.[0]?.TempoDePreparo }}</h5>
+        <h5>{{ recipes?.tempoDePreparo }}</h5>
       </li>
       <li>
         <img src="../../../assets/IMG/Icons/icon-porcoes.png" alt="" />
-        <h5>{{ recipes?.[0]?.Porcoes }}</h5>
+        <h5>{{ recipes?.porcoes }} Porções</h5>
       </li>
       <li>
         <img src="../../../assets/IMG/Icons/icon-dificuldade.png" alt="" />
-        <h5>{{ recipes?.[0]?.NivelDeDificuldade }}</h5>
+        <h5>{{ recipes?.nivelDeDificuldade }}</h5>
       </li>
     </ul>
   </div>
   <div class="recipe">
+    <br />
+    <hr />
     <div class="recipe__ingredient">
       <div class="ingredient__icon">
         <img src="../../../assets/IMG/Icons/icon-ingredientes.png" alt="" />
@@ -42,9 +52,9 @@
           <ul>
             <li
               *ngFor="
-                let ingredient of recipes?.[0]?.Ingredientes.slice(
+                let ingredient of recipes?.ingredientes.slice(
                   0,
-                  recipes?.[0]?.Ingredientes.length / 2 + 1
+                  recipes?.ingredientes.length / 2 + 1
                 );
                 let i = index
               "
@@ -56,28 +66,27 @@
           <ul>
             <li
               *ngFor="
-                let ingredient of recipes?.[0]?.Ingredientes.slice(
-                  getSecondColumnIndex(recipes?.[0]?.Ingredientes.length)
+                let ingredient of recipes?.ingredientes.slice(
+                  getSecondColumnIndex(recipes?.ingredientes.length)
                 );
                 let i = index
               "
             >
-              {{
-                i + 1 + getSecondColumnIndex(recipes?.[0]?.Ingredientes.length)
-              }}) {{ ingredient }}
+              {{ i + 1 + getSecondColumnIndex(recipes?.ingredientes.length) }})
+              {{ ingredient }}
             </li>
           </ul>
         </div>
         <div class="extra-recipe" *ngIf="hasExtra">
-          <div *ngFor="let extra of recipes?.[0]?.Extra">
-            <h5>{{ extra.NomeDaReceitaExtra }}:</h5>
+          <div *ngFor="let extra of recipes?.Extra">
+            <h5>{{ extra.nomeDaReceitaExtra }}:</h5>
             <div class="secondaryList">
               <ul>
                 <li
                   *ngFor="
-                    let ingredient of extra.Ingredientes.slice(
+                    let ingredient of extra.ingredientes.slice(
                       0,
-                      (extra.Ingredientes.length / 2) + 1
+                      extra.ingredientes.length / 2 + 1
                     );
                     let i = index
                   "
@@ -89,13 +98,13 @@
               <ul>
                 <li
                   *ngFor="
-                    let ingredient of extra.Ingredientes.slice(
-                      getSecondColumnIndex(extra.Ingredientes.length)
+                    let ingredient of extra.ingredientes.slice(
+                      getSecondColumnIndex(extra.ingredientes.length)
                     );
                     let i = index
                   "
                 >
-                  {{ i + 1 + getSecondColumnIndex(extra.Ingredientes.length) }})
+                  {{ i + 1 + getSecondColumnIndex(extra.ingredientes.length) }})
                   {{ ingredient }}
                 </li>
               </ul>
@@ -103,16 +112,18 @@
           </div>
         </div>
       </div>
+      <br />
+      <hr />
       <div class="recipe__method-of-preparation">
         <div class="method-of-preparation__icon">
           <img src="../../../assets/IMG/Icons/icon-preparo.png" alt="" />
           <h5>Modo de fazer:</h5>
         </div>
         <div class="method-of-preparation">
-          <p>{{ recipes?.[0]?.ModoDeFazer }}</p>
+          <p>{{ recipes?.modoDeFazer }}</p>
           <!-- extra recipe Modo de fazer -->
           <div class="extra-recipe" *ngIf="hasExtra">
-            <div *ngFor="let extra of recipes?.[0]?.Extra">
+            <div *ngFor="let extra of recipes?.Extra">
               <hr />
               <h5>{{ extra.NomeDaReceitaExtra }}:</h5>
               <div class="method-of-preparation">

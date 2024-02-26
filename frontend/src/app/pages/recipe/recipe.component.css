@@ -16,8 +16,16 @@
 
 .recipe__header__photo {
   width: 474px;
+  height: 316px;
+  margin-bottom: 30px;
 }
-
+.recipe__header__photo>img{
+  width: 100%;
+  height: 100%;
+  
+  padding: 0.8rem;
+  border-radius: 25px;
+}
 .recipe__header__photo>h5 {
   font-size: 15px;
 }

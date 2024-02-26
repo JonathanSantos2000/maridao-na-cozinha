@@ -1,13 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  background: linear-gradient(255.54deg, #70af85,  #f0e2d0);
+body {
+  background: linear-gradient(255.54deg, #70af85, #f0e2d0);
 }
 
-a{
+a {
   text-decoration: none;
+  color: #00340c;
 }

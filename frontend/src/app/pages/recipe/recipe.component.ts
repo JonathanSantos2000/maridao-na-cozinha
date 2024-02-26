@@ -22,6 +22,7 @@ export class RecipeComponent implements OnInit {
       if (params.id)
         recipeService.getRecipebyId(params.id).subscribe((serverRecipe) => {
           this.recipes = serverRecipe;
+          console.log(this.recipes);
         });
     });
   }

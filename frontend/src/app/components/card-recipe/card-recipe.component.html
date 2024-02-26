@@ -1,7 +1,12 @@
 <div class="conteiner__card-recipe">
   <a routerLink="/categoria/{{ typeCategoria }}/recipe/{{ idRecipe }}">
     <div class="card-recipe__img">
-      <img src="../../../../assets/IMG/img-receitas/{{ urlImg }}.jpg" alt="" />
+      <ng-container *ngIf="urlImg === 'Foto-NI'; else normalImage">
+        <img src="../../../assets/IMG/img-receitas/{{ urlImg }}.jpg" alt="" />
+      </ng-container>
+      <ng-template #normalImage>
+        <img src="../../../assets/IMG/img-receitas/{{ urlImg }}" alt="Normal" />
+      </ng-template>
     </div>
     <div class="card-recipe__title">
       <h1>{{ titleReceita }}</h1>

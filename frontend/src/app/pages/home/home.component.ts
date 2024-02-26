@@ -10,7 +10,7 @@ import { Recipe } from 'src/app/shared/models/recipe';
   styleUrls: ['./home.component.css', './home.responsive.component.css'],
 })
 export class HomeComponent implements OnInit {
-  numberOfRecipes: number[] = [];
+  numberOfRecipes: number[] = [1, 2, 3];
   recipes: Recipe[] = [];
   recipesAll: Recipe[] = [];
   recipebyId!: Recipe | any;
@@ -31,12 +31,14 @@ export class HomeComponent implements OnInit {
 
   fetchRecipesByIds() {
     this.numberOfRecipes.forEach((id) => {
+      console.log(this.recipesAll);
       this.recipes.push(this.recipesAll[id]);
     });
   }
 
   randomRecipes(maxNumber: number) {
     const selectedRecipes = new Set<number>();
+
     while (selectedRecipes.size < 8) {
       let randomNumber: number = Math.floor(Math.random() * maxNumber);
       selectedRecipes.add(randomNumber);
