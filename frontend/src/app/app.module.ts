@@ -12,8 +12,6 @@ import { CardRecipeComponent } from './components/card-recipe/card-recipe.compon
 import { RecipeComponent } from './pages/recipe/recipe.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { FormContactComponent } from './components/form-contact/form-contact.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { FormRecipeComponent } from './components/form-recipe/form-recipe.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -27,8 +25,6 @@ import { HttpClientModule } from '@angular/common/http';
     CardRecipeComponent,
     RecipeComponent,
     CarouselComponent,
-    ContactComponent,
-    FormContactComponent,
     FormRecipeComponent,
   ],
   imports: [
