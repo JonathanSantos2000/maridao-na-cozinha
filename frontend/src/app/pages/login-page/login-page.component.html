@@ -1,0 +1,43 @@
+<div class="conteinner__login flex-all-collun-center">
+  <form
+    [formGroup]="loginForm"
+    (ngSubmit)="submit()"
+    class="flex-all-collun-center"
+  >
+    <div class="title_logo">
+      <img src="../../../assets/IMG/Icons/logo.png" alt="" />
+      <h3>Fazer login</h3>
+    </div>
+    <div class="input-group">
+      <input type="email" formControlName="email" id="email" required />
+      <label for="email"> Email: </label>
+
+      <div class="error-list" *ngIf="fc.email.errors && isSubmitted">
+        <div *ngIf="fc.email.errors.required">
+          Email não deveria estar vazio
+        </div>
+        <div *ngIf="fc.email.errors.email">E-mail não está correto</div>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input
+        type="password"
+        formControlName="password"
+        id="password"
+        required
+      />
+      <label for="password"> Password: </label>
+      <div class="error-list" *ngIf="fc.password.errors && isSubmitted">
+        <div *ngIf="fc.password.errors.required">
+          Senha não deveria estar vazio
+        </div>
+      </div>
+    </div>
+
+    <div class="btns">
+      <a href="#">Criar Conta</a>
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>

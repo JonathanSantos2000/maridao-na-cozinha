@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit {
 
   fetchRecipesByIds() {
     this.numberOfRecipes.forEach((id) => {
-      console.log(this.recipesAll);
       this.recipes.push(this.recipesAll[id]);
     });
   }

@@ -62,7 +62,23 @@
       <li>
         <a [routerLink]="['categoria', 'Tem +']" (click)="openMenu()">Tem +</a>
       </li>
-      <li><a [routerLink]="['']" (click)="openMenu()">Dicas</a></li>
+      <li *ngIf="!isAuth">
+        <a [routerLink]="['login']" (click)="openMenu()"> Login </a>
+      </li>
+      <li class="user" *ngIf="isAuth">
+        <a>{{ user.name.split(' ')[0] }}</a>
+        <ul class="sub_menu">
+          <li>
+            <a>Receitas favoritas</a>
+          </li>
+          <li>
+            <a>Envie sua receita</a>
+          </li>
+          <li>
+            <a (click)="logout()">Sair</a>
+          </li>
+        </ul>
+      </li>
     </ul>
   </div>
 

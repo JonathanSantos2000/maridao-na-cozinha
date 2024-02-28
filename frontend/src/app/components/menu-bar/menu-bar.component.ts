@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/app/shared/models/user';
 
 @Component({
   selector: 'app-menu-bar',
@@ -14,9 +16,24 @@ export class MenuBarComponent implements OnInit {
   overlayVariable: boolean = false;
   btnclose: boolean = false;
   btnOpen: boolean = true;
-  constructor() {}
+
+  user!: User;
+  constructor(private userService: UserService) {
+    userService.userObservable.subscribe((newUser) => {
+      this.user = newUser;
+    });
+  }
 
   ngOnInit(): void {}
+
+  logout() {
+    this.userService.logout();
+  }
+
+  get isAuth() {
+    console.log(this.user);
+    return this.user.token;
+  }
 
   openMenu() {
     this.menuVariable = !this.menuVariable;

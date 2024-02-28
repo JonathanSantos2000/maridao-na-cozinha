@@ -10,4 +10,6 @@ export const CATEGORY_URL = BASE_URL + '/api/categoria';
 export const CATEGORY_NAME_URL = BASE_URL + '/api/categoria/:categoria';
 
 export const RECIPE_CATEGORY_SUBCATEGORY_URL =
-  BASE_URL +'/api/categoria/:categoria/subcategoria/:subcategoria';
+  BASE_URL + '/api/categoria/:categoria/subcategoria/:subcategoria';
+
+export const USER_LOGIN_URL = BASE_URL + '/api/users/login';
