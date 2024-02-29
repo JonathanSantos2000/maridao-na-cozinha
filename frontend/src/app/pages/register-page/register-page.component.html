@@ -1,13 +1,23 @@
 <div class="conteinner__login flex-all-collun-center">
   <form
-    [formGroup]="loginForm"
+    [formGroup]="registerForm"
     (ngSubmit)="submit()"
     class="flex-all-collun-center"
   >
     <div class="title_logo">
       <img src="../../../assets/IMG/Icons/logo.png" alt="" />
-      <h3>Fazer login</h3>
+      <h3>Criar uma conta</h3>
     </div>
+    <!-- Nome -->
+    <div class="input-group">
+      <input type="text" formControlName="name" id="name" required />
+      <label for="name"> Nome: </label>
+
+      <div class="error-list" *ngIf="fc.name.errors && isSubmitted">
+        <div *ngIf="fc.name.errors.required">Nome não deveria estar vazio</div>
+      </div>
+    </div>
+    <!-- Email -->
     <div class="input-group">
       <input type="email" formControlName="email" id="email" required />
       <label for="email"> Email: </label>
@@ -27,7 +37,7 @@
         id="password"
         required
       />
-      <label for="password"> Password: </label>
+      <label for="password"> Senha: </label>
       <div class="error-list" *ngIf="fc.password.errors && isSubmitted">
         <div *ngIf="fc.password.errors.required">
           Senha não deveria estar vazio
@@ -35,11 +45,22 @@
       </div>
     </div>
 
+    <div class="input-group">
+      <input
+        type="password"
+        formControlName="conformPassword"
+        id="conformPassword"
+        required
+      />
+      <label for="conformPassword"> Confirme a senha: </label>
+      <div class="error-list" *ngIf="fc.password.errors && isSubmitted">
+        <div *ngIf="fc.password.errors.required">
+          Senha não deveria estar vazio
+        </div>
+      </div>
+    </div>
     <div class="btns">
-      <a routerLink="/registro" [queryParams]="{ returnUrl: returnUrl }">
-        Criar Conta
-      </a>
-      <button type="submit">Login</button>
+      <button type="submit">Criar</button>
     </div>
   </form>
 </div>
