@@ -18,6 +18,9 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { InputGroupComponent } from './components/form/input-group/input-group.component';
+import { InputValidationComponent } from './components/form/input-validation/input-validation.component';
+import { TextInputComponent } from './components/form/text-input/text-input.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
     CarouselComponent,
     FormRecipeComponent,
     LoginPageComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    InputGroupComponent,
+    InputValidationComponent,
+    TextInputComponent,
   ],
   imports: [
     BrowserModule,

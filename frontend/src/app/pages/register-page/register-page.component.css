@@ -11,8 +11,9 @@
   & form {
     border: 1px solid #808080;
     border-radius: 8px;
-    width: 400px;
-    height: 500px;
+    width: 50%;
+    min-height: 500px;
+    height: auto;
     padding: 40px;
 
     justify-content: space-between;
@@ -30,42 +31,8 @@
       }
     }
 
-    & .input-group {
+    & text-input {
       width: 100%;
-      margin-bottom: 30px;
-      position: relative;
-
-      & input {
-        width: 100%;
-        padding: 10px;
-        outline: 0;
-        border: 1px solid #00340C;
-        color: #00340C;
-        background: transparent;
-        font-size: 15px;
-      }
-
-      & label {
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        padding: 10px;
-        color: #00340C;
-        cursor: text;
-        transition: .2s ease-in-out;
-      }
-
-      & input:focus~label,
-      input:valid~label {
-        top: -35px;
-        font-size: 14px;
-      }
-
-      & input:focus,
-      input:valid {
-        border-color: blue;
-      }
     }
 
     & .btns {
@@ -75,6 +42,7 @@
       align-items: center;
 
       width: 100%;
+      margin-top: 25px;
 
       & button {
         width: 100%;

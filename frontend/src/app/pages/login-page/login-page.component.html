@@ -8,32 +8,20 @@
       <img src="../../../assets/IMG/Icons/logo.png" alt="" />
       <h3>Fazer login</h3>
     </div>
-    <div class="input-group">
-      <input type="email" formControlName="email" id="email" required />
-      <label for="email"> Email: </label>
 
-      <div class="error-list" *ngIf="fc.email.errors && isSubmitted">
-        <div *ngIf="fc.email.errors.required">
-          Email não deveria estar vazio
-        </div>
-        <div *ngIf="fc.email.errors.email">E-mail não está correto</div>
-      </div>
-    </div>
+    <text-input
+      [control]="fc.email"
+      [showErrorWhen]="isSubmitted"
+      type="email"
+      label="Email:"
+    ></text-input>
 
-    <div class="input-group">
-      <input
-        type="password"
-        formControlName="password"
-        id="password"
-        required
-      />
-      <label for="password"> Password: </label>
-      <div class="error-list" *ngIf="fc.password.errors && isSubmitted">
-        <div *ngIf="fc.password.errors.required">
-          Senha não deveria estar vazio
-        </div>
-      </div>
-    </div>
+    <text-input
+      [control]="fc.password"
+      [showErrorWhen]="isSubmitted"
+      type="password"
+      label="Senha:"
+    ></text-input>
 
     <div class="btns">
       <a routerLink="/registro" [queryParams]="{ returnUrl: returnUrl }">

@@ -31,7 +31,6 @@ export class MenuBarComponent implements OnInit {
   }
 
   get isAuth() {
-    console.log(this.user);
     return this.user.token;
   }
 

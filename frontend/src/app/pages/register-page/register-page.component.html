@@ -9,56 +9,34 @@
       <h3>Criar uma conta</h3>
     </div>
     <!-- Nome -->
-    <div class="input-group">
-      <input type="text" formControlName="name" id="name" required />
-      <label for="name"> Nome: </label>
+    <text-input
+      [control]="fc.name"
+      [showErrorWhen]="isSubmitted"
+      type="text"
+      label="Nome:"
+    ></text-input>
+    <!-- email -->
+    <text-input
+      [control]="fc.email"
+      [showErrorWhen]="isSubmitted"
+      type="email"
+      label="Email:"
+    ></text-input>
+    <!-- password -->
+    <text-input
+      [control]="fc.password"
+      [showErrorWhen]="isSubmitted"
+      type="password"
+      label="Senha:"
+    ></text-input>
+    <!-- confirmPassword -->
+    <text-input
+      [control]="fc.confirmPassword"
+      [showErrorWhen]="isSubmitted"
+      type="password"
+      label="Confirme a senha:"
+    ></text-input>
 
-      <div class="error-list" *ngIf="fc.name.errors && isSubmitted">
-        <div *ngIf="fc.name.errors.required">Nome não deveria estar vazio</div>
-      </div>
-    </div>
-    <!-- Email -->
-    <div class="input-group">
-      <input type="email" formControlName="email" id="email" required />
-      <label for="email"> Email: </label>
-
-      <div class="error-list" *ngIf="fc.email.errors && isSubmitted">
-        <div *ngIf="fc.email.errors.required">
-          Email não deveria estar vazio
-        </div>
-        <div *ngIf="fc.email.errors.email">E-mail não está correto</div>
-      </div>
-    </div>
-
-    <div class="input-group">
-      <input
-        type="password"
-        formControlName="password"
-        id="password"
-        required
-      />
-      <label for="password"> Senha: </label>
-      <div class="error-list" *ngIf="fc.password.errors && isSubmitted">
-        <div *ngIf="fc.password.errors.required">
-          Senha não deveria estar vazio
-        </div>
-      </div>
-    </div>
-
-    <div class="input-group">
-      <input
-        type="password"
-        formControlName="conformPassword"
-        id="conformPassword"
-        required
-      />
-      <label for="conformPassword"> Confirme a senha: </label>
-      <div class="error-list" *ngIf="fc.password.errors && isSubmitted">
-        <div *ngIf="fc.password.errors.required">
-          Senha não deveria estar vazio
-        </div>
-      </div>
-    </div>
     <div class="btns">
       <button type="submit">Criar</button>
     </div>
