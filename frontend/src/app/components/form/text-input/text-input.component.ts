@@ -14,12 +14,10 @@ export class TextInputComponent implements OnInit {
   @Input()
   label!: string;
   @Input()
-  type: 'text' | 'password' | 'email' = 'text';
+  type: 'text' | 'password' | 'email' | 'number' = 'text';
 
-
-  get formControl(){
-    return this.control as FormControl
+  get formControl() {
+    return this.control as FormControl;
   }
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

@@ -14,3 +14,4 @@ export const RECIPE_CATEGORY_SUBCATEGORY_URL =
 
 export const USER_LOGIN_URL = BASE_URL + '/api/users/login';
 export const USER_REGISTER_URL = BASE_URL + '/api/users/register';
+export const NEW_RECIPE_URL = BASE_URL + '/api/ask/newRecipe';

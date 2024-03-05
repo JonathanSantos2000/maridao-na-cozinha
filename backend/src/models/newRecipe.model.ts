@@ -6,7 +6,7 @@ interface Extra {
   modoDeFazer: string;
 }
 
-export interface Recipe {
+export interface NewRecipe {
   id: string;
   quemMandou: string;
   nomeDaReceita: string;
@@ -22,9 +22,11 @@ export interface Recipe {
   stars: number;
   favorite: boolean;
   extra?: Extra[];
+  resposta: string;
+  copyright: boolean;
 }
 
-export const RecipeSchema = new Schema<Recipe>(
+export const NewRecipeSchema = new Schema<NewRecipe>(
   {
     nomeDaReceita: { type: String, required: true },
     quemMandou: { type: String, required: true },
@@ -46,6 +48,8 @@ export const RecipeSchema = new Schema<Recipe>(
         modoDeFazer: { type: String, required: true },
       },
     ],
+    resposta: { type: String, required: true },
+    copyright: { type: Boolean, default: false },
   },
   {
     toJSON: {
@@ -58,4 +62,4 @@ export const RecipeSchema = new Schema<Recipe>(
   }
 );
 
-export const ReceipeModel = model<Recipe>("recipe", RecipeSchema);
+export const NewRecipeModel = model<NewRecipe>("newRecipe", NewRecipeSchema);

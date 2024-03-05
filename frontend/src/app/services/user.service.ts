@@ -16,6 +16,7 @@ export class UserService {
     this.getUserFromLocalStorage()
   );
   public userObservable: Observable<User>;
+
   constructor(private http: HttpClient, private toastrService: ToastrService) {
     this.userObservable = this.userSubject.asObservable();
   }
@@ -37,6 +38,7 @@ export class UserService {
       })
     );
   }
+  
   register(userRegister: IUserRegister): Observable<User> {
     return this.http.post<User>(USER_REGISTER_URL, userRegister).pipe(
       tap({
@@ -54,11 +56,13 @@ export class UserService {
       })
     );
   }
+
   logout() {
     this.userSubject.next(new User());
     localStorage.removeItem(USER_KEY);
     window.location.reload();
   }
+
   private setUserToLocalStorage(user: User) {
     localStorage.setItem(USER_KEY, JSON.stringify(user));
   }

@@ -21,6 +21,7 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 import { InputGroupComponent } from './components/form/input-group/input-group.component';
 import { InputValidationComponent } from './components/form/input-validation/input-validation.component';
 import { TextInputComponent } from './components/form/text-input/text-input.component';
+import { NewRecipeComponent } from './pages/new-recipe/new-recipe.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { TextInputComponent } from './components/form/text-input/text-input.comp
     InputGroupComponent,
     InputValidationComponent,
     TextInputComponent,
+    NewRecipeComponent,
   ],
   imports: [
     BrowserModule,

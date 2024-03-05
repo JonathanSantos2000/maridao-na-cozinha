@@ -1,0 +1,136 @@
+<div class="conteiner_new-recipe">
+  <form
+    [formGroup]="recipeForm"
+    (ngSubmit)="submit()"
+    class="flex-all-collun-center"
+  >
+    <h1>Receita:</h1>
+    <text-input
+      [control]="fc.nomeDaReceita"
+      [showErrorWhen]="isSubmitted"
+      type="text"
+      label="Nome da receita:"
+    ></text-input>
+
+    <text-input
+      [control]="fc.ingredientes"
+      [showErrorWhen]="isSubmitted"
+      type="text"
+      label="Digite os ingredientes separados por virgula:"
+    ></text-input>
+
+    <text-input
+      [control]="fc.modoDeFazer"
+      [showErrorWhen]="isSubmitted"
+      type="text"
+      label="Digite o modo de fazer:"
+    ></text-input>
+
+    <label for="textEx">Ex. Molho, Cobertura, recheio...</label>
+    <br />
+    <button type="button" (click)="openModal()">Adicionar Extra</button>
+
+    <!-- Lista Extras add -->
+    <ul class="lista-extra-recipe" *ngFor="let extra of extras; let i = index">
+      <li class="item-list">
+        <strong>Nome:</strong> {{ extra.nome }}
+        <br />
+        <strong>Ingredientes:</strong>
+        <span *ngIf="isArray(extra.ingredientes)">
+          {{ extra.ingredientes.join(", ") }}
+        </span>
+        <span *ngIf="!isArray(extra.ingredientes)">
+          {{ extra.ingredientes }}
+        </span>
+        <br />
+        <strong>Modo de fazer:</strong> {{ extra.modoDeFazer }}
+        <br />
+      </li>
+      <li class="list-btn">
+        <button type="button" (click)="removeExtra(i)">
+          <i class="bi bi-trash3"></i>
+        </button>
+      </li>
+    </ul>
+    <!-- Fim lista Extra -->
+
+    <div class="column-inputs">
+      <div class="left-column">
+        <div class="input-file">
+          <label for="arquivo">Enviar foto:</label>
+          <input type="file" id="photo" formControlName="foto" required />
+        </div>
+
+        <text-input
+          [control]="fc.categoria"
+          [showErrorWhen]="isSubmitted"
+          type="text"
+          label="Categoria:"
+        ></text-input>
+
+        <text-input
+          [control]="fc.subcategoria"
+          [showErrorWhen]="isSubmitted"
+          type="text"
+          label="Subcategoria:"
+        ></text-input>
+      </div>
+
+      <div class="right-column">
+        <text-input
+          [control]="fc.tempoDePreparo"
+          [showErrorWhen]="isSubmitted"
+          type="text"
+          label="Quanto tempo leva:"
+        ></text-input>
+        <label for="textEx">
+          Ex. 1 Hora e 50 Minutos / 1 Hora / 50 Minutos
+        </label>
+        <hr />
+
+        <text-input
+          [control]="fc.porcoes"
+          [showErrorWhen]="isSubmitted"
+          type="number"
+          label="Quantas porções da para fazer:"
+        ></text-input>
+        <hr />
+
+        <div class="input-radio">
+          <label for="NivelDeDificuldade">
+            Qual o nivel de dificuldade da receita:
+          </label>
+          <div class="radio">
+            <input
+              type="radio"
+              formControlName="nivelDeDificuldade"
+              name="nivelDeDificuldade"
+              value="Facil"
+            />
+            <label for="Facil">Facil</label>
+          </div>
+          <div class="radio">
+            <input
+              type="radio"
+              formControlName="nivelDeDificuldade"
+              name="nivelDeDificuldade"
+              value="Medio"
+            />
+            <label for="Medio">Medio</label>
+          </div>
+          <div class="radio">
+            <input
+              type="radio"
+              formControlName="nivelDeDificuldade"
+              name="nivelDeDificuldade"
+              value="Dificil"
+            />
+            <label for="Dificil">Dificil</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>

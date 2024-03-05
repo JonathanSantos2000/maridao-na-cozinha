@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-form-recipe',
   templateUrl: './form-recipe.component.html',
   styleUrl: './form-recipe.component.css',
 })
-export class FormRecipeComponent {
+export class FormRecipeComponent implements OnInit {
+  
+  ngOnInit(): void {}
+
   nomeExtra: string = '';
   ingredientesExtra: string[] = [];
   modoDeFazerExtra: string = '';

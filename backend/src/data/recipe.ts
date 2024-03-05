@@ -2,6 +2,7 @@ export const recipe_foods: any[] = [
   {
     id: 1,
     nomeDaReceita: "Alfenins",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 coco grande ralado",
       "3 xícaras de água",
@@ -23,6 +24,7 @@ export const recipe_foods: any[] = [
   {
     id: 2,
     nomeDaReceita: "Amendoim Coberto",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 xícaras de açúcar",
       "2 xícaras de água",
@@ -46,6 +48,7 @@ export const recipe_foods: any[] = [
   {
     id: 3,
     nomeDaReceita: "Amendoim Crocante",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 xícaras de açúcar",
       "1/2 xícara de café (feito um pouco forte)",
@@ -70,6 +73,7 @@ export const recipe_foods: any[] = [
   {
     id: 4,
     nomeDaReceita: "Amor Em Pedaço",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "6 ovos",
       "250 g de açúcar",
@@ -94,6 +98,7 @@ export const recipe_foods: any[] = [
   {
     id: 5,
     nomeDaReceita: "Arroz À Grega",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 xícaras de arroz",
       "6 xícaras de água",
@@ -124,6 +129,7 @@ export const recipe_foods: any[] = [
   {
     id: 6,
     nomeDaReceita: "Arroz De Lavrador",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 colheres de sopa de azeite",
       "1 cebola",
@@ -150,6 +156,7 @@ export const recipe_foods: any[] = [
   {
     id: 7,
     nomeDaReceita: "Arroz Italiano",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de chá de arroz cru",
       "250 g de queijo mussarela",
@@ -178,6 +185,7 @@ export const recipe_foods: any[] = [
   {
     id: 8,
     nomeDaReceita: "Azeitona Recheada",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "200 g de manteiga",
       "2 gemas",
@@ -203,6 +211,7 @@ export const recipe_foods: any[] = [
   {
     id: 9,
     nomeDaReceita: "Bacalhau Ao Forno",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de bacalhau",
       "1/2 kg de batata",
@@ -250,6 +259,7 @@ export const recipe_foods: any[] = [
   {
     id: 10,
     nomeDaReceita: "Banana-Da-Terra Caramelada",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 bananas-da-terra maduras",
       "1 xícara de água",
@@ -272,6 +282,7 @@ export const recipe_foods: any[] = [
   {
     id: 11,
     nomeDaReceita: "Bananas Enroladas",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 dúzia de bananas-d'água",
       "250 g de presunto",
@@ -294,6 +305,7 @@ export const recipe_foods: any[] = [
   {
     id: 12,
     nomeDaReceita: "Barquetes De Coco",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 xícaras de farinha de trigo",
       "200 g de manteiga ou margarina",
@@ -328,6 +340,7 @@ export const recipe_foods: any[] = [
   {
     id: 13,
     nomeDaReceita: "Bengalinhas Vienenses",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de farinha de trigo",
       "2 colheres de sopa(rasas) de fermento",
@@ -354,6 +367,7 @@ export const recipe_foods: any[] = [
   {
     id: 14,
     nomeDaReceita: "Bife À Milanesa",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "5 a 6 bifes",
       "2 colheres de chá de pimenta e cominho",
@@ -378,6 +392,7 @@ export const recipe_foods: any[] = [
   {
     id: 15,
     nomeDaReceita: "Bife De Alface",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 ovos",
       "camarão seco moido a gosto",
@@ -401,6 +416,7 @@ export const recipe_foods: any[] = [
   {
     id: 16,
     nomeDaReceita: "Bife De Galinha À Milanesa",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de peito de galinha",
       "1 colher de sobremesa de sal",
@@ -427,6 +443,7 @@ export const recipe_foods: any[] = [
   {
     id: 17,
     nomeDaReceita: "Biribas",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "1 coco médio ralado",
@@ -450,6 +467,7 @@ export const recipe_foods: any[] = [
   {
     id: 18,
     nomeDaReceita: "Biscoitinhos",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 gema",
       "1 xícara de açúcar refinado",
@@ -476,6 +494,7 @@ export const recipe_foods: any[] = [
   {
     id: 19,
     nomeDaReceita: "Biscoitinhos Da Vovó",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 tablete de margarina (100 g)",
       "1 1/2 xícara de açúcar",
@@ -500,6 +519,7 @@ export const recipe_foods: any[] = [
   {
     id: 20,
     nomeDaReceita: "Biscoitos Com Suco De Laranja",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 3/4 de xícara de farinha de trigo",
       "1/2 xícara de manteiga ou margarina",
@@ -523,6 +543,7 @@ export const recipe_foods: any[] = [
   {
     id: 21,
     nomeDaReceita: "Biscoitos De Batata-Doce",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de açúcar",
       "2 xícaras de batata-doce cozida e passada no espremedor",
@@ -546,6 +567,7 @@ export const recipe_foods: any[] = [
   {
     id: 22,
     nomeDaReceita: "Biscoitos De Cerveja",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de farinha de trigo",
       "250 g de manteiga",
@@ -567,6 +589,7 @@ export const recipe_foods: any[] = [
   {
     id: 23,
     nomeDaReceita: "Biscoitos De Farinha De Arroz",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "10 colheres de sopa de farinha de arroz",
       "10 colheres de sopa de araruta",
@@ -590,6 +613,7 @@ export const recipe_foods: any[] = [
   {
     id: 24,
     nomeDaReceita: "Biscoitos De Maria",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 pacote grande de Maizena",
       "3 colheres de sopa de manteiga",
@@ -613,6 +637,7 @@ export const recipe_foods: any[] = [
   {
     id: 25,
     nomeDaReceita: "Biscoitos Delícia",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 xícara de fubá",
       "1 xícara de açúcar",
@@ -638,6 +663,7 @@ export const recipe_foods: any[] = [
   {
     id: 26,
     nomeDaReceita: "Biscoitos Duryea",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "100 g de açúcar",
       "120 g de farinha de trigo",
@@ -663,6 +689,7 @@ export const recipe_foods: any[] = [
   {
     id: 27,
     nomeDaReceita: "Boca De Lobo I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 1/2 copo de farinha de trigo",
       "1 colher de sopa de queijo parmesão ralado",
@@ -688,6 +715,7 @@ export const recipe_foods: any[] = [
   {
     id: 28,
     nomeDaReceita: "Boca De Lobo II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 gemas",
       "3 colheres de sopa de manteiga",
@@ -713,6 +741,7 @@ export const recipe_foods: any[] = [
   {
     id: 29,
     nomeDaReceita: "Bolachas De Queijo",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "250 g de queijo parmesão ralado",
       "250 g de margarina",
@@ -736,6 +765,7 @@ export const recipe_foods: any[] = [
   {
     id: 30,
     nomeDaReceita: "Bolachinhas Ana Paula",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "10 colheres de sopa (cheias) de farinha de trigo",
       "9 colheres de sopa (rasas) de açúcar",
@@ -759,6 +789,7 @@ export const recipe_foods: any[] = [
   {
     id: 31,
     nomeDaReceita: "Bolachinhas De Goma",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de goma (peneirada)",
       "400 g de açúcar",
@@ -782,6 +813,7 @@ export const recipe_foods: any[] = [
   {
     id: 32,
     nomeDaReceita: "Bolinhas De Queijo",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 xícara de chá de queijo parmesão ralado",
       "1/2 xícara de chá de queijo-de-minas ou prato ralado",
@@ -808,6 +840,7 @@ export const recipe_foods: any[] = [
   {
     id: 33,
     nomeDaReceita: "Bolachinhas Ana Paula",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "10 colheres de sopa(cheias) de farinha de trigo",
       "9 colheres de sopa(rasas) de açúcar",
@@ -830,6 +863,7 @@ export const recipe_foods: any[] = [
   {
     id: 34,
     nomeDaReceita: "Bolachinhas De Goma",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de goma (peneirada)",
       "400 g de açúcar",
@@ -853,6 +887,7 @@ export const recipe_foods: any[] = [
   {
     id: 35,
     nomeDaReceita: "Bolinhos De Batata",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "400 g de mortadela cortada em cubinho",
       "1 kg de batata passada no espremedor",
@@ -878,6 +913,7 @@ export const recipe_foods: any[] = [
   {
     id: 36,
     nomeDaReceita: "Bolinhos De Fubá E Cebola",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 xícaras de fubá",
       "1/2 xícara de farinha de trigo",
@@ -905,6 +941,7 @@ export const recipe_foods: any[] = [
   {
     id: 37,
     nomeDaReceita: "Bolo Aipim E Camarão",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de camarões",
       "1/2 kg de aipim cozido",
@@ -935,6 +972,7 @@ export const recipe_foods: any[] = [
   {
     id: 38,
     nomeDaReceita: "Bolo Americano",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de açúcar",
       "3 xícaras de farinha de trigo",
@@ -960,6 +998,7 @@ export const recipe_foods: any[] = [
   {
     id: 39,
     nomeDaReceita: "Bolo Chifon",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 xícara de chocolate em 3/4 de xícara de água morna",
       "5 ovos",
@@ -1009,6 +1048,7 @@ export const recipe_foods: any[] = [
   {
     id: 40,
     nomeDaReceita: "Bolo Cremoso",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 colheres de sopa de manteiga",
       "1 l de leite menos um copo",
@@ -1036,6 +1076,7 @@ export const recipe_foods: any[] = [
   {
     id: 41,
     nomeDaReceita: "Bolo Cremoso De Batata",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de batata-inglesa",
       "1 kg de açúcar",
@@ -1063,6 +1104,7 @@ export const recipe_foods: any[] = [
   {
     id: 42,
     nomeDaReceita: "Bolo De Aipim I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 xícaras de aipim ralado",
       "3 xícaras de açúcar",
@@ -1087,6 +1129,7 @@ export const recipe_foods: any[] = [
   {
     id: 43,
     nomeDaReceita: "Bolo De Aipim II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 colheres de sopa de fermento de pão",
       "3 colheres de sopa de açúcar",
@@ -1108,6 +1151,7 @@ export const recipe_foods: any[] = [
   {
     id: 44,
     nomeDaReceita: "Bolo De Aipim III",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de aipim ralado sem espremer",
       "2 xícaras de açúcar",
@@ -1134,6 +1178,7 @@ export const recipe_foods: any[] = [
   {
     id: 45,
     nomeDaReceita: "Bolo De Chocolate",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 1/2 xícaras de farinha de trigo",
       "2 xícaras de açúcar",
@@ -1177,6 +1222,7 @@ export const recipe_foods: any[] = [
   {
     id: 46,
     nomeDaReceita: "Bolo De Coca-Cola",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 xícaras de farinha de trigo",
       "2 1/2 xícaras de açúcar",
@@ -1216,6 +1262,7 @@ export const recipe_foods: any[] = [
   {
     id: 47,
     nomeDaReceita: "Bolo De Aipim Cru",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de aipim ralado e espremido",
       "1 coco ralado(pela parte de trás)",
@@ -1241,6 +1288,7 @@ export const recipe_foods: any[] = [
   {
     id: 48,
     nomeDaReceita: "Bolo De Arroz",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de arroz",
       "1/2 kg de açúcar",
@@ -1262,6 +1310,7 @@ export const recipe_foods: any[] = [
   {
     id: 49,
     nomeDaReceita: "Bolo De Banana I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 xícaras de açúcar",
       "3 xícaras de farinha de trigo",
@@ -1288,6 +1337,7 @@ export const recipe_foods: any[] = [
   {
     id: 50,
     nomeDaReceita: "Bolo De Banana II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 bananas nanicas bem maduras",
       "1/2 copo de óleo",
@@ -1312,6 +1362,7 @@ export const recipe_foods: any[] = [
   {
     id: 51,
     nomeDaReceita: "Bolo De Casamento",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "8 ovos",
       "1/2 kg de manteiga",
@@ -1336,6 +1387,7 @@ export const recipe_foods: any[] = [
   {
     id: 52,
     nomeDaReceita: "Bolo De Cenoura",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "250 g de cenoura ralada",
       "5 colheres de sopa de farinha láctea",
@@ -1363,6 +1415,7 @@ export const recipe_foods: any[] = [
   {
     id: 53,
     nomeDaReceita: "Bolo De Farinha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "11 colheres de sopa de farinha de mandioca",
       "11 colheres de sopa de açúcar",
@@ -1388,6 +1441,7 @@ export const recipe_foods: any[] = [
   {
     id: 54,
     nomeDaReceita: "Bolo De Farinha De Tapioca",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "6 ovos",
       "3 xícaras de farinha de tapioca",
@@ -1412,6 +1466,7 @@ export const recipe_foods: any[] = [
   {
     id: 55,
     nomeDaReceita: "Bolo De Laranja I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 ovos (claras em neve)",
       "2 colheres de sopa de manteiga",
@@ -1436,6 +1491,7 @@ export const recipe_foods: any[] = [
   {
     id: 56,
     nomeDaReceita: "Bolo De Laranja II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de farinha de trigo",
       "2 xícaras de açúcar",
@@ -1459,6 +1515,7 @@ export const recipe_foods: any[] = [
   {
     id: 57,
     nomeDaReceita: "Bolo De Milho I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 ovos",
       "1 xícara de açúcar",
@@ -1485,6 +1542,7 @@ export const recipe_foods: any[] = [
   {
     id: 58,
     nomeDaReceita: "Bolo De Milho II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 colher de sopa de farinha de trigo",
       "3 colheres de sopa(bem cheias) de vitamilho",
@@ -1513,6 +1571,7 @@ export const recipe_foods: any[] = [
   {
     id: 59,
     nomeDaReceita: "Bolo De Natal Moreno",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 xícara de chá de margarina",
       "5 ovos",
@@ -1543,6 +1602,7 @@ export const recipe_foods: any[] = [
   {
     id: 60,
     nomeDaReceita: "Bolo De Pão",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 1/2 pão(grande)",
       "2 ovos inteiros",
@@ -1567,6 +1627,7 @@ export const recipe_foods: any[] = [
   {
     id: 61,
     nomeDaReceita: "Bolo De Pão-De-Ló",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 ovos",
       "1 colher de sopa de manteiga",
@@ -1592,6 +1653,7 @@ export const recipe_foods: any[] = [
   {
     id: 62,
     nomeDaReceita: "Bolo De Queijo",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 ovos",
       "3 colheres de sopa de farinha de trigo",
@@ -1619,6 +1681,7 @@ export const recipe_foods: any[] = [
   {
     id: 63,
     nomeDaReceita: "Bolo De Repolho",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 repolho cortado bem miúdo e cozido em água e sal",
       "3 ovos",
@@ -1648,6 +1711,7 @@ export const recipe_foods: any[] = [
   {
     id: 64,
     nomeDaReceita: "Bolo De Tapioca I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de açúcar",
       "3 xícaras de tapioca",
@@ -1674,6 +1738,7 @@ export const recipe_foods: any[] = [
   {
     id: 65,
     nomeDaReceita: "Bolo De Tapioca II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 ovos",
       "2 xícaras de açúcar",
@@ -1700,6 +1765,7 @@ export const recipe_foods: any[] = [
   {
     id: 66,
     nomeDaReceita: "Bolo De Tapioca III",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "6 ovos",
       "3 colheres de sopa de manteiga",
@@ -1723,6 +1789,7 @@ export const recipe_foods: any[] = [
   {
     id: 67,
     nomeDaReceita: "Bolo De Verdura I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de chuchu cortadinho cozido na água e sal",
       "2 xícaras de cenoura cortadinha cozida na água e sal",
@@ -1751,6 +1818,7 @@ export const recipe_foods: any[] = [
   {
     id: 68,
     nomeDaReceita: "Bolo De Verdura II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 cenouras",
       "2 chuchus",
@@ -1778,6 +1846,7 @@ export const recipe_foods: any[] = [
   {
     id: 69,
     nomeDaReceita: "Bolo De Nescau",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 1/2 xícaras de farinha de trigo",
       "2 xícaras de açúcar",
@@ -1814,6 +1883,7 @@ export const recipe_foods: any[] = [
   {
     id: 70,
     nomeDaReceita: "Bolo De Verdura III",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 ovos",
       "1 xícara de farinha de trigo",
@@ -1848,6 +1918,7 @@ export const recipe_foods: any[] = [
   {
     id: 71,
     nomeDaReceita: "Bolo Déa",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 ovos",
       "3 colheres de sopa de farinha de trigo",
@@ -1874,6 +1945,7 @@ export const recipe_foods: any[] = [
   {
     id: 72,
     nomeDaReceita: "Bolo Delicioso",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "1 lata de leite de vaca",
@@ -1898,6 +1970,7 @@ export const recipe_foods: any[] = [
   {
     id: 73,
     nomeDaReceita: "Bolo Florense",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 xícaras de açúcar",
       "3 xícaras de farinha de trigo",
@@ -1933,6 +2006,7 @@ export const recipe_foods: any[] = [
   {
     id: 74,
     nomeDaReceita: "Bolo Luar De Junho",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 xícara de manteiga",
       "1 1/2 xícara de açúcar",
@@ -1981,6 +2055,7 @@ export const recipe_foods: any[] = [
   {
     id: 75,
     nomeDaReceita: "Bolo Marítimo",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Massa: 2 xícaras de chá de farinha de trigo",
       "2 colheres de sopa de margarina",
@@ -2020,6 +2095,7 @@ export const recipe_foods: any[] = [
   {
     id: 76,
     nomeDaReceita: "Bolo Regina",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "200 g de manteiga",
       "250 g de açúcar",
@@ -2044,6 +2120,7 @@ export const recipe_foods: any[] = [
   {
     id: 77,
     nomeDaReceita: "Bolo Salgado De Peixe",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Massa: 2 ovos",
       "4 colheres de sopa de margarina",
@@ -2089,6 +2166,7 @@ export const recipe_foods: any[] = [
   {
     id: 78,
     nomeDaReceita: "Bolo Úmido De Maracujá",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 xícara de chá de margarina",
       "1 1/2 xícara de chá de açúcar",
@@ -2115,6 +2193,7 @@ export const recipe_foods: any[] = [
   {
     id: 79,
     nomeDaReceita: "Bolo Vila Velha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de açúcar",
       "3 ovos",
@@ -2147,6 +2226,7 @@ export const recipe_foods: any[] = [
   {
     id: 80,
     nomeDaReceita: "Bombinhas De Morango",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de chá de água",
       "1 colher de sopa de manteiga",
@@ -2168,6 +2248,7 @@ export const recipe_foods: any[] = [
   {
     id: 81,
     nomeDaReceita: "Brigadeiro",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "2 colheres de sopa (rasas) de manteiga",
@@ -2189,6 +2270,7 @@ export const recipe_foods: any[] = [
   {
     id: 82,
     nomeDaReceita: "Cachorro-Quente De Assadeira",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "500 g de farinha de trigo",
       "3 tabletes de fermento de pão (15 g cada)",
@@ -2215,6 +2297,7 @@ export const recipe_foods: any[] = [
   {
     id: 83,
     nomeDaReceita: "Café Italiano",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["400 g de leite em pó", "4 colheres de sopa de Nescau"],
     modoDeFazer:
       "Misture todos os ingredientes e guarde em vaso hermeticamente fechado. Coloque 3 colheres de chá de café italiano em uma xícara pequena de água fervente. Adoce a gosto.",
@@ -2232,6 +2315,7 @@ export const recipe_foods: any[] = [
   {
     id: 84,
     nomeDaReceita: "Caipirinha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "400 g de farinha de trigo",
       "125 g de açúcar",
@@ -2256,6 +2340,7 @@ export const recipe_foods: any[] = [
   {
     id: 85,
     nomeDaReceita: "Cajuzinhos De Amendoim",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 claras em neve",
       "Açúcar",
@@ -2278,6 +2363,7 @@ export const recipe_foods: any[] = [
   {
     id: 86,
     nomeDaReceita: "Camafeus",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "250 g de nozes",
       "100 g de amêndoas moídas",
@@ -2301,6 +2387,7 @@ export const recipe_foods: any[] = [
   {
     id: 87,
     nomeDaReceita: "Camarão À Grega",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de camarões",
       "1 limão",
@@ -2327,6 +2414,7 @@ export const recipe_foods: any[] = [
   {
     id: 88,
     nomeDaReceita: "Caramelizar",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 copos de açúcar comum",
       "4 copos de açúcar doçúcar granulado",
@@ -2350,6 +2438,7 @@ export const recipe_foods: any[] = [
   {
     id: 89,
     nomeDaReceita: "Cavaca",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de farinha de trigo",
       "1 ovo",
@@ -2374,6 +2463,7 @@ export const recipe_foods: any[] = [
   {
     id: 90,
     nomeDaReceita: "Cebolas Caprichadas",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 pão de forma sem casca torrado",
       "1 envelope de creme de cebola",
@@ -2398,6 +2488,7 @@ export const recipe_foods: any[] = [
   {
     id: 91,
     nomeDaReceita: "Cenoura Recheada",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "6 cenouras grandes raspadas e cozidas",
       "1 colher de sopa de manteiga",
@@ -2423,6 +2514,7 @@ export const recipe_foods: any[] = [
   {
     id: 92,
     nomeDaReceita: "Chocolate Crocante",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de aveia",
       "1 1/2 xícara de açúcar",
@@ -2447,6 +2539,7 @@ export const recipe_foods: any[] = [
   {
     id: 93,
     nomeDaReceita: "Chocolate Do Domador",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "1 tablete grande do Chocolate Superior Meio Amargo",
@@ -2471,6 +2564,7 @@ export const recipe_foods: any[] = [
   {
     id: 94,
     nomeDaReceita: "Choquitos Crocantes",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["200 g de açúcar", "200 g de manteiga", "2 ovos inteiros"],
     modoDeFazer:
       "Bata como gemada. Em seguida, triture um pacote de bolacha Maria, deixando alguns pedaços grandes e junte ao creme com 10 colheres de sopa(cheias) de Nescau. Coloque no congelador em forma de canudinhos em papel laminado.",
@@ -2488,6 +2582,7 @@ export const recipe_foods: any[] = [
   {
     id: 95,
     nomeDaReceita: "Chuchu Com Molho Branco",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de chuchu",
       "1 colher de sopa de manteiga derretida",
@@ -2509,6 +2604,7 @@ export const recipe_foods: any[] = [
   {
     id: 96,
     nomeDaReceita: "Chus",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 1/2 xícara de água",
       "5 colheres de sopa de manteiga",
@@ -2532,6 +2628,7 @@ export const recipe_foods: any[] = [
   {
     id: 97,
     nomeDaReceita: "Cocada De Forno I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "700 g de açúcar",
       "1 coco ralado(pela parte de trás)",
@@ -2555,6 +2652,7 @@ export const recipe_foods: any[] = [
   {
     id: 98,
     nomeDaReceita: "Cocada De Forno II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 coco ralado(pela parte de trás)",
       "1/2 kg de açúcar",
@@ -2579,6 +2677,7 @@ export const recipe_foods: any[] = [
   {
     id: 99,
     nomeDaReceita: "Coxinha De Galinha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 canecas de caldo de galinha",
       "2 canecas de leite de vaca",
@@ -2608,6 +2707,7 @@ export const recipe_foods: any[] = [
   {
     id: 100,
     nomeDaReceita: "Creme Branco",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 queijo Catupiry ou Cremelino",
       "1 cebola batida",
@@ -2631,6 +2731,7 @@ export const recipe_foods: any[] = [
   {
     id: 101,
     nomeDaReceita: "Creme Chantilly",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 colheres de sopa de manteiga",
       "3 colheres de sopa de açúcar",
@@ -2654,6 +2755,7 @@ export const recipe_foods: any[] = [
   {
     id: 102,
     nomeDaReceita: "Creme De Batata",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 tablete de caldo de carne dissolvido em 1/2 l de água",
       "10 batatas grandes",
@@ -2680,6 +2782,7 @@ export const recipe_foods: any[] = [
   {
     id: 103,
     nomeDaReceita: "Creme De Galinha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 peitos grandes de galinha",
       "3 xícaras de caldo de galinha",
@@ -2709,6 +2812,7 @@ export const recipe_foods: any[] = [
   {
     id: 104,
     nomeDaReceita: "Creme De Manteiga",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "250 g de manteiga",
       "4 gemas",
@@ -2731,6 +2835,7 @@ export const recipe_foods: any[] = [
   {
     id: 105,
     nomeDaReceita: "Creme De Pasteleiro",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 colheres de sopa de farinha de trigo",
       "1 1/2 xícara de chá de leite",
@@ -2753,6 +2858,7 @@ export const recipe_foods: any[] = [
   {
     id: 106,
     nomeDaReceita: "Creme Para Sanduíche",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de creme de leite",
       "3 colheres de sopa de vinagre ou limão",
@@ -2774,6 +2880,7 @@ export const recipe_foods: any[] = [
   {
     id: 107,
     nomeDaReceita: "Croquete De Bacalhau",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "250 g de bacalhau aferventado e resfriado",
       "2 colheres de sopa de azeite",
@@ -2802,6 +2909,7 @@ export const recipe_foods: any[] = [
   {
     id: 108,
     nomeDaReceita: "Croquete De Carne Assada",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de leite",
       "2 colheres de sopa de Maizena",
@@ -2824,6 +2932,7 @@ export const recipe_foods: any[] = [
   {
     id: 109,
     nomeDaReceita: "Delícias De Passas",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "1 lata de açúcar(lata do leite condensado)",
@@ -2847,6 +2956,7 @@ export const recipe_foods: any[] = [
   {
     id: 110,
     nomeDaReceita: "Empadas De Aipim",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de aipim cozido em água e sal e passado na máquina",
       "1 colher de sopa de manteiga",
@@ -2868,6 +2978,7 @@ export const recipe_foods: any[] = [
   {
     id: 111,
     nomeDaReceita: "Empadas De Liquidificador",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "5 ovos inteiros",
       "1 xícara de leite",
@@ -2893,6 +3004,7 @@ export const recipe_foods: any[] = [
   {
     id: 112,
     nomeDaReceita: "Esfihas",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 colheres de sopa de fermento fresco",
       "1 colher de sobremesa de açúcar",
@@ -2915,6 +3027,7 @@ export const recipe_foods: any[] = [
   {
     id: 113,
     nomeDaReceita: "Estrelinhas De Natal",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "150 g de manteiga ou margarina",
       "2 1/2 xícaras de açúcar",
@@ -2943,6 +3056,7 @@ export const recipe_foods: any[] = [
   {
     id: 114,
     nomeDaReceita: "Fígado Empanado",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "500 g de fígado de boi cortados em fatias",
       "5 colheres de sopa(cheias) de farinha de rosca",
@@ -2968,6 +3082,7 @@ export const recipe_foods: any[] = [
   {
     id: 115,
     nomeDaReceita: "Glacê De Caldo De Limão",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Açúcar",
       "Caldo de limão(a gosto)",
@@ -2989,6 +3104,7 @@ export const recipe_foods: any[] = [
   {
     id: 116,
     nomeDaReceita: "Glacê De Chocolate",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "125 g de chocolate fino picado",
       "200 g de açúcar refinado",
@@ -3010,6 +3126,7 @@ export const recipe_foods: any[] = [
   {
     id: 117,
     nomeDaReceita: "Glacê De Chocolate Com Manteiga",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "250 g de açúcar refinado",
       "125 g de chocolate em pó",
@@ -3031,6 +3148,7 @@ export const recipe_foods: any[] = [
   {
     id: 118,
     nomeDaReceita: "Glacê De Fondan",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de açúcar glaçúcar",
       "9 colheres de sopa de leite de coco",
@@ -3050,6 +3168,7 @@ export const recipe_foods: any[] = [
   {
     id: 119,
     nomeDaReceita: "Glacê De Laranja Para Tortas",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["Caldo de 2 laranjas", "3 colheres de sopa de açúcar"],
     modoDeFazer:
       "Junte o caldo de 2 laranjas e 3 colheres de sopa de açúcar, leve ao fogo para engrossar e despeje quente sobre a torta.",
@@ -3067,6 +3186,7 @@ export const recipe_foods: any[] = [
   {
     id: 120,
     nomeDaReceita: "Glacê De Minuto",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 xícara de Nescau",
       "1/4 de xícara de leite",
@@ -3090,6 +3210,7 @@ export const recipe_foods: any[] = [
   {
     id: 121,
     nomeDaReceita: "Glacê Mármore",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 claras",
       "Suco de 1 limão",
@@ -3111,6 +3232,7 @@ export const recipe_foods: any[] = [
   {
     id: 122,
     nomeDaReceita: "Glacê Para Fazer Flores",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 claras",
       "1 colher de sopa de suco de limão",
@@ -3132,6 +3254,7 @@ export const recipe_foods: any[] = [
   {
     id: 123,
     nomeDaReceita: "Glacê Para Ornamentar Bolo",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 claras em neve",
       "1 pitada de sal",
@@ -3153,6 +3276,7 @@ export const recipe_foods: any[] = [
   {
     id: 124,
     nomeDaReceita: "Iogurte Caseiro",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 l de leite de vaca",
       "4 colheres de sopa de leite em pó",
@@ -3174,6 +3298,7 @@ export const recipe_foods: any[] = [
   {
     id: 125,
     nomeDaReceita: "Lasanha de Carne",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 pacote de lasanha",
       "200 g de queijo prato ou mussarela",
@@ -3197,6 +3322,7 @@ export const recipe_foods: any[] = [
   {
     id: 126,
     nomeDaReceita: "Leite Condensado",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 l de leite de vaca",
       "900 g de açúcar",
@@ -3219,6 +3345,7 @@ export const recipe_foods: any[] = [
   {
     id: 127,
     nomeDaReceita: "Língua-De-Gato",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "150 g de farinha de trigo",
       "150 g de fécula de batata",
@@ -3243,6 +3370,7 @@ export const recipe_foods: any[] = [
   {
     id: 128,
     nomeDaReceita: "Macarrão",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "500 g de talharim",
       "1 1/2 l de água",
@@ -3268,6 +3396,7 @@ export const recipe_foods: any[] = [
   {
     id: 129,
     nomeDaReceita: "Maionese De Legumes",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 batata",
       "1 cenoura",
@@ -3293,6 +3422,7 @@ export const recipe_foods: any[] = [
   {
     id: 130,
     nomeDaReceita: "Manauê Com Glacê De Laranja",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de açúcar",
       "2 colheres de sopa de margarina",
@@ -3317,6 +3447,7 @@ export const recipe_foods: any[] = [
   {
     id: 131,
     nomeDaReceita: "Manauê Mineiro",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "300 g de açúcar",
       "200 g de manteiga",
@@ -3342,6 +3473,7 @@ export const recipe_foods: any[] = [
   {
     id: 132,
     nomeDaReceita: "Mandioca Ao Forno",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de mandioca",
       "Sal a gosto",
@@ -3366,6 +3498,7 @@ export const recipe_foods: any[] = [
   {
     id: 133,
     nomeDaReceita: "Massa Básica Para Panqueca",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 xícara de farinha de trigo",
       "1 pitada de sal",
@@ -3390,6 +3523,7 @@ export const recipe_foods: any[] = [
   {
     id: 134,
     nomeDaReceita: "Massa Básica Para Torta Aberta Simples",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 1/4 de xícara de farinha de trigo",
       "8 colheres de sopa de manteiga ou margarina gelada(cortada em pedaços)",
@@ -3412,6 +3546,7 @@ export const recipe_foods: any[] = [
   {
     id: 135,
     nomeDaReceita: "Massa Para Canudinho",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 1/2 kg de farinha de trigo",
       "1 ovo",
@@ -3436,6 +3571,7 @@ export const recipe_foods: any[] = [
   {
     id: 136,
     nomeDaReceita: "Massa Salgada Com Água Quente",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "300 g de farinha de trigo",
       "150 g de manteiga",
@@ -3457,6 +3593,7 @@ export const recipe_foods: any[] = [
   {
     id: 137,
     nomeDaReceita: "Mousse De Ameixas",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Ameixa",
       "Leite condensado",
@@ -3483,6 +3620,7 @@ export const recipe_foods: any[] = [
   {
     id: 138,
     nomeDaReceita: "Mulatinho",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Ameixa preta sem caroço",
       "Leite condensado",
@@ -3505,6 +3643,7 @@ export const recipe_foods: any[] = [
   {
     id: 139,
     nomeDaReceita: "Nhoque Frito",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Batata",
       "Farinha de trigo",
@@ -3529,6 +3668,7 @@ export const recipe_foods: any[] = [
   {
     id: 140,
     nomeDaReceita: "Olho-De-Sogra",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Coco ralado",
       "Leite condensado",
@@ -3552,6 +3692,7 @@ export const recipe_foods: any[] = [
   {
     id: 141,
     nomeDaReceita: "Paciência",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Açúcar refinado",
       "Farinha de trigo",
@@ -3574,6 +3715,7 @@ export const recipe_foods: any[] = [
   {
     id: 142,
     nomeDaReceita: "Paçoca De Farinha Láctea",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["Amendoim torrado", "Farinha láctea", "Açúcar"],
     modoDeFazer:
       "Asse o amendoim no forno, não deixando queimar. Passe em seguida na máquina (peça fina) e misture a farinha láctea e o açúcar.",
@@ -3591,6 +3733,7 @@ export const recipe_foods: any[] = [
   {
     id: 143,
     nomeDaReceita: "Paçoca De Inhame",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["Inhame", "Açúcar", "Coco ralado"],
     modoDeFazer:
       "Cozinhe o inhame de véspera e deixe dormir no escorredor. No dia seguinte, rale-o e junte o coco e o açúcar. Misture tudo com um garfo e arrume numa travessa.",
@@ -3608,6 +3751,7 @@ export const recipe_foods: any[] = [
   {
     id: 144,
     nomeDaReceita: "Paçoca Simples",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["Amendoim torrado", "Farinha de mandioca", "Açúcar"],
     modoDeFazer:
       "Asse o amendoim no forno, não deixando queimar. Passe em seguida na máquina (peça fina), junte a farinha e o açúcar e torne a passar na máquina.",
@@ -3625,6 +3769,7 @@ export const recipe_foods: any[] = [
   {
     id: 145,
     nomeDaReceita: "Pãezinhos II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Leite morno",
       "Fermento granulado",
@@ -3651,6 +3796,7 @@ export const recipe_foods: any[] = [
   {
     id: 146,
     nomeDaReceita: "Pãezinhos III",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Leite condensado",
       "Água morna",
@@ -3678,6 +3824,7 @@ export const recipe_foods: any[] = [
   {
     id: 147,
     nomeDaReceita: "Pãezinhos De Laranja",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Farinha de trigo",
       "Fermento",
@@ -3703,6 +3850,7 @@ export const recipe_foods: any[] = [
   {
     id: 148,
     nomeDaReceita: "Pãezinhos De Queijo I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Farinha de trigo",
       "Açúcar",
@@ -3730,6 +3878,7 @@ export const recipe_foods: any[] = [
   {
     id: 149,
     nomeDaReceita: "Pãezinhos De Queijo II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Leite quente",
       "Caldo de galinha",
@@ -3755,6 +3904,7 @@ export const recipe_foods: any[] = [
   {
     id: 150,
     nomeDaReceita: "Pãezinhos Delícia Com Iogurte",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Fermento seco ou tablete",
       "Açúcar",
@@ -3782,6 +3932,7 @@ export const recipe_foods: any[] = [
   {
     id: 151,
     nomeDaReceita: "Panetone I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Leite condensado",
       "Leite de vaca",
@@ -3810,6 +3961,7 @@ export const recipe_foods: any[] = [
   {
     id: 152,
     nomeDaReceita: "Panetone II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Açúcar",
       "Fermento de pão ou fermento seco para pão",
@@ -3840,6 +3992,7 @@ export const recipe_foods: any[] = [
   {
     id: 153,
     nomeDaReceita: "Panetone III",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Farinha de trigo",
       "Fermento fresco",
@@ -3869,6 +4022,7 @@ export const recipe_foods: any[] = [
   {
     id: 154,
     nomeDaReceita: "Panquecas De Batatas",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["Batata", "Farinha de trigo", "Ovo", "Sal"],
     modoDeFazer:
       "Rale as batatas cruas, junte a farinha de trigo, o ovo e o sal. Frite na gordura as colheradas, achatando-as.",
@@ -3886,6 +4040,7 @@ export const recipe_foods: any[] = [
   {
     id: 155,
     nomeDaReceita: "Pão Caseiro",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Farinha de trigo",
       "Fermento para pão",
@@ -3909,6 +4064,7 @@ export const recipe_foods: any[] = [
   {
     id: 156,
     nomeDaReceita: "Pão De Abóbora",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Leite condensado",
       "Fermento biológico",
@@ -3934,6 +4090,7 @@ export const recipe_foods: any[] = [
   {
     id: 157,
     nomeDaReceita: "Pão De Assadeira",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Ovos",
       "Farinha de trigo",
@@ -3960,6 +4117,7 @@ export const recipe_foods: any[] = [
   {
     id: 158,
     nomeDaReceita: "Pão De Banana",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Manteiga ou margarina",
       "Açúcar",
@@ -3987,6 +4145,7 @@ export const recipe_foods: any[] = [
   {
     id: 159,
     nomeDaReceita: "Pão De Batata I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["Batata-do-reino", "Maizena", "Manteiga", "Ovo", "Sal"],
     modoDeFazer:
       "Cozinhe as batatas na água e sal. Passe no espremedor e amasse com os outros ingredientes. Leve ao fogo até soltar da panela. Modele as bolinhas com a massa ainda quente. Pincele com gema. Leve ao forno em forminhas untadas com manteiga. Retire do forno logo que dourar.",
@@ -4004,6 +4163,7 @@ export const recipe_foods: any[] = [
   {
     id: 160,
     nomeDaReceita: "Pão De Forma I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Leite morno",
       "Água morna",
@@ -4030,6 +4190,7 @@ export const recipe_foods: any[] = [
   {
     id: 161,
     nomeDaReceita: "Pão De Forma II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Farinha de trigo",
       "Margarina",
@@ -4056,6 +4217,7 @@ export const recipe_foods: any[] = [
   {
     id: 162,
     nomeDaReceita: "Pão-De-Ló D'água",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["Ovos", "Açúcar", "Trigo", "Água"],
     modoDeFazer:
       "Bata as claras em neve, junte as gemas, o açúcar, misture delicadamente com a farinha de trigo e, por último, as colheres de água. Leve ao forno em tabuleiro untado.",
@@ -4073,6 +4235,7 @@ export const recipe_foods: any[] = [
   {
     id: 163,
     nomeDaReceita: "Pão De Mandioquinha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Leite condensado",
       "Fermento biológico",
@@ -4098,6 +4261,7 @@ export const recipe_foods: any[] = [
   {
     id: 164,
     nomeDaReceita: "Pão De Mel",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Leite condensado.",
       "Canela em pó.",
@@ -4125,6 +4289,7 @@ export const recipe_foods: any[] = [
   {
     id: 165,
     nomeDaReceita: "Pão De Milho",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Fermento para pão",
       "Farinha de trigo",
@@ -4150,6 +4315,7 @@ export const recipe_foods: any[] = [
   {
     id: 166,
     nomeDaReceita: "Pão De Milho Verde",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Milho verde",
       "Leite",
@@ -4174,6 +4340,7 @@ export const recipe_foods: any[] = [
   {
     id: 167,
     nomeDaReceita: "Pão De Minuto",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Leite morno",
       "Açúcar",
@@ -4201,6 +4368,7 @@ export const recipe_foods: any[] = [
   {
     id: 168,
     nomeDaReceita: "Pão De Sal",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "Água morna",
       "Fermento de pão (tablete ou granulado)",
@@ -4225,6 +4393,7 @@ export const recipe_foods: any[] = [
   {
     id: 169,
     nomeDaReceita: "Kanten",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "8 copos americano de água",
       "2 colheres de sopa de Kanten em pó",
@@ -4247,6 +4416,7 @@ export const recipe_foods: any[] = [
   {
     id: 170,
     nomeDaReceita: "Kare Rice",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "200 g de carne de porco cortada em cubos",
       "200 g de carne de vaca cortada em cubos",
@@ -4273,6 +4443,7 @@ export const recipe_foods: any[] = [
   {
     id: 171,
     nomeDaReceita: "Carne Desfiada",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 moyashi",
       "3 cebolas",
@@ -4309,6 +4480,7 @@ export const recipe_foods: any[] = [
   {
     id: 172,
     nomeDaReceita: "Carne De Porco Em Tiras Com Pimentões",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "500 g de lombo de porco",
       "3 pimentões médios",
@@ -4340,6 +4512,7 @@ export const recipe_foods: any[] = [
   {
     id: 173,
     nomeDaReceita: "Tropical Isla Margarita",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "para duas pessoas:",
       "100gr de camarão",
@@ -4371,6 +4544,7 @@ export const recipe_foods: any[] = [
   {
     id: 174,
     nomeDaReceita: "Bisteca Com Mandioquinha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de bisteca de porco",
       "6 colheres (sopa) de suco de limão",
@@ -4397,6 +4571,7 @@ export const recipe_foods: any[] = [
   {
     id: 175,
     nomeDaReceita: "Frango Dourado",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 cubinhos de Caldo de Galinha",
       "4 colheres (sopa) de vinho branco seco",
@@ -4422,6 +4597,7 @@ export const recipe_foods: any[] = [
   {
     id: 176,
     nomeDaReceita: "Frango A Passarinho",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 frango (cerca de 1 1/2 kg) cortado em pedaços pequenos",
       "3 cubinhos de Caldo de Galinha",
@@ -4445,6 +4621,7 @@ export const recipe_foods: any[] = [
   {
     id: 177,
     nomeDaReceita: "Picadinho Indiano",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 cebola ( média ) picadinha",
       "500 g de carne ( alcatra",
@@ -4479,6 +4656,7 @@ export const recipe_foods: any[] = [
   {
     id: 178,
     nomeDaReceita: "Abóbora Preciosa",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 Kg de filé de pescada  3 cubinhos de caldo de legumes Knorr",
       "1/2 xícara ( chá ) de vinho branco seco aquecido",
@@ -4505,6 +4683,7 @@ export const recipe_foods: any[] = [
   {
     id: 179,
     nomeDaReceita: "Pão De Cebola",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "04 copos de farinha de trigo",
       "01 colher (chá) de sal",
@@ -4532,6 +4711,7 @@ export const recipe_foods: any[] = [
   {
     id: 180,
     nomeDaReceita: "Pão De Milho",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "01 xícara de fubá",
       "01 xícara de farinha de trigo",
@@ -4558,6 +4738,7 @@ export const recipe_foods: any[] = [
   {
     id: 181,
     nomeDaReceita: "Macarrão Mediterrâneo",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 abobrinhas ( médias ) em rodelas cortadas ao meio",
       "Óleo para fritar",
@@ -4587,6 +4768,7 @@ export const recipe_foods: any[] = [
   {
     id: 182,
     nomeDaReceita: "Macarrão Com Lombo E Amendoim",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "½ Kg de lombo de porco em tiras",
       "4 colheres ( sopa ) de margarina",
@@ -4613,6 +4795,7 @@ export const recipe_foods: any[] = [
   {
     id: 183,
     nomeDaReceita: "Profiteroles",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 xícara de manteiga ou margarina",
       "1 xícara de água",
@@ -4635,6 +4818,7 @@ export const recipe_foods: any[] = [
   {
     id: 184,
     nomeDaReceita: "Salada De Parafuso E Peito De Peru Defumado",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 Pacote de Parafuso Premiata",
       "1 xícara de maionese",
@@ -4665,6 +4849,7 @@ export const recipe_foods: any[] = [
   {
     id: 185,
     nomeDaReceita: "Massa Profissional De Risoli",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 xícara chá de óleo",
       "01 cebola ralada",
@@ -4693,6 +4878,7 @@ export const recipe_foods: any[] = [
   {
     id: 186,
     nomeDaReceita: "Carpaccio De Beterraba",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 beterrabas grandes",
       "200 gramas de lulas limpas em anéis",
@@ -4719,6 +4905,7 @@ export const recipe_foods: any[] = [
   {
     id: 187,
     nomeDaReceita: "Coxa De Pato Com Dois Feijões",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 coxas de pato",
       "1 garrafa de vinho tinto",
@@ -4747,6 +4934,7 @@ export const recipe_foods: any[] = [
   {
     id: 188,
     nomeDaReceita: "Camarão Africana",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de camarão rosa",
       "½ litro de leite de coco",
@@ -4783,6 +4971,7 @@ export const recipe_foods: any[] = [
   {
     id: 189,
     nomeDaReceita: "Manezinho Pelado (Prato Típico De Goiânia)",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 prato fundo de mandioca ralada crua",
       "1 prato raso de açúcar",
@@ -4808,6 +4997,7 @@ export const recipe_foods: any[] = [
   {
     id: 190,
     nomeDaReceita: "Suco De Melão E Goiaba",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 goiabas vermelhas",
       "2 xícaras de água",
@@ -4831,6 +5021,7 @@ export const recipe_foods: any[] = [
   {
     id: 191,
     nomeDaReceita: "Sorvete Cremoso (Processo À Quente)",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 litro de leite",
       "1 xícara de chá de açúcar",
@@ -4857,6 +5048,7 @@ export const recipe_foods: any[] = [
   {
     id: 192,
     nomeDaReceita: "Doce De Batata Doce Com Leite De Coco",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 kg de batata-doce",
       "2 kg de açúcar",
@@ -4878,6 +5070,7 @@ export const recipe_foods: any[] = [
   {
     id: 193,
     nomeDaReceita: "Bobó De Frango",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "01 Kg de peito de frango em cubinhos",
       "Suco de limão",
@@ -4906,6 +5099,7 @@ export const recipe_foods: any[] = [
   {
     id: 194,
     nomeDaReceita: "Rosbife Com Ervas",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lagarto de uns 2 kg",
       "aproximadamente",
@@ -4930,6 +5124,7 @@ export const recipe_foods: any[] = [
   {
     id: 195,
     nomeDaReceita: "Peixe Ao Escabeche",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de filés ou postas de peixe",
       "1 cenoura cortada em rodelas",
@@ -4959,6 +5154,7 @@ export const recipe_foods: any[] = [
   {
     id: 196,
     nomeDaReceita: "Lentilha Com Costelinha De Porco",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de lentilha",
       "4 cubinhos de Caldo de Bacon",
@@ -4985,6 +5181,7 @@ export const recipe_foods: any[] = [
   {
     id: 197,
     nomeDaReceita: "Galinha Mineira",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 cubinhos de Caldo de Galinha",
       "1 xícara (chá) canjiquinha ( xerém)",
@@ -5008,6 +5205,7 @@ export const recipe_foods: any[] = [
   {
     id: 198,
     nomeDaReceita: "Sopa De Peixes E Frutos Do Mar",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 xícara de vinho branco seco",
       "2 e 1/2 xícaras de água",
@@ -5037,6 +5235,7 @@ export const recipe_foods: any[] = [
   {
     id: 199,
     nomeDaReceita: "Sanduíches Quentes",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/4 de xícara de picles picados",
       "1 xícara de queijo prato ou fundido amassado",
@@ -5061,6 +5260,7 @@ export const recipe_foods: any[] = [
   {
     id: 200,
     nomeDaReceita: "Picanha Recheada Com Abóbora",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 picanha",
       "2 dentes de alho espremidos",
@@ -5086,6 +5286,7 @@ export const recipe_foods: any[] = [
   {
     id: 201,
     nomeDaReceita: "Risotto Di Vongole",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "(4-6 porções)",
       "1 kg de vôngoles",
@@ -5117,6 +5318,7 @@ export const recipe_foods: any[] = [
   {
     id: 202,
     nomeDaReceita: "Arroz Chinês",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 copos de arroz",
       "250 gr de presunto picado",
@@ -5148,6 +5350,7 @@ export const recipe_foods: any[] = [
   {
     id: 203,
     nomeDaReceita: "Ervilha Na Manteiga",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 cebola pequena picadinha",
       "2 colheres (sopa) de margarina",
@@ -5170,6 +5373,7 @@ export const recipe_foods: any[] = [
   {
     id: 204,
     nomeDaReceita: "Gratinado Rápido",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "½ xícara (chá) de maionese",
       "½ xícara (chá) de leite de vaca",
@@ -5193,6 +5397,7 @@ export const recipe_foods: any[] = [
   {
     id: 205,
     nomeDaReceita: "Tzaziki (Para Carneiro Assado)",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 pepino pequeno pelado",
       "1/2xicara de oregano moído",
@@ -5217,6 +5422,7 @@ export const recipe_foods: any[] = [
   {
     id: 206,
     nomeDaReceita: "Sanduíche De Metro Com Salame",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "01 pão de 80 cm ou 1 metro",
       "maionese a gosto",
@@ -5242,6 +5448,7 @@ export const recipe_foods: any[] = [
   {
     id: 207,
     nomeDaReceita: "Queijadinha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "3 colheres de queijo ralado",
@@ -5264,6 +5471,7 @@ export const recipe_foods: any[] = [
   {
     id: 208,
     nomeDaReceita: "Tajem De Frango",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "01 kg de peito de frango cortado em cubinhos",
       "01 colher das de sopa de açafrão",
@@ -5294,6 +5502,7 @@ export const recipe_foods: any[] = [
   {
     id: 209,
     nomeDaReceita: "Pão Húngaro De Limão",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "30 g de fermento de pão ou 2 colheres de sopa de granulado",
       "1 colher de chá de sal",
@@ -5321,6 +5530,7 @@ export const recipe_foods: any[] = [
   {
     id: 210,
     nomeDaReceita: "Pãozinho Iracy",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de batata",
       "4 ovos",
@@ -5347,6 +5557,7 @@ export const recipe_foods: any[] = [
   {
     id: 211,
     nomeDaReceita: "Pasta De Queijo E Catchup",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 vidro de requeijão cremoso",
       "1 caixinha de queijo fundido",
@@ -5372,6 +5583,7 @@ export const recipe_foods: any[] = [
   {
     id: 212,
     nomeDaReceita: "Bolo Mexe E Remexe",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 ½ xicara de leite de coco",
       "3 ovos inteiros",
@@ -5399,6 +5611,7 @@ export const recipe_foods: any[] = [
   {
     id: 213,
     nomeDaReceita: "Cataplana De Borrego (Carneiro)",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "800 gr de borrego (carneiro)",
       "250 gr de batatas",
@@ -5432,6 +5645,7 @@ export const recipe_foods: any[] = [
   {
     id: 214,
     nomeDaReceita: "Amendoins / Amêndoas De Sobremesa",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["1 c. amendoins/amêndoas cruas", "1 c. açúcar", "1 c. água"],
     modoDeFazer:
       "Coloca-se tudo num tacho e vai-se mexendo sempre sem parar, o açúcar vai tomando ponto e só quando o açúcar estiver todo derretido e de cor castanha é que se despeja para um tabuleiro untado com manteiga mexendo com dois garfos para ficarem soltos. Faz o mesmo com amêndoas.",
@@ -5449,6 +5663,7 @@ export const recipe_foods: any[] = [
   {
     id: 215,
     nomeDaReceita: "Molotov",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["8 claras", "8 colher de açúcar", "Caramelo a gosto"],
     modoDeFazer:
       "Bater as claras em ponto firme. Juntar cada colher de açúcar por vez batendo bem entre cada colher. Acrescentar 3 ou 4 colheres de caramelo frio. Untar uma forma com caramelo. Colocar o preparo pressionando bem para não ficar com buracos. Levar ao forno (200º) pré-aquecido, 40 minutos, em banho-maria. Quando estiver cozido apagar o forno, entreabrir a porta e deixar assim até estar morno.Quem gostar pode cobrir com doce de ovos.",
@@ -5466,6 +5681,7 @@ export const recipe_foods: any[] = [
   {
     id: 216,
     nomeDaReceita: "Pudim De Queijo Fresco",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "200 grs queijo fresco",
       "2 dl natas",
@@ -5488,6 +5704,7 @@ export const recipe_foods: any[] = [
   {
     id: 217,
     nomeDaReceita: "Pão De Nozes E Passas",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 cp nozes picadas",
       "1 cp passas",
@@ -5514,6 +5731,7 @@ export const recipe_foods: any[] = [
   {
     id: 218,
     nomeDaReceita: "Torta cremosa de frango",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de trigo",
       "100 g de margarina",
@@ -5555,6 +5773,7 @@ export const recipe_foods: any[] = [
   {
     id: 219,
     nomeDaReceita: "Pão De Banana E Noz",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 1/2 c farinha",
       "1/2 c açúcar",
@@ -5581,6 +5800,7 @@ export const recipe_foods: any[] = [
   {
     id: 220,
     nomeDaReceita: "Doce De Travessa",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 c açúcar",
       "8 gemas",
@@ -5604,6 +5824,7 @@ export const recipe_foods: any[] = [
   {
     id: 221,
     nomeDaReceita: "Cabrito Assado",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 cabrito",
       "cebolas",
@@ -5633,6 +5854,7 @@ export const recipe_foods: any[] = [
   {
     id: 222,
     nomeDaReceita: "Patê De Atum",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de atum",
       "3 colheres de sopa de maionese",
@@ -5655,6 +5877,7 @@ export const recipe_foods: any[] = [
   {
     id: 223,
     nomeDaReceita: "Patê De Presunto",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "100 g de presunto",
       "2 colheres de sopa de maionese",
@@ -5677,6 +5900,7 @@ export const recipe_foods: any[] = [
   {
     id: 224,
     nomeDaReceita: "Pudim De Queijo",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "6 ovos",
       "1/2 litro de leite",
@@ -5700,6 +5924,7 @@ export const recipe_foods: any[] = [
   {
     id: 225,
     nomeDaReceita: "Queijadinha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 xícara de chá de coco ralado",
       "1 lata(200 g) de leite condensado",
@@ -5722,6 +5947,7 @@ export const recipe_foods: any[] = [
   {
     id: 226,
     nomeDaReceita: "Quindim Ducoco",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 vidro(200 ml) de leite de coco",
       "1 lata de leite condensado",
@@ -5746,6 +5972,7 @@ export const recipe_foods: any[] = [
   {
     id: 227,
     nomeDaReceita: "Rapadurinha De Coco",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "3 latas(mesma do leite) de açúcar",
@@ -5768,6 +5995,7 @@ export const recipe_foods: any[] = [
   {
     id: 228,
     nomeDaReceita: "Requeijão Caseiro",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 l de leite talhado",
       "200 g de margarina",
@@ -5791,6 +6019,7 @@ export const recipe_foods: any[] = [
   {
     id: 229,
     nomeDaReceita: "Rocombole De Batata",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de batata",
       "4 colheres de sopa de farinha de trigo",
@@ -5816,6 +6045,7 @@ export const recipe_foods: any[] = [
   {
     id: 230,
     nomeDaReceita: "Sonhos De Aipim",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de aipim",
       "1 ovo inteiro",
@@ -5840,6 +6070,7 @@ export const recipe_foods: any[] = [
   {
     id: 231,
     nomeDaReceita: "Torta De Abacaxi I",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 canecas de farinha de trigo",
       "2 canecas de açúcar",
@@ -5867,6 +6098,7 @@ export const recipe_foods: any[] = [
   {
     id: 232,
     nomeDaReceita: "Uvas Cobertas",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de uvas verdes",
       "1 coco ralado",
@@ -5891,6 +6123,7 @@ export const recipe_foods: any[] = [
   {
     id: 233,
     nomeDaReceita: "Bolo Salgado De Atum",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 ovos inteiros",
       "½ xícara de chá de óleo",
@@ -5918,6 +6151,7 @@ export const recipe_foods: any[] = [
   {
     id: 234,
     nomeDaReceita: "Arrumadinho De Feijão Verde",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de feijão verde",
       "Sal",
@@ -5946,6 +6180,7 @@ export const recipe_foods: any[] = [
   {
     id: 235,
     nomeDaReceita: "Farofa Rica",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 xícaras de fubá de milho",
       "1/2 xícara de leite quente",
@@ -5973,6 +6208,7 @@ export const recipe_foods: any[] = [
   {
     id: 236,
     nomeDaReceita: "Bolo De Macaxeira",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 kg de macaxeira crua (aipim)",
       "2 cocos",
@@ -5996,6 +6232,7 @@ export const recipe_foods: any[] = [
   {
     id: 237,
     nomeDaReceita: "Brigadeiro",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 ½ xícara de chá de leite em pó desnatado",
       "1 colher de sopa de multi adoçante",
@@ -6020,6 +6257,7 @@ export const recipe_foods: any[] = [
   {
     id: 238,
     nomeDaReceita: "Bolo De Canela Em Pó",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 colheres(sopa) de canela em pó",
       "2 copos de açúcar",
@@ -6047,6 +6285,7 @@ export const recipe_foods: any[] = [
   {
     id: 239,
     nomeDaReceita: "Caçarola Mineira",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "750 ml de leite",
       "13 colheres(sopa) de açúcar",
@@ -6070,6 +6309,7 @@ export const recipe_foods: any[] = [
   {
     id: 240,
     nomeDaReceita: "Brigadeirão",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 latas de leite condensado",
       "1 vidro pequeno de leite de coco",
@@ -6092,6 +6332,7 @@ export const recipe_foods: any[] = [
   {
     id: 241,
     nomeDaReceita: "Pão De Ameixa",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 colheres de sopa de açúcar",
       "6 xícaras de chá de farinha de trigo",
@@ -6119,6 +6360,7 @@ export const recipe_foods: any[] = [
   {
     id: 242,
     nomeDaReceita: "Quindim De Iaiá",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de farinha de trigo",
       "3 ovos",
@@ -6140,6 +6382,7 @@ export const recipe_foods: any[] = [
   {
     id: 243,
     nomeDaReceita: "Zaatar Caseiro (Tempero Sírio)",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "200g de orégano em pó",
       "300g de farinha de trigo",
@@ -6165,6 +6408,7 @@ export const recipe_foods: any[] = [
   {
     id: 244,
     nomeDaReceita: "Bolo De Carne",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1kg de carne moída magra",
       "1 xícara de miolo de pão dietético de dois dias em pedacinhos",
@@ -6197,6 +6441,7 @@ export const recipe_foods: any[] = [
   {
     id: 245,
     nomeDaReceita: "Pudim Salgado Ao Vapor Suave (Chawan Mushi)",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "É uma espécie de pudim",
       "no entanto salgado",
@@ -6232,6 +6477,7 @@ export const recipe_foods: any[] = [
   {
     id: 246,
     nomeDaReceita: "Filés De Linguado Com Tomate",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 tomate grande picado",
       "1 colher de sopa de cebola picada",
@@ -6259,6 +6505,7 @@ export const recipe_foods: any[] = [
   {
     id: 247,
     nomeDaReceita: "Frango Com Maçã Ao Curry",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 filés de peito de frango (cerca de 500g)",
       "2 maçãs fuji",
@@ -6287,6 +6534,7 @@ export const recipe_foods: any[] = [
   {
     id: 248,
     nomeDaReceita: "Cação Grelhado",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "500g de postas finas de cação",
       "3 colheres de sopa de suco de limão fresco",
@@ -6312,6 +6560,7 @@ export const recipe_foods: any[] = [
   {
     id: 249,
     nomeDaReceita: "Repolho Roxo Com Maçãs",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["700g de repolho roxo", "200g de maçã", "5g de limão"],
     modoDeFazer:
       "Lavar o repolho e picar bem fininho. Picar as maçãs em cubos médios e colocar o suco de limão. Refogar o repolho por 5 minutos junto com a maçã e sal",
@@ -6329,6 +6578,7 @@ export const recipe_foods: any[] = [
   {
     id: 250,
     nomeDaReceita: "Caldo De Piranha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 Piranhas grandes inteiras",
       "3 Cebolas inteiras",
@@ -6355,6 +6605,7 @@ export const recipe_foods: any[] = [
   {
     id: 251,
     nomeDaReceita: "Frigideira De Peixe, Camarão E Abóbora",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "600g abadejo cortado em cubos",
       "400g camarão pequeno e limpo",
@@ -6390,6 +6641,7 @@ export const recipe_foods: any[] = [
   {
     id: 252,
     nomeDaReceita: "Pãozinho Massa Podre",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "250 g de margarina",
       "100 g de queijo parmesão ralado",
@@ -6416,6 +6668,7 @@ export const recipe_foods: any[] = [
   {
     id: 253,
     nomeDaReceita: "Pasteizinhos De Forno",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/3 de xícara de leite de vaca",
       "3 gemas",
@@ -6439,6 +6692,7 @@ export const recipe_foods: any[] = [
   {
     id: 254,
     nomeDaReceita: "Pastelão Célia",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 colher de sopa de fermento fresco",
       "2 colheres de sopa de açúcar granulado",
@@ -6464,6 +6718,7 @@ export const recipe_foods: any[] = [
   {
     id: 255,
     nomeDaReceita: "Pipoca Doce",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 colheres de sopa de óleo",
       "1 xícara de milho de pipoca",
@@ -6486,6 +6741,7 @@ export const recipe_foods: any[] = [
   {
     id: 256,
     nomeDaReceita: "Pizza III",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 colher de sopa fermento granulado",
       "1 colher de sopa de açúcar",
@@ -6510,6 +6766,7 @@ export const recipe_foods: any[] = [
   {
     id: 257,
     nomeDaReceita: "Pizza Napolitana",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 colher de sopa de fermento granulado",
       "1 colher de sopa de açúcar",
@@ -6534,6 +6791,7 @@ export const recipe_foods: any[] = [
   {
     id: 258,
     nomeDaReceita: "Pudim De Aipim",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 1/2 xícara de açúcar",
       "2 xícaras de leite de coco tirado com água",
@@ -6558,6 +6816,7 @@ export const recipe_foods: any[] = [
   {
     id: 259,
     nomeDaReceita: "Pudim De Laranja",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 laranjas",
       "230 g de açúcar",
@@ -6580,6 +6839,7 @@ export const recipe_foods: any[] = [
   {
     id: 260,
     nomeDaReceita: "Pudim De Leite",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 ovos",
       "3 xícaras de leite",
@@ -6603,6 +6863,7 @@ export const recipe_foods: any[] = [
   {
     id: 261,
     nomeDaReceita: "Pudim De Tapioca II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 l de leite de vaca",
       "1/2 kg de tapioca",
@@ -6628,6 +6889,7 @@ export const recipe_foods: any[] = [
   {
     id: 262,
     nomeDaReceita: "Pudim Especial",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "2 xícaras de chá de leite de vaca",
@@ -6652,6 +6914,7 @@ export const recipe_foods: any[] = [
   {
     id: 263,
     nomeDaReceita: "Quadradinhos De Laranja",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 ovos",
       "8 colheres de sopa de açúcar",
@@ -6676,6 +6939,7 @@ export const recipe_foods: any[] = [
   {
     id: 264,
     nomeDaReceita: "Queijo Caseiro Para Sanduíche",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 l de leite",
       "4 colheres de sopa de Maizena",
@@ -6699,6 +6963,7 @@ export const recipe_foods: any[] = [
   {
     id: 265,
     nomeDaReceita: "Rocombole",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 ovos",
       "5 colheres de sopa de farinha de trigo",
@@ -6721,6 +6986,7 @@ export const recipe_foods: any[] = [
   {
     id: 266,
     nomeDaReceita: "Rocombole Rosalina",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "8 ovos",
       "8 colheres(não muito cheias) de farinha de trigo",
@@ -6742,6 +7008,7 @@ export const recipe_foods: any[] = [
   {
     id: 267,
     nomeDaReceita: "Rodinhas Bicolores",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 xícara de manteiga",
       "1/2 xícara de açúcar",
@@ -6768,6 +7035,7 @@ export const recipe_foods: any[] = [
   {
     id: 268,
     nomeDaReceita: "Rolo De Frango",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de peito de frango desossado",
       "4 ovos",
@@ -6796,6 +7064,7 @@ export const recipe_foods: any[] = [
   {
     id: 269,
     nomeDaReceita: "Rosca De Reis",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "2 tabletes(30 g) de fermento de pão",
@@ -6825,6 +7094,7 @@ export const recipe_foods: any[] = [
   {
     id: 270,
     nomeDaReceita: "Salaminho De Chocolate",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 pacote de biscoito de leite",
       "1 tablete(200 g) de chocolate meio amargo",
@@ -6847,6 +7117,7 @@ export const recipe_foods: any[] = [
   {
     id: 271,
     nomeDaReceita: "Salgadinho Lanche De Sardinha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 xícara de óleo",
       "3 ovos",
@@ -6872,6 +7143,7 @@ export const recipe_foods: any[] = [
   {
     id: 272,
     nomeDaReceita: "Sanduíche Enrolado",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 pão de forma cortado ao comprido",
       "1 lata de salsicha",
@@ -6898,6 +7170,7 @@ export const recipe_foods: any[] = [
   {
     id: 273,
     nomeDaReceita: "Sanduíche Marinalva",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 pão de sanduíche",
       "2 ovos",
@@ -6923,6 +7196,7 @@ export const recipe_foods: any[] = [
   {
     id: 274,
     nomeDaReceita: "Sequilhos",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "100 g de açúcar",
       "200 g de manteiga ou margarina",
@@ -6944,6 +7218,7 @@ export const recipe_foods: any[] = [
   {
     id: 275,
     nomeDaReceita: "Sequilhos Catarina",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "100 g de manteiga",
       "100 g de açúcar",
@@ -6967,6 +7242,7 @@ export const recipe_foods: any[] = [
   {
     id: 276,
     nomeDaReceita: "Sequilhos De Maizena",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "4 ovos",
@@ -6991,6 +7267,7 @@ export const recipe_foods: any[] = [
   {
     id: 277,
     nomeDaReceita: "Sonhos De Bacalhau",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "3 xícaras de chá de bacalhau ensopado",
       "3 batatas cozidas",
@@ -7018,6 +7295,7 @@ export const recipe_foods: any[] = [
   {
     id: 278,
     nomeDaReceita: "Sonhos De Queijo",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 copo de água",
       "1 colher de sopa de manteiga",
@@ -7043,6 +7321,7 @@ export const recipe_foods: any[] = [
   {
     id: 279,
     nomeDaReceita: "Sorvete De Abacaxi",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 copo de suco de abacaxi",
       "1 1/2 copo de água",
@@ -7066,6 +7345,7 @@ export const recipe_foods: any[] = [
   {
     id: 280,
     nomeDaReceita: "Suco De Uva",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: ["1 kg de uva", "4 xícaras de água", "1 xícara de açúcar"],
     modoDeFazer:
       "Coloque numa panela as uvas e a água. Leve ao fogo e deixe levantar fervura. Passe tudo por uma peneira, comprimindo bem as uvas para retirar o suco. Adoce, deixe esfriar e leve à geladeira.",
@@ -7083,6 +7363,7 @@ export const recipe_foods: any[] = [
   {
     id: 281,
     nomeDaReceita: "Suflê De Queijo",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "100 g de queijo parmesão ralado",
       "1 colher de sopa de manteiga",
@@ -7109,6 +7390,7 @@ export const recipe_foods: any[] = [
   {
     id: 282,
     nomeDaReceita: "Talharim Ao Forno II",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de talharim",
       "3 xícaras de leite",
@@ -7137,6 +7419,7 @@ export const recipe_foods: any[] = [
   {
     id: 283,
     nomeDaReceita: "Torta De Batata E Salsicha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 gema",
       "2 colheres de sopa de água",
@@ -7165,6 +7448,7 @@ export const recipe_foods: any[] = [
   {
     id: 284,
     nomeDaReceita: "Torta De Galinha",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 1/2 xícara de maionese",
       "1 ovo",
@@ -7187,6 +7471,7 @@ export const recipe_foods: any[] = [
   {
     id: 285,
     nomeDaReceita: "Torta De Galinha Com Verduras",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 galinha cozida e desossada",
       "250 g de cenoura cozida em pedacinhos",
@@ -7220,6 +7505,7 @@ export const recipe_foods: any[] = [
   {
     id: 286,
     nomeDaReceita: "Torta De Repolho",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 kg de repolho",
       "1 lata(400 g) de sardinha",
@@ -7249,6 +7535,7 @@ export const recipe_foods: any[] = [
   {
     id: 287,
     nomeDaReceita: "Torta Salgada",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 ovos",
       "12 colheres de sopa de farinha de trigo",
@@ -7273,6 +7560,7 @@ export const recipe_foods: any[] = [
   {
     id: 288,
     nomeDaReceita: "Trança De Pão",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 1/2 copo de leite morno",
       "1 1/2 colher de sopa de fermento",
@@ -7297,6 +7585,7 @@ export const recipe_foods: any[] = [
   {
     id: 289,
     nomeDaReceita: "Tronquinhos",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "200 g de amendoim torrado e moído",
@@ -7318,6 +7607,7 @@ export const recipe_foods: any[] = [
   {
     id: 290,
     nomeDaReceita: "Gemada Santo Antonio",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 gemas",
       "1 colher /s de açúcar de baunilha",
@@ -7342,6 +7632,7 @@ export const recipe_foods: any[] = [
   {
     id: 291,
     nomeDaReceita: "Camarão Rosado Ao Curry",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/5 kilo de camarões rosados limpos",
       "5 colheres de azeite",
@@ -7369,6 +7660,7 @@ export const recipe_foods: any[] = [
   {
     id: 292,
     nomeDaReceita: "Torta De Camarão",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 tomates",
       "2 cebolas",
@@ -7394,6 +7686,7 @@ export const recipe_foods: any[] = [
   {
     id: 293,
     nomeDaReceita: "Camarão Com Laranja",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 Kg de camarão descascado e limpo",
       "3 colheres (sopa) de manteiga ou margarina",
@@ -7424,6 +7717,7 @@ export const recipe_foods: any[] = [
   {
     id: 294,
     nomeDaReceita: "Bobó De Camarão",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 quilo de camarão",
       "3 tomates picados",
@@ -7451,6 +7745,7 @@ export const recipe_foods: any[] = [
   {
     id: 295,
     nomeDaReceita: "Moqueca De Camarão",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 quilo de camarão grande e limpo",
       "4 colheres (sopa) de azeite",
@@ -7478,6 +7773,7 @@ export const recipe_foods: any[] = [
   {
     id: 296,
     nomeDaReceita: "Casquinhas De Siri",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 quilo de carne de siri",
       "3 colheres (sopa) de manteiga",
@@ -7506,6 +7802,7 @@ export const recipe_foods: any[] = [
   {
     id: 297,
     nomeDaReceita: "Peixe Brasil",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de peixe ensopado",
       "3 ovos",
@@ -7531,6 +7828,7 @@ export const recipe_foods: any[] = [
   {
     id: 298,
     nomeDaReceita: "Biscoitinhos Amanteigados De Laranja",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "4 xícaras de chá de farinha de trigo",
       "3 colheres de chá de fermento em pó",
@@ -7556,6 +7854,7 @@ export const recipe_foods: any[] = [
   {
     id: 299,
     nomeDaReceita: "Churros",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 xícaras de chá de água",
       "1 pitada de sal",
@@ -7581,6 +7880,7 @@ export const recipe_foods: any[] = [
   {
     id: 300,
     nomeDaReceita: "Docinho De Cenoura",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de cenoura cozida e passada no liquidificador",
       "1 coco ralado",
@@ -7605,6 +7905,7 @@ export const recipe_foods: any[] = [
   {
     id: 301,
     nomeDaReceita: "Docinho De Milho Verde",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 lata de leite condensado",
       "1 lata de milho verde escorrido",
@@ -7627,6 +7928,7 @@ export const recipe_foods: any[] = [
   {
     id: 302,
     nomeDaReceita: "Frango Ao Parmesão",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 kg de frango em pedaços",
       "100g de manteiga",
@@ -7650,6 +7952,7 @@ export const recipe_foods: any[] = [
   {
     id: 303,
     nomeDaReceita: "Frango Desfiado Ao Forno",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 colheres(sopa) de óleo",
       "1 cebola pequena picada",
@@ -7678,6 +7981,7 @@ export const recipe_foods: any[] = [
   {
     id: 304,
     nomeDaReceita: "Arroz Na Manteiga Verde",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "2 colheres (sopa) de óleo",
       "2 xícaras (chá) de arroz",
@@ -7705,6 +8009,7 @@ export const recipe_foods: any[] = [
   {
     id: 305,
     nomeDaReceita: "Torta De Tempero",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "8 tomates bem picadinhos",
       "2 pimentões bem picadinhos",
@@ -7734,6 +8039,7 @@ export const recipe_foods: any[] = [
   {
     id: 306,
     nomeDaReceita: "Anel De Queijo",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1 xícara de água fria",
       "1/2 xícara de manteiga cortada em pedacinhos",
@@ -7758,6 +8064,7 @@ export const recipe_foods: any[] = [
   {
     id: 307,
     nomeDaReceita: "Aspargos Com Lagostim",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "20 aspargos verdes",
       "50 g de manteiga",
@@ -7784,6 +8091,7 @@ export const recipe_foods: any[] = [
   {
     id: 308,
     nomeDaReceita: "Bolo Formigueiro",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "300g de açúcar refinado",
       "300g de manteiga",
@@ -7810,6 +8118,7 @@ export const recipe_foods: any[] = [
   {
     id: 309,
     nomeDaReceita: "Pão Folar Português",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "1/2 kg de farinha de trigo",
       "ovo",
@@ -7841,6 +8150,7 @@ export const recipe_foods: any[] = [
   {
     id: 310,
     nomeDaReceita: "Colomba Pascal",
+    quemMandou: "Maridão na Cozinha",
     ingredientes: [
       "500 g de farinha de trigo",
       "30 g de fermento biológico fresco",

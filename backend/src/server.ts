@@ -6,6 +6,7 @@ import cors from "cors";
 import recipeRouter from "./Routers/recipe.router";
 import categoriaRouter from "./Routers/category.router";
 import userRouter from "./Routers/user.router";
+import newRecipeRouter from "./Routers/newRecipe.router";
 import { dpConnect } from "./configs/database.config";
 
 dpConnect();
@@ -23,6 +24,7 @@ app.use(
 app.use("/api/recipe", recipeRouter);
 app.use("/api/categoria", categoriaRouter);
 app.use("/api/users", userRouter);
+app.use("/api/ask", newRecipeRouter);
 
 const port = 5000;
 app.listen(port, () => {

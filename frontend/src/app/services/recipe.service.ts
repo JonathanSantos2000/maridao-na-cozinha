@@ -10,7 +10,10 @@ import {
   RECIPE_CATEGORY_URL,
   RECIPE_ID_URL,
   RECIPE_URL,
+  NEW_RECIPE_URL,
 } from '../shared/constants/urls';
+import { INewRecipe } from '../shared/interfaces/INewRecipe';
+import { NewRecipe } from '../shared/models/newRecipe';
 
 @Injectable({
   providedIn: 'root',
@@ -57,7 +60,7 @@ export class RecipeService {
     const url = `${RECIPE_CATEGORY_SUBCATEGORY_URL.replace(
       ':categoria',
       category
-    ).replace(':subcategoria', subCategory)}`;  
+    ).replace(':subcategoria', subCategory)}`;
 
     return this.http.get<Recipe[]>(url);
   }
@@ -76,5 +79,9 @@ export class RecipeService {
       [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+  }
+
+  newRecipe(newRecipe: INewRecipe): Observable<NewRecipe> {
+    return this.http.post<NewRecipe>(NEW_RECIPE_URL, newRecipe);
   }
 }

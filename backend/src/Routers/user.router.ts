@@ -35,11 +35,11 @@ router.post(
     }
   })
 );
+
 router.post(
   "/register",
   asyncHandler(async (req, res) => {
     const { name, email, password } = req.body;
-    console.log(email);
     
     const user = await UserModel.findOne({ email });
     if (user) {

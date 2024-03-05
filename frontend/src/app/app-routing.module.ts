@@ -5,6 +5,7 @@ import { CategoriaComponent } from './pages/categoria/categoria.component';
 import { RecipeComponent } from './pages/recipe/recipe.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { NewRecipeComponent } from './pages/new-recipe/new-recipe.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'registro',
     component: RegisterPageComponent,
+  },
+  {
+    path: 'send/recipe',
+    component: NewRecipeComponent,
   },
 ];
 

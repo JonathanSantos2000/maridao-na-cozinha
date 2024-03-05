@@ -1,0 +1,62 @@
+.conteiner_new-recipe {
+  max-width: 980px;
+  margin: 2rem auto;
+
+  & form {
+    border: 1px solid #808080;
+    padding: 40px;
+    border-radius: 8px;
+
+    .column-inputs {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      & .left-column {
+        width: 49%;
+
+        & .input-file {
+          display: flex;
+          flex-direction: column;
+          border-radius: 8px;
+          padding: 0 .5rem;
+
+          margin-bottom: .5rem;
+
+          & input[type="file"] {
+            margin: 10px 0;
+          }
+
+          & label {
+            margin: 10px 0 0 0;
+          }
+
+        }
+      }
+
+      & .right-column {
+        width: 49%;
+
+        & hr {
+          margin: .2rem 0;
+        }
+
+        & .input-radio {
+          display: flex;
+          flex-direction: column;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    & button {
+      width: 100%;
+      font-size: 18px;
+      color: #fff;
+      background-color: #00340C;
+      border-radius: 8px;
+      padding: .2rem;
+      margin: 10px 0;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-export class Recipe {
+export class NewRecipe {
   id!: number;
   nomeDaReceita!: string;
   quemMandou!: string;
@@ -14,20 +14,11 @@ export class Recipe {
   stars!: number;
   favorite!: boolean;
   extra?: Extra[];
+  copyright!: boolean;
 }
 
 interface Extra {
   nomeDaReceitaExtra?: string;
   ingredientes: string[];
   modoDeFazer: string;
-}
-
-export class Category {
-  idCategory!: number;
-  nomeCategory!: string;
-  nomeSubCategory!: nomeSubCategory[];
-}
-interface nomeSubCategory {
-  nome: string;
-  urlImg: string;
 }
