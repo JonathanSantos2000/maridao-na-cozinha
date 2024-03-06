@@ -12,7 +12,6 @@ import { CardRecipeComponent } from './components/card-recipe/card-recipe.compon
 import { RecipeComponent } from './pages/recipe/recipe.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { FormRecipeComponent } from './components/form-recipe/form-recipe.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ToastrModule } from 'ngx-toastr';
@@ -33,7 +32,6 @@ import { NewRecipeComponent } from './pages/new-recipe/new-recipe.component';
     CardRecipeComponent,
     RecipeComponent,
     CarouselComponent,
-    FormRecipeComponent,
     LoginPageComponent,
     RegisterPageComponent,
     InputGroupComponent,

@@ -6,7 +6,10 @@
   "author": "Jonathan Costa <62775506+JonathanSantos2000@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "dev": "cd frontend && npm start & cd backend && npm start",
+    "prebuild": "cd backend && npm run build",
+    "build": "cd frontend && npm run build"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
