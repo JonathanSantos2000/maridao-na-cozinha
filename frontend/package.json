@@ -4,9 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm install --force && ng build --configuration production",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build": "npm install --force && ng build --configuration production"
   },
   "private": true,
   "dependencies": {
@@ -24,19 +22,20 @@
     "rxjs": "~7.5.0",
     "slick-carousel": "^1.8.1",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.4"
-  },
-  "devDependencies": {
+    "zone.js": "~0.14.4",
     "@angular-devkit/build-angular": "^17.2.0",
     "@angular/cli": "~17.2.0",
     "@angular/compiler-cli": "^17.2.1",
     "@types/jasmine": "~4.0.0",
+    "typescript": "~5.3.3"
+
+  },
+  "devDependencies": {
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~5.3.3"
+    "karma-jasmine-html-reporter": "~2.0.0"
   }
 }

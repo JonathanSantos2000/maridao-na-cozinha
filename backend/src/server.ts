@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
-
+import path from "path";
 import express from "express";
 import cors from "cors";
 import recipeRouter from "./Routers/recipe.router";
@@ -26,7 +26,12 @@ app.use("/api/categoria", categoriaRouter);
 app.use("/api/users", userRouter);
 app.use("/api/ask", newRecipeRouter);
 
-const port = 5000;
+app.use(express.static("public"));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log("okay");
 });

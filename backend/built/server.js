@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
+var path_1 = __importDefault(require("path"));
 var express_1 = __importDefault(require("express"));
 var cors_1 = __importDefault(require("cors"));
 var recipe_router_1 = __importDefault(require("./Routers/recipe.router"));
@@ -23,7 +24,11 @@ app.use("/api/recipe", recipe_router_1.default);
 app.use("/api/categoria", category_router_1.default);
 app.use("/api/users", user_router_1.default);
 app.use("/api/ask", newRecipe_router_1.default);
-var port = 5000;
+app.use(express_1.default.static("public"));
+app.get("*", function (req, res) {
+    res.sendFile(path_1.default.join(__dirname, "public", "index.html"));
+});
+var port = process.env.PORT || 5000;
 app.listen(port, function () {
     console.log("okay");
 });
