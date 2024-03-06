@@ -43,29 +43,23 @@ var express_1 = require("express");
 var jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 var express_async_handler_1 = __importDefault(require("express-async-handler"));
 var user_model_1 = require("../models/user.model");
-var user_1 = require("../data/user");
+/* import { client_user } from "../data/user"; */
 var http_status_1 = require("../constants/http_status");
 var bcryptjs_1 = __importDefault(require("bcryptjs"));
 var router = (0, express_1.Router)();
-router.get("/seed", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var usersCount;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, user_model_1.UserModel.countDocuments()];
-            case 1:
-                usersCount = _a.sent();
-                if (usersCount > 0) {
-                    res.send("Seed is already done!");
-                    return [2 /*return*/];
-                }
-                return [4 /*yield*/, user_model_1.UserModel.create(user_1.client_user)];
-            case 2:
-                _a.sent();
-                res.send("Seed Is Done!");
-                return [2 /*return*/];
-        }
-    });
-}); }));
+/* router.get(
+  "/seed",
+  asyncHandler(async (req, res) => {
+    const usersCount = await UserModel.countDocuments();
+    if (usersCount > 0) {
+      res.send("Seed is already done!");
+      return;
+    }
+
+    await UserModel.create(client_user);
+    res.send("Seed Is Done!");
+  })
+); */
 router.post("/login", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var _a, email, password, user, _b;
     return __generator(this, function (_c) {
