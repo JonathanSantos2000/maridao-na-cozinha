@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-
 import { RecipeService } from 'src/app/services/recipe.service';
 import { Recipe } from 'src/app/shared/models/recipe';
 
@@ -13,7 +11,18 @@ import { Recipe } from 'src/app/shared/models/recipe';
 export class RecipeComponent implements OnInit {
   recipes!: Recipe | any;
   hasExtra: boolean = false;
+  showForm: boolean = false;
+  showBtnShow: boolean = true;
+  showBtnHide: boolean = false;
 
+  slideConfig = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+
+  fileToUpload: File | null = null;
+  
   constructor(
     activatedRoute: ActivatedRoute,
     private recipeService: RecipeService
@@ -31,5 +40,11 @@ export class RecipeComponent implements OnInit {
 
   getSecondColumnIndex(n: number): number {
     return Math.floor(n / 2 + 1);
+  }
+
+  showFormContent() {
+    this.showForm = !this.showForm;
+    this.showBtnShow = !this.showBtnShow;
+    this.showBtnHide = !this.showBtnHide;
   }
 }

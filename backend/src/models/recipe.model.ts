@@ -1,19 +1,21 @@
 import { Schema, model } from "mongoose";
 
 interface Extra {
+  urlFoto: string;
+  quemMandou: string;
+}
+interface Foto {
   nomeDaReceitaExtra?: string;
   ingredientes: string[];
   modoDeFazer: string;
 }
-
 export interface Recipe {
   id: string;
   quemMandou: string;
   nomeDaReceita: string;
   ingredientes: string[];
   modoDeFazer: string;
-  foto: string[];
-  fotoAutor: string[];
+  foto: Foto[];
   categoria: string;
   subcategoria: string;
   tempoDePreparo: string;
@@ -30,8 +32,12 @@ export const RecipeSchema = new Schema<Recipe>(
     quemMandou: { type: String, required: true },
     ingredientes: { type: [String], required: true },
     modoDeFazer: { type: String, required: true },
-    foto: { type: [String], required: true },
-    fotoAutor: { type: [String], required: true },
+    foto: [
+      {
+        urlFoto: { type: String, required: true },
+        quemMandou: { type: String, required: true },
+      },
+    ],
     categoria: { type: String, required: true },
     subcategoria: { type: String, required: true },
     tempoDePreparo: { type: String, required: true },

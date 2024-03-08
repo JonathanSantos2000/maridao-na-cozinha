@@ -2,19 +2,16 @@
   <div class="main-box__title">
     <h1>Receitas</h1>
   </div>
-  <div class="home-desktop">
+  <div class="home">
     <div class="main-box__recipes">
       <div *ngFor="let recipe of recipes">
         <app-card-recipe
           typeCategoria="{{ recipe.categoria }}"
           idRecipe="{{ recipe.id }}"
-          urlImg="{{ recipe.foto[0] }}"
+          urlImg="{{ recipe.foto[0].urlFoto }}"
           titleReceita="{{ recipe.nomeDaReceita }}"
         ></app-card-recipe>
       </div>
     </div>
-  </div>
-  <div class="home-mobile">
-    <app-carousel></app-carousel>
   </div>
 </div>

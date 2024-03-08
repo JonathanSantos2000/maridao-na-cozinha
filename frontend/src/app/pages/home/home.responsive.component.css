@@ -2,11 +2,8 @@
   .conteiner__main-box{
     width: 100%;
   }
-  .home-desktop {
-    display: none;
-  }
-
-  .home-mobile {
-    display: block;
+  .main-box__recipes{
+    justify-content: center;
+    align-items: center;
   }
 }

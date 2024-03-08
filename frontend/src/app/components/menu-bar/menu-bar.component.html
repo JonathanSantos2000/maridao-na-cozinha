@@ -69,10 +69,7 @@
         <a>{{ user.name.split(" ")[0] }}</a>
         <ul class="sub_menu">
           <li>
-            <a>Receitas favoritas</a>
-          </li>
-          <li>
-            <a [routerLink]="['send/recipe']">Envie sua receita</a>
+            <a [routerLink]="['/perfil']">Perfil</a>
           </li>
           <li>
             <a (click)="logout()">Sair</a>

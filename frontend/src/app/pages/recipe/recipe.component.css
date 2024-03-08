@@ -10,37 +10,75 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-left: 15px;
   font-family: "Dancing Script", cursive;
+
+  padding-left: 15px;
+  margin-bottom: 15px;
+
+  & .recipe__header__photo {
+    width: 474px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      padding: 0.2rem 0.8rem 0.8rem;
+      border-radius: 25px;
+    }
+
+    & .navigation-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0.8rem;
+    }
+
+    & .new_photo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: .2rem 0.8rem;
+
+      & .new_photo-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & .send-more {
+          & button {
+            width: 38px;
+            height: 38px;
+            font-size: 32px;
+            background: none;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+
+    }
+
+    & h5 {
+      font-size: 15px;
+    }
+  }
 }
 
-.recipe__header__photo {
-  width: 474px;
-  height: 316px;
-  margin-bottom: 30px;
-}
-.recipe__header__photo>img{
-  width: 100%;
-  height: 100%;
-  
-  padding: 0.8rem;
-  border-radius: 25px;
-}
-.recipe__header__photo>h5 {
-  font-size: 15px;
-}
+.recipe__description {
+  margin-top: .5rem;
 
-.recipe__description>ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 50px;
-}
+  & ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
 
-.recipe__description>ul>li {
-  list-style: none;
-  display: flex;
-  align-items: center;
+    & li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .recipe__description>ul>li>img {

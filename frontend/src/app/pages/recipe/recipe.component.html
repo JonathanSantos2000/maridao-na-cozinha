@@ -4,22 +4,60 @@
       <h1>{{ recipes?.nomeDaReceita }}</h1>
     </div>
     <div class="recipe__header__photo">
-      <ng-container *ngIf="recipes?.foto[0] === 'Foto-NI'; else normalImage">
-        <img
-          src="../../../assets/IMG/img-receitas/{{ recipes?.foto[0] }}.jpg"
-          alt=""
-        />
-      </ng-container>
-      <ng-template #normalImage>
-        <img
-          src="../../../assets/IMG/img-receitas/{{ recipes?.foto[0] }}"
-          alt="Normal"
-        />
-      </ng-template>
+      <div class="navigation-container">
+        <button (click)="slickModalCarne.slickPrev()" class="prevArrow">
+          <i class="bi bi-caret-left"></i>
+        </button>
+        <button (click)="slickModalCarne.slickNext()" class="nextArrow">
+          <i class="bi bi-caret-right"></i>
+        </button>
+      </div>
+      <ngx-slick-carousel
+        class="carousel"
+        #slickModalCarne="slick-carousel"
+        [config]="slideConfig"
+      >
+        <div ngxSlickItem *ngFor="let photos of recipes?.foto">
+          <div class="slide">
+            <img
+              src="../../../assets/IMG/img-receitas/{{ photos.urlFoto }}.jpg"
+              alt="{{ recipes?.nomeDaReceita }} "
+            />
+          </div>
+        </div>
+      </ngx-slick-carousel>
+
       <h5 class="notificacoes">
         * Essas estimativas podem variar dependendo das técnicas de cozinha
         individuais e dos ingredientes específicos utilizados.
       </h5>
+      <div class="new_photo">
+        <div class="new_photo-header">
+          <div class="title">
+            <h1>Envie sua foto:</h1>
+          </div>
+          <div class="send-more">
+            <button (click)="showFormContent()" *ngIf="showBtnShow">
+              <i class="bi bi-plus-lg"></i>
+            </button>
+            <button (click)="showFormContent()" *ngIf="showBtnHide">
+              <i class="bi bi-dash-lg"></i>
+            </button>
+          </div>
+        </div>
+        <div class="content" *ngIf="showForm">
+<!--           <form (submit)="uploadFile()">
+            <input
+              type="file"
+              (change)="handleFileInput($event.target.files)"
+              name="file"
+              id="file"
+            />
+            <br />
+            <button type="submit">Enviar</button>
+          </form> -->
+        </div>
+      </div>
     </div>
   </div>
   <div class="recipe__description">

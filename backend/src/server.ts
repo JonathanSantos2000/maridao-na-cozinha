@@ -7,6 +7,7 @@ import recipeRouter from "./Routers/recipe.router";
 import categoriaRouter from "./Routers/category.router";
 import userRouter from "./Routers/user.router";
 import newRecipeRouter from "./Routers/newRecipe.router";
+import upload from "./Routers/upload.router";
 import { dpConnect } from "./configs/database.config";
 
 dpConnect();
@@ -17,7 +18,10 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:4200", "https://maridao-na-cozinha.onrender.com"]
+    origin: [
+      "http://localhost:4200",
+      "https://maridao-na-cozinha.onrender.com",
+    ],
   })
 );
 
@@ -25,6 +29,7 @@ app.use("/api/recipe", recipeRouter);
 app.use("/api/categoria", categoriaRouter);
 app.use("/api/users", userRouter);
 app.use("/api/ask", newRecipeRouter);
+app.use("/api", upload);
 
 app.use(express.static("public"));
 app.get("*", (req, res) => {

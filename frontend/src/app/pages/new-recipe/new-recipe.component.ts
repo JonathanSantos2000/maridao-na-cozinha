@@ -76,7 +76,7 @@ export class NewRecipeComponent implements OnInit {
       categoria: fv.categoria,
       subcategoria: fv.subcategoria,
       tempoDePreparo: fv.tempoDePreparo,
-      porcoes: fv.porcoes + 'porções',
+      porcoes: fv.porcoes,
       nivelDeDificuldade: fv.nivelDeDificuldade,
       stars: 0,
       favorite: false,

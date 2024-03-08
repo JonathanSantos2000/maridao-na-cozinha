@@ -4,7 +4,7 @@ export class Recipe {
   quemMandou!: string;
   ingredientes!: string[];
   modoDeFazer!: string;
-  foto!: string;
+  foto!: Foto[];
   fotoAutor!: string[];
   categoria!: string;
   subcategoria!: string;
@@ -16,12 +16,16 @@ export class Recipe {
   extra?: Extra[];
 }
 
+interface Foto {
+  urlFoto: string;
+  quemMandou: string;
+}
+
 interface Extra {
   nomeDaReceitaExtra?: string;
   ingredientes: string[];
   modoDeFazer: string;
 }
-
 export class Category {
   idCategory!: number;
   nomeCategory!: string;

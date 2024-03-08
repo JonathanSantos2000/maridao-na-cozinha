@@ -21,6 +21,7 @@ import { InputGroupComponent } from './components/form/input-group/input-group.c
 import { InputValidationComponent } from './components/form/input-validation/input-validation.component';
 import { TextInputComponent } from './components/form/text-input/text-input.component';
 import { NewRecipeComponent } from './pages/new-recipe/new-recipe.component';
+import { PerfilPageComponent } from './pages/perfil-page/perfil-page.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { NewRecipeComponent } from './pages/new-recipe/new-recipe.component';
     InputValidationComponent,
     TextInputComponent,
     NewRecipeComponent,
+    PerfilPageComponent,
   ],
   imports: [
     BrowserModule,

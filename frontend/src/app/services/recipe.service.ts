@@ -84,4 +84,16 @@ export class RecipeService {
   newRecipe(newRecipe: INewRecipe): Observable<NewRecipe> {
     return this.http.post<NewRecipe>(NEW_RECIPE_URL, newRecipe);
   }
+  
+  uploadFile(
+    category: string,
+    recipeName: string,
+    file: File
+  ): Observable<any> {
+    const formData: FormData = new FormData();
+    formData.append('file', file, file.name);
+    formData.append('category', category);
+    formData.append('recipeName', recipeName);
+    return this.http.post<any>('/api/upload', formData);
+  }
 }
