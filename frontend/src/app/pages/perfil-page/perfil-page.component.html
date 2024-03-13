@@ -1,0 +1,151 @@
+<div class="conteiner__perfil" *ngIf="!isAdm">
+  <div class="sends">
+    <div class="sends-header">
+      <div class="title">
+        <h1>Seus envios:</h1>
+      </div>
+      <div class="send-more">
+        <h1>
+          <a routerLink="/send/recipe">
+            <i class="bi bi-plus-lg"></i>
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="sends-content">
+      <div class="recipes_sends">
+        <div class="recipes_sends-title">
+          <h3>Suas Receitas:</h3>
+        </div>
+        <div class="recipes_sends-content">
+          <div class="navigation-container">
+            <button (click)="slickModalrecipes.slickPrev()" class="prevArrow">
+              <i class="bi bi-caret-left"></i>
+            </button>
+            <button (click)="slickModalrecipes.slickNext()" class="nextArrow">
+              <i class="bi bi-caret-right"></i>
+            </button>
+          </div>
+          <ngx-slick-carousel
+            class="carousel"
+            #slickModalrecipes="slick-carousel"
+            [config]="slideConfig"
+          >
+            <div ngxSlickItem *ngFor="let recipe of userNewRecipes">
+              <div class="slide">
+                <img [src]="startUrl + recipe.foto" alt="" />
+                <h5
+                  class="status"
+                  *ngIf="recipe.resposta == 'Verificando'"
+                  [ngStyle]="{ color: 'white' }"
+                >
+                  <i class="bi bi-chevron-down"></i>
+                </h5>
+                <h5
+                  class="status"
+                  *ngIf="recipe.resposta == 'Aprovado'"
+                  [ngStyle]="{ color: 'green' }"
+                >
+                  <i class="bi bi-check2"></i>
+                </h5>
+                <h5
+                  class="status"
+                  *ngIf="recipe.resposta == 'Negado'"
+                  [ngStyle]="{ color: 'red' }"
+                >
+                  <i class="bi bi-x-lg"></i>
+                </h5>
+                <h5>{{ recipe.nomeDaReceita }}</h5>
+              </div>
+            </div>
+          </ngx-slick-carousel>
+        </div>
+      </div>
+      <!-- fim recipes send -->
+      <!-- inicio photo sends -->
+      <div class="photo_send">
+        <div class="photo_send-title">
+          <h3>Suas Fotos:</h3>
+        </div>
+        <div class="photo_send-content">
+          <div class="navigation-container">
+            <button (click)="slickModalCarne.slickPrev()" class="prevArrow">
+              <i class="bi bi-caret-left"></i>
+            </button>
+            <button (click)="slickModalCarne.slickNext()" class="nextArrow">
+              <i class="bi bi-caret-right"></i>
+            </button>
+          </div>
+          <ngx-slick-carousel
+            class="carousel"
+            #slickModalCarne="slick-carousel"
+            [config]="slideConfig"
+          >
+            <div ngxSlickItem *ngFor="let photos of userPhotos">
+              <div class="slide">
+                <img [src]="startUrl + photos.urlFoto" alt="" />
+                <h5
+                  class="status"
+                  *ngIf="photos.resposta == 'Verificando'"
+                  [ngStyle]="{ color: 'white' }"
+                >
+                  <i class="bi bi-chevron-down"></i>
+                </h5>
+                <h5
+                  class="status"
+                  *ngIf="photos.resposta == 'Aprovado'"
+                  [ngStyle]="{ color: 'green' }"
+                >
+                  <i class="bi bi-check2"></i>
+                </h5>
+                <h5
+                  class="status"
+                  *ngIf="photos.resposta == 'Negado'"
+                  [ngStyle]="{ color: 'red' }"
+                >
+                  <i class="bi bi-x-lg"></i>
+                </h5>
+                <h5>{{ photos.nomeReceita }}</h5>
+              </div>
+            </div>
+          </ngx-slick-carousel>
+        </div>
+      </div>
+    </div>
+    <div class="favorites"></div>
+  </div>
+</div>
+<div class="conteiner__perfil" *ngIf="isAdm">
+  <div class="recipes_verificar"></div>
+  <div class="photos_verificar">
+    <div class="title"><h1>Fotos:</h1></div>
+  </div>
+  <div class="photos_content">
+    <div class="photo" *ngFor="let photos of userPhotos">
+      <img [src]="startUrl + photos.urlFoto" alt="" />
+      <div class="control">
+        <h1 class="title_recipe">{{ photos.nomeReceita }}</h1>
+        <h1>Quem enviou: {{ photos.quemMandou }}</h1>
+        <h1>Status atual: {{ photos.resposta }}</h1>
+        <div class="btns">
+          <button
+            (click)="
+              approve(
+                photos._id,
+                photos.urlFoto,
+                photos.nomeReceita,
+                photos.quemMandou
+              )
+            "
+          >
+            <i class="bi bi-check2" [ngStyle]="{ color: 'green' }"></i>
+          </button>
+
+          <button (click)="denie()">
+            <i class="bi bi-x-lg" [ngStyle]="{ color: 'red' }"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

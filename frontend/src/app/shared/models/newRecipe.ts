@@ -15,6 +15,7 @@ export class NewRecipe {
   favorite!: boolean;
   extra?: Extra[];
   copyright!: boolean;
+  resposta!: string;
 }
 
 interface Extra {

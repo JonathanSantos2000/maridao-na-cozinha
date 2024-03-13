@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
-    "dev": "cd frontend && npm start & cd backend && npm start",
+    "dev": "cd backend && npm start & cd frontend && npm start",
     "start": "cd backend/built && node server.js",
     "prebuild": "cd backend && npm run build",
     "build": "cd frontend && npm run build"

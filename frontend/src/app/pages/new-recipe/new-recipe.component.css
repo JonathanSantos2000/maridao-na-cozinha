@@ -32,6 +32,24 @@
           }
 
         }
+
+        & .categoria, .subCategoria {
+          width: 100%;
+
+          & select {
+            width: 60%;
+            height: 60px;
+            background: #00340C;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: #fff;
+
+            & option {
+              margin-top: .2rem;
+            }
+          }
+        }
       }
 
       & .right-column {

@@ -1,10 +1,10 @@
 import { Schema, model } from "mongoose";
 
-interface Extra {
+interface Foto {
   urlFoto: string;
   quemMandou: string;
 }
-interface Foto {
+interface Extra {
   nomeDaReceitaExtra?: string;
   ingredientes: string[];
   modoDeFazer: string;

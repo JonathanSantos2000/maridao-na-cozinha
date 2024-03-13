@@ -11,9 +11,12 @@ import {
   RECIPE_ID_URL,
   RECIPE_URL,
   NEW_RECIPE_URL,
+  NEW_UPLOAD_URL,
+  UPDATE_PHOTO_STATUS_URL,
 } from '../shared/constants/urls';
 import { INewRecipe } from '../shared/interfaces/INewRecipe';
 import { NewRecipe } from '../shared/models/newRecipe';
+import { Foto } from '../shared/models/photos';
 
 @Injectable({
   providedIn: 'root',
@@ -81,19 +84,77 @@ export class RecipeService {
     return array;
   }
 
-  newRecipe(newRecipe: INewRecipe): Observable<NewRecipe> {
-    return this.http.post<NewRecipe>(NEW_RECIPE_URL, newRecipe);
+  newRecipe(
+    nomeDaReceita: string,
+    quemMandou: string,
+    ingredientes: string[],
+    modoDeFazer: string,
+    file: File | any,
+    fotoAutor: string,
+    categoria: string,
+    subcategoria: string,
+    tempoDePreparo: string,
+    porcoes: string,
+    nivelDeDificuldade: string,
+    stars: number,
+    favorite: boolean,
+    extra: any
+  ): Observable<NewRecipe> {
+    const formData = new FormData();
+    formData.append('nomeDaReceita', nomeDaReceita);
+    formData.append('quemMandou', quemMandou);
+    formData.append('ingredientes', JSON.stringify(ingredientes));
+    formData.append('modoDeFazer', modoDeFazer);
+    formData.append('file', file);
+    formData.append('fotoAutor', fotoAutor);
+    formData.append('categoria', categoria);
+    formData.append('subcategoria', subcategoria);
+    formData.append('tempoDePreparo', tempoDePreparo);
+    formData.append('porcoes', porcoes);
+    formData.append('nivelDeDificuldade', nivelDeDificuldade);
+    formData.append('stars', stars.toString());
+    formData.append('favorite', favorite.toString());
+
+    if (extra === '') {
+      extra = {};
+    }
+    formData.append('extra', extra);
+    return this.http.post<NewRecipe>(NEW_RECIPE_URL, formData);
   }
-  
+
   uploadFile(
     category: string,
     recipeName: string,
+    idUserSend: string,
+    userSend: string,
     file: File
-  ): Observable<any> {
+  ): Observable<Foto> {
     const formData: FormData = new FormData();
     formData.append('file', file, file.name);
     formData.append('category', category);
     formData.append('recipeName', recipeName);
-    return this.http.post<any>('/api/upload', formData);
+    formData.append('userSend', userSend);
+    formData.append('idUserSend', idUserSend);
+
+    return this.http.post<Foto>(NEW_UPLOAD_URL, formData);
+  }
+
+  updatePhotoStatus(
+    idPhoto: string,
+    url: string,
+    status: string,
+    nomeDaReceita: string,
+    user: string
+  ): Observable<Foto> {
+    const statusData = {
+      idPhoto: idPhoto,
+      url: url,
+      status: status,
+      nomeDaReceita: nomeDaReceita,
+      user: user,
+    };
+
+    // Enviando a solicitação HTTP com os dados como JSON
+    return this.http.post<Foto>(UPDATE_PHOTO_STATUS_URL, statusData);
   }
 }

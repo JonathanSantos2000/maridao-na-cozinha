@@ -19,10 +19,17 @@
       >
         <div ngxSlickItem *ngFor="let photos of recipes?.foto">
           <div class="slide">
-            <img
-              src="../../../assets/IMG/img-receitas/{{ photos.urlFoto }}.jpg"
-              alt="{{ recipes?.nomeDaReceita }} "
-            />
+            <ng-container
+              *ngIf="photos.urlFoto === 'Foto-NI'; else normalImage"
+            >
+              <img
+                src="../../../assets/IMG/img-receitas/{{ photos.urlFoto }}.jpg"
+                alt=""
+              />
+            </ng-container>
+            <ng-template #normalImage>
+              <img [src]="startUrl + photos.urlFoto" alt="" />
+            </ng-template>
           </div>
         </div>
       </ngx-slick-carousel>
@@ -46,16 +53,16 @@
           </div>
         </div>
         <div class="content" *ngIf="showForm">
-<!--           <form (submit)="uploadFile()">
+          <form (submit)="uploadFile()">
             <input
               type="file"
-              (change)="handleFileInput($event.target.files)"
+              (change)="handleFileInput($event)"
               name="file"
               id="file"
             />
             <br />
             <button type="submit">Enviar</button>
-          </form> -->
+          </form>
         </div>
       </div>
     </div>

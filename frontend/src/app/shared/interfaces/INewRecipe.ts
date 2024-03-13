@@ -3,8 +3,8 @@ export interface INewRecipe {
   quemMandou: string;
   ingredientes: string[];
   modoDeFazer: string;
-  foto: string;
-  fotoAutor: string[];
+  foto: File | null;
+  fotoAutor: string;
   categoria: string;
   subcategoria: string;
   tempoDePreparo: string;

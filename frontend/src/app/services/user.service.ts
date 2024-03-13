@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { User } from '../shared/models/user';
-import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/constants/urls';
+import {
+  GET_NEW_RECIPE_URL,
+  PHOTOS_SEND_URL,
+  PHOTOS_USER_SEND_URL,
+  USER_LOGIN_URL,
+  USER_REGISTER_URL,
+} from '../shared/constants/urls';
 import { HttpClient } from '@angular/common/http';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { ToastrService } from 'ngx-toastr';
 import { IUserRegister } from '../shared/interfaces/IUserRegister';
+import { Foto } from '../shared/models/photos';
+import { NewRecipe } from '../shared/models/newRecipe';
 
 const USER_KEY = 'User';
 @Injectable({
@@ -15,6 +23,7 @@ export class UserService {
   private userSubject = new BehaviorSubject<User>(
     this.getUserFromLocalStorage()
   );
+
   public userObservable: Observable<User>;
 
   constructor(private http: HttpClient, private toastrService: ToastrService) {
@@ -38,7 +47,7 @@ export class UserService {
       })
     );
   }
-  
+
   register(userRegister: IUserRegister): Observable<User> {
     return this.http.post<User>(USER_REGISTER_URL, userRegister).pipe(
       tap({
@@ -61,6 +70,25 @@ export class UserService {
     this.userSubject.next(new User());
     localStorage.removeItem(USER_KEY);
     window.location.reload();
+  }
+
+  getPhotosByUser(userId: string) {
+    return this.http.get<Foto[]>(
+      `${PHOTOS_USER_SEND_URL.replace(':id', userId)}`
+    );
+  }
+
+  getPhotosbyStatus(status: string) {
+    return this.http.get<Foto[]>(
+      `${PHOTOS_SEND_URL.replace(':status', status)}`
+    );
+  }
+
+  getNewRecipeByUser(quemMandou: string) {
+    console.log(quemMandou);
+    return this.http.get<NewRecipe[]>(
+      `${GET_NEW_RECIPE_URL.replace(':quemMandou', quemMandou)}`
+    );
   }
 
   private setUserToLocalStorage(user: User) {

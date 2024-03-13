@@ -1,0 +1,128 @@
+.conteiner__perfil {
+  max-width: 980px;
+  min-height: 600px;
+  margin: 2rem auto;
+
+  & .sends, .photos_verificar {
+    border: 1px solid #808080;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #00340C;
+
+    & .sends-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      & .title {
+        padding-left: 10px;
+      }
+
+      & .send-more {
+        padding-right: 10px;
+      }
+    }
+
+    & .recipes_sends {
+      & .recipes_sends-title {
+        border-top: 1px solid #808080;
+        border-bottom: 1px solid #808080;
+        padding-left: 10px;
+
+      }
+    }
+
+    & .photo_send {
+      & .photo_send-title {
+        border-top: 1px solid #808080;
+        border-bottom: 1px solid #808080;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+.conteiner__perfil {
+  & .photos_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & .photo {
+      display: flex;
+      flex-direction: row;
+      border: 1px solid #808080;
+      width: 100%;
+      margin-bottom: .5rem;
+
+
+      /* 418 280 */
+      & img {
+        width: 418px;
+        height: 280px;
+      }
+
+      & .control {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 56%;
+        margin: 0.5rem;
+
+        & h1 {
+          font-size: 26px;
+          font-weight: 700;
+          color: #00340C;
+        }
+
+        & .title_recipe {
+          text-align: center;
+        }
+
+        & .btns {
+          width: 100%;
+          height: 36px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          & button {
+            width: 260px;
+            height: 100%;
+            font-size: 28px;
+            padding: .2rem;
+            cursor: pointer;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.slide {
+  width: 100%;
+  position: relative;
+
+  & img {
+    width: 229px;
+    height: 172px;
+  }
+
+  & h5 {
+    font-family: "Dancing Script", cursive;
+    margin: 0 5px;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .status {
+    background: rgba(256, 256, 256, .5);
+    position: absolute;
+    top: 0;
+    right: .7rem;
+    font-size: 43px;
+  }
+}

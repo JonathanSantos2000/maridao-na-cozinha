@@ -58,22 +58,36 @@
       <div class="left-column">
         <div class="input-file">
           <label for="arquivo">Enviar foto:</label>
-          <input type="file" id="photo" formControlName="foto" required />
+          <input type="file" id="photo" formControlName="foto" (change)="handleFileInput($event)" required />
         </div>
+        <div class="categoria">
+          <label for="arquivo">Selecione a categoria:</label><br />
+          <select
+            formControlName="categoria"
+            (change)="onCategoriaChange($event)"
+          >
+            <option value="" selected>Selecione a categoria</option>
 
-        <text-input
-          [control]="fc.categoria"
-          [showErrorWhen]="isSubmitted"
-          type="text"
-          label="Categoria:"
-        ></text-input>
-
-        <text-input
-          [control]="fc.subcategoria"
-          [showErrorWhen]="isSubmitted"
-          type="text"
-          label="Subcategoria:"
-        ></text-input>
+            <option
+              *ngFor="let categoria of categorias"
+              [value]="categoria.nomeCategory"
+            >
+              {{ categoria.nomeCategory }}
+            </option>
+          </select>
+        </div>
+        <br /><br />
+        <div class="subCategoria">
+          <label for="arquivo">Selecione a subcategoria:</label><br />
+          <select formControlName="subcategoria">
+            <option
+              *ngFor="let subcategoria of subcategorias"
+              [value]="subcategoria"
+            >
+              {{ subcategoria }}
+            </option>
+          </select>
+        </div>
       </div>
 
       <div class="right-column">
@@ -130,7 +144,9 @@
         </div>
       </div>
     </div>
-
+    <br /><br />
+    <input type="checkbox" required />
+    <label for="copyright">Todas as informações-lhe pertence?</label>
     <button type="submit">Enviar</button>
   </form>
 </div>

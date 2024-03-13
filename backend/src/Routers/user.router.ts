@@ -5,6 +5,7 @@ import { User, UserModel } from "../models/user.model";
 /* import { client_user } from "../data/user"; */
 import { HTTP_BAD_REQUEST } from "../constants/http_status";
 import bcrypt from "bcryptjs";
+import { NewPhotoModel } from "../models/photo.model";
 
 const router = Router();
 
@@ -53,7 +54,7 @@ router.post(
       name,
       email: email.toLowerCase(),
       password: encryptedPassWord,
-      isAdmin: false,
+      isAdmin: true,
     };
     const dbUser = await UserModel.create(newUser);
     res.send(generateTokenReponse(dbUser));
@@ -80,5 +81,28 @@ const generateTokenReponse = (user: User) => {
     token: token,
   };
 };
+
+router.get(
+  "/photos/:id",
+  asyncHandler(async (req, res) => {
+    const quemMandouRegEx = new RegExp(req.params.id);
+    const photo = await NewPhotoModel.find({
+      idQuemMandou: { $regex: quemMandouRegEx },
+    });
+    res.send(photo);
+  })
+);
+/* Get photos by status */
+router.get(
+  "/photos/admin/:status",
+  asyncHandler(async (req, res) => {
+    const statusRegEx = new RegExp(req.params.status);
+    const status = await NewPhotoModel.find({
+      resposta: { $regex: statusRegEx },
+    });
+    res.send(status);
+  })
+);
+
 
 export default router;

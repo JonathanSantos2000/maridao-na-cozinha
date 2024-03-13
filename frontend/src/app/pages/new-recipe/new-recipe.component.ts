@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { UserService } from 'src/app/services/user.service';
-import { INewRecipe } from 'src/app/shared/interfaces/INewRecipe';
+import { Category } from 'src/app/shared/models/recipe';
 import { User } from 'src/app/shared/models/user';
 
 @Component({
@@ -22,6 +22,11 @@ export class NewRecipeComponent implements OnInit {
   ingredientesExtra: string[] = [];
   modoDeFazerExtra: string = '';
   extras: any[] = [];
+
+  categorias: Category[] = [];
+  subcategorias: string[] = [];
+
+  fileToUpload: File | null = null;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -54,10 +59,71 @@ export class NewRecipeComponent implements OnInit {
       nivelDeDificuldade: ['', Validators.required],
     });
     this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl;
+
+    this.getAllCategories();
   }
 
   get fc() {
     return this.recipeForm.controls;
+  }
+
+  handleFileInput(event: any) {
+    const files = event.target.files;
+    if (files) {
+      const file = files.item(0);
+      if (file) {
+        this.fileToUpload = new File([file], file.name, { type: file.type });
+      }
+    }
+  }
+
+  getAllCategories() {
+    this.recipeService.getAllCategoryRecipe().subscribe(
+      (categorias: Category[]) => {
+        this.categorias = categorias;
+      },
+      (error) => {
+        console.error('Erro ao obter categorias:', error);
+      }
+    );
+  }
+
+  onCategoriaChange(event: any) {
+    const valorSelecionado = event.target.value;
+
+    this.subcategorias = [];
+    this.categorias.forEach((element) => {
+      if (element.nomeCategory === valorSelecionado) {
+        this.subcategorias.push(
+          ...element.nomeSubCategory.map((subcategoria) => subcategoria.nome)
+        );
+      }
+    });
+  }
+
+  formatRecipeName(name: string): string {
+    // Divida o nome da receita em palavras
+    const words = name.toLowerCase().split(' ');
+
+    // Capitalize a primeira letra de cada palavra
+    const capitalizedWords = words.map((word) => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+
+    // Junte as palavras novamente em uma string
+    return capitalizedWords.join(' ');
+  }
+
+  normalizeString(str: string): string {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  processIngredients() {
+    const ingredientes = this.recipeForm.get('ingredientes')?.value;
+    const ingredientesArray = ingredientes
+      .split(',')
+      .map((ingrediente: string) => ingrediente.trim());
+    this.recipeForm.get('ingredientes')?.setValue(ingredientesArray);
   }
 
   submit() {
@@ -66,27 +132,41 @@ export class NewRecipeComponent implements OnInit {
     if (this.recipeForm.invalid) return;
 
     const fv = this.recipeForm.value;
-    const newRecipe: INewRecipe = {
-      nomeDaReceita: fv.nomeDaReceita,
-      quemMandou: fv.quemMandou,
-      ingredientes: fv.ingredientes,
-      modoDeFazer: fv.modoDeFazer,
-      foto: fv.foto,
-      fotoAutor: fv.fotoAutor,
-      categoria: fv.categoria,
-      subcategoria: fv.subcategoria,
-      tempoDePreparo: fv.tempoDePreparo,
-      porcoes: fv.porcoes,
-      nivelDeDificuldade: fv.nivelDeDificuldade,
-      stars: 0,
-      favorite: false,
-      extra: fv.extra,
-    };
+    let formattedRecipeName = this.formatRecipeName(fv.nomeDaReceita);
+    formattedRecipeName = this.normalizeString(formattedRecipeName);
 
-    this.recipeService.newRecipe(newRecipe).subscribe((_) => {
-      this.router.navigateByUrl(this.returnUrl);
-    });
+    const newName = `${fv.categoria}_${this.user.id}-${formattedRecipeName}_${this.fileToUpload?.name}`;
+
+    if (this.fileToUpload) {
+      this.fileToUpload = new File([this.fileToUpload], newName, {
+        type: this.fileToUpload.type,
+      });
+    }
+    
+    this.processIngredients();
+
+    this.recipeService
+      .newRecipe(
+        formattedRecipeName,
+        fv.quemMandou,
+        fv.ingredientes,
+        fv.modoDeFazer,
+        this.fileToUpload,
+        fv.fotoAutor,
+        fv.categoria,
+        fv.subcategoria,
+        fv.tempoDePreparo,
+        fv.porcoes,
+        fv.nivelDeDificuldade,
+        0,
+        false,
+        fv.extra
+      )
+      .subscribe((_) => {
+        window.location.reload();
+      });
   }
+
   /* Fim Submit */
   openModal() {
     const modal = document.getElementById('myModal');

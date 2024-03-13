@@ -1,6 +1,5 @@
 import { Router } from "express";
 import { category_recipe } from "../data/category";
-import { recipe_foods } from "../data/recipe";
 import asyncHandler from "express-async-handler";
 import { CategoryModel } from "../models/category.model";
 import { ReceipeModel } from "../models/recipe.model";
@@ -18,6 +17,14 @@ router.get(
     }
     await CategoryModel.create(category_recipe);
     res.send("Seed Is Done!");
+  })
+);
+/* Pegar todas as CATEGORIAS No MongoD */
+router.get(
+  "/",
+  asyncHandler(async (req, res) => {
+    const categoria = await CategoryModel.find();
+    res.send(categoria);
   })
 );
 

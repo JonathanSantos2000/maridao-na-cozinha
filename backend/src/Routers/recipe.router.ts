@@ -2,6 +2,7 @@ import { Router } from "express";
 import { recipe_foods } from "../data/recipe";
 import asyncHandler from "express-async-handler";
 import { ReceipeModel } from "../models/recipe.model";
+import { NewPhotoModel } from "../models/photo.model";
 
 const router = Router();
 
@@ -48,5 +49,30 @@ router.get(
     res.send(recipe);
   })
 );
+
+router.post("/photo/status", async (req, res) => {
+  const { idPhoto, url, status, nomeDaReceita, user } = req.body;
+  let photo = {
+    urlFoto: url,
+    quemMandou: user,
+  };
+  
+  try {
+    const updatedPhoto = await NewPhotoModel.updateOne(
+      { _id: idPhoto }, // Filter: Find the document with the given id
+      { $set: { resposta: status } } // Update: Set the resposta field to the provided status
+    );
+
+    const updatedRecipe = await ReceipeModel.updateOne(
+      { nomeDaReceita: nomeDaReceita },
+      { $push: { foto: photo } }
+    );
+
+    res.send({ updatedPhoto, updatedRecipe });
+  } catch (error) {
+    console.error("Error updating photo status:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
 
 export default router;

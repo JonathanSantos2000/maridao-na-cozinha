@@ -2,17 +2,26 @@ import { Router } from "express";
 import asyncHandler from "express-async-handler";
 import { HTTP_BAD_REQUEST } from "../constants/http_status";
 import { NewRecipe, NewRecipeModel } from "../models/newRecipe.model";
+import multer from "multer";
+import { storage, fileFilter } from "../configs/multer";
+
 const router = Router();
+
+const upload = multer({
+  storage: storage,
+  fileFilter: fileFilter,
+});
 
 router.post(
   "/newRecipe",
+  upload.single("file"),
   asyncHandler(async (req, res) => {
     const {
       nomeDaReceita,
       quemMandou,
       ingredientes,
       modoDeFazer,
-      foto,
+      file,
       fotoAutor,
       categoria,
       subcategoria,
@@ -21,7 +30,11 @@ router.post(
       nivelDeDificuldade,
       extra,
     } = req.body;
-
+    let url = `${categoria}/${JSON.stringify(req.file?.filename)}`.replace(
+      /"/g,
+      ""
+    );
+    console.log(`file: ${url}`);
     const recipe = await NewRecipeModel.findOne({ nomeDaReceita });
     if (recipe) {
       res.status(HTTP_BAD_REQUEST).send("Recipe is already exist");
@@ -34,7 +47,7 @@ router.post(
       quemMandou: quemMandou,
       ingredientes: ingredientes,
       modoDeFazer: modoDeFazer,
-      foto: foto,
+      foto: url,
       fotoAutor: fotoAutor,
       categoria: categoria,
       subcategoria: subcategoria,
@@ -43,14 +56,29 @@ router.post(
       nivelDeDificuldade: nivelDeDificuldade,
       stars: 0,
       favorite: false,
-      extra: extra,
       resposta: "Verificando",
-      copyright: false,
+      copyright: true,
     };
+
+    if (extra !== "") {
+      newRecipe.extra = extra;
+    }
+
     const dbRecipe = await NewRecipeModel.create(newRecipe);
-    console.log(dbRecipe);
     res.send(dbRecipe);
   })
 );
 
+router.get(
+  "/newRecipe/:quemMandou",
+  asyncHandler(async (req, res) => {
+    console.log("entre");
+    const quemMandouRegEx = new RegExp(req.params.quemMandou);
+    const recipe = await NewRecipeModel.find({
+      quemMandou: { $regex: quemMandouRegEx },
+    });
+    console.log(recipe);
+    res.send(recipe);
+  })
+);
 export default router;
