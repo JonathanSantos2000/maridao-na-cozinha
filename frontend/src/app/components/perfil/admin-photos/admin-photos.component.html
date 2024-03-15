@@ -1,0 +1,53 @@
+<div class="photos_header">
+  <div class="title">
+    <h1>Fotos:</h1>
+    <div class="btnsShowHide">
+      <button (click)="showPhotoContent()" *ngIf="showPhotoBtnShow">
+        <i class="bi bi-plus-lg"></i>
+      </button>
+      <button (click)="showPhotoContent()" *ngIf="showPhotoBtnHide">
+        <i class="bi bi-dash-lg"></i>
+      </button>
+    </div>
+  </div>
+  <div class="btns">
+    <button (click)="showPhotoList('Verificando')">Verificando</button>
+    <button (click)="showPhotoList('Aprovado')">Aprovado</button>
+    <button (click)="showPhotoList('Negado')">Negado</button>
+  </div>
+</div>
+<div class="photos_content" *ngIf="showPhotos">
+  <ng-container *ngIf="userPhotos.length > 0; else normalImage">
+    <div class="photo" *ngFor="let photos of userPhotos">
+      <img [src]="startUrl + photos.urlFoto" alt="" />
+      <div class="control">
+        <h1 class="title_recipe">{{ photos.nomeReceita }}</h1>
+        <h1>Quem enviou: {{ photos.quemMandou }}</h1>
+        <h1>Status atual: {{ photos.resposta }}</h1>
+        <div class="btns">
+          <button
+            (click)="
+              approve(
+                photos._id,
+                photos.urlFoto,
+                photos.nomeReceita,
+                photos.quemMandou
+              )
+            "
+          >
+            <i class="bi bi-check2" [ngStyle]="{ color: 'green' }"></i>
+          </button>
+
+          <button (click)="denie()">
+            <i class="bi bi-x-lg" [ngStyle]="{ color: 'red' }"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #normalImage>
+    <div class="hasNoPhoto">
+      <h1>Não Há fotos com esse Status...</h1>
+    </div>
+  </ng-template>
+</div>

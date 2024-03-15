@@ -52,7 +52,7 @@
       <app-card-recipe
         typeCategoria="{{ titleCat }}"
         idRecipe="{{ recipe.id }}"
-        urlImg="{{ recipe.foto[0].urlFoto }}"
+        urlImg="{{ recipe.foto.length > 1 ? recipe.foto[1].urlFoto : recipe.foto[0].urlFoto }}"
         titleReceita="{{ recipe.nomeDaReceita }}"
       ></app-card-recipe>
     </div>

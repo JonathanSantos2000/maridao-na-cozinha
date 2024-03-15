@@ -6,6 +6,7 @@ import { User, UserModel } from "../models/user.model";
 import { HTTP_BAD_REQUEST } from "../constants/http_status";
 import bcrypt from "bcryptjs";
 import { NewPhotoModel } from "../models/photo.model";
+import { NewRecipeModel } from "../models/newRecipe.model";
 
 const router = Router();
 
@@ -104,5 +105,15 @@ router.get(
   })
 );
 
+router.get(
+  "/newrecipes/admin/:status",
+  asyncHandler(async (req, res) => {
+    const statusRegEx = new RegExp(req.params.status);
+    const status = await NewRecipeModel.find({
+      resposta: { $regex: statusRegEx },
+    });
+    res.send(status);
+  })
+);
 
 export default router;

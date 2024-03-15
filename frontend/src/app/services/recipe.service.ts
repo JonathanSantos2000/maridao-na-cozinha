@@ -13,10 +13,12 @@ import {
   NEW_RECIPE_URL,
   NEW_UPLOAD_URL,
   UPDATE_PHOTO_STATUS_URL,
+  GET_NEW_RECIPE_URL,
 } from '../shared/constants/urls';
 import { INewRecipe } from '../shared/interfaces/INewRecipe';
 import { NewRecipe } from '../shared/models/newRecipe';
 import { Foto } from '../shared/models/photos';
+import { forEachChild } from 'typescript';
 
 @Injectable({
   providedIn: 'root',
@@ -114,11 +116,12 @@ export class RecipeService {
     formData.append('nivelDeDificuldade', nivelDeDificuldade);
     formData.append('stars', stars.toString());
     formData.append('favorite', favorite.toString());
+    formData.append('extra', JSON.stringify(extra));
 
-    if (extra === '') {
-      extra = {};
-    }
-    formData.append('extra', extra);
+    formData.forEach((element) => {
+      console.log(element);
+    });
+
     return this.http.post<NewRecipe>(NEW_RECIPE_URL, formData);
   }
 
@@ -156,5 +159,10 @@ export class RecipeService {
 
     // Enviando a solicitação HTTP com os dados como JSON
     return this.http.post<Foto>(UPDATE_PHOTO_STATUS_URL, statusData);
+  }
+
+  getNewRecipeByid(idRecipe: string) {
+    const url = `${GET_NEW_RECIPE_URL.replace(':id', idRecipe)}`;
+    return this.http.get<NewRecipe>(url);
   }
 }

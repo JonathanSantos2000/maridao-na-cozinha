@@ -1,0 +1,39 @@
+<div class="photo_send-title">
+  <h1>Suas Fotos:</h1>
+</div>
+<div class="photo_send-content">
+
+  <ngx-slick-carousel
+    class="carousel"
+    #slickModalCarne="slick-carousel"
+    [config]="slideConfig"
+  >
+    <div ngxSlickItem *ngFor="let photos of userPhotos">
+      <div class="slide">
+        <img [src]="startUrl + photos.urlFoto" alt="" />
+        <h5
+          class="status"
+          *ngIf="photos.resposta == 'Verificando'"
+          [ngStyle]="{ color: 'white' }"
+        >
+          <i class="bi bi-chevron-down"></i>
+        </h5>
+        <h5
+          class="status"
+          *ngIf="photos.resposta == 'Aprovado'"
+          [ngStyle]="{ color: 'green' }"
+        >
+          <i class="bi bi-check2"></i>
+        </h5>
+        <h5
+          class="status"
+          *ngIf="photos.resposta == 'Negado'"
+          [ngStyle]="{ color: 'red' }"
+        >
+          <i class="bi bi-x-lg"></i>
+        </h5>
+        <h5>{{ photos.nomeReceita }}</h5>
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</div>

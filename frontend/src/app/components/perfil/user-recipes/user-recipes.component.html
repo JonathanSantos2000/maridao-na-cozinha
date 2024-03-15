@@ -1,0 +1,40 @@
+<div class="recipes_sends-title">
+  <h3>Suas Receitas:</h3>
+</div>
+<div class="recipes_sends-content">
+  <ngx-slick-carousel
+    class="carousel"
+    #slickModalrecipes="slick-carousel"
+    [config]="slideConfig"
+  >
+    <div ngxSlickItem *ngFor="let recipe of userNewRecipes">
+      <div class="slide">
+        <a routerLink="/request/{{ recipe.id }}">
+          <img [src]="startUrl + recipe.foto" alt="" />
+          <h5
+            class="status"
+            *ngIf="recipe.resposta == 'Verificando'"
+            [ngStyle]="{ color: 'white' }"
+          >
+            <i class="bi bi-chevron-down"></i>
+          </h5>
+          <h5
+            class="status"
+            *ngIf="recipe.resposta == 'Aprovado'"
+            [ngStyle]="{ color: 'green' }"
+          >
+            <i class="bi bi-check2"></i>
+          </h5>
+          <h5
+            class="status"
+            *ngIf="recipe.resposta == 'Negado'"
+            [ngStyle]="{ color: 'red' }"
+          >
+            <i class="bi bi-x-lg"></i>
+          </h5>
+          <h5>{{ recipe.nomeDaReceita }}</h5>
+        </a>
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</div>

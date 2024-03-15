@@ -24,7 +24,6 @@ export const fileFilter = (
   cb: multer.FileFilterCallback
 ) => {
   const allowedTypes = [".jpg", ".jpeg", ".png"];
-  console.log(file);
   // Obter a extensão do arquivo
   const ext = path.extname(file.originalname).toLowerCase();
 

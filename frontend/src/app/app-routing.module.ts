@@ -7,6 +7,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { NewRecipeComponent } from './pages/new-recipe/new-recipe.component';
 import { PerfilPageComponent } from './pages/perfil-page/perfil-page.component';
+import { RequestRecipePageComponent } from './pages/request-recipe-page/request-recipe-page.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'send/recipe',
     component: NewRecipeComponent,
+  },
+  {
+    path: 'request/:id',
+    component: RequestRecipePageComponent,
   },
 ];
 

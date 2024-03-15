@@ -13,7 +13,7 @@ import { User } from 'src/app/shared/models/user';
   styleUrls: ['./recipe.component.css', './recipe.responsive.component.css'],
 })
 export class RecipeComponent implements OnInit {
-  recipes!: Recipe | any;
+  recipes!: Recipe;
   hasExtra: boolean = false;
   showForm: boolean = false;
   showBtnShow: boolean = true;
@@ -29,7 +29,7 @@ export class RecipeComponent implements OnInit {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    arrows: false,
+    arrows: true,
   };
 
   constructor(
@@ -50,9 +50,9 @@ export class RecipeComponent implements OnInit {
               slidesToShow: 1,
               slidesToScroll: 1,
               initialSlide: 1,
-              arrows: false,
+              arrows: true,
             };
-        }
+          }
         });
     });
   }

@@ -22,6 +22,11 @@ import { InputValidationComponent } from './components/form/input-validation/inp
 import { TextInputComponent } from './components/form/text-input/text-input.component';
 import { NewRecipeComponent } from './pages/new-recipe/new-recipe.component';
 import { PerfilPageComponent } from './pages/perfil-page/perfil-page.component';
+import { RequestRecipePageComponent } from './pages/request-recipe-page/request-recipe-page.component';
+import { UserPhotosComponent } from './components/perfil/user-photos/user-photos.component';
+import { AdminPhotosComponent } from './components/perfil/admin-photos/admin-photos.component';
+import { UserRecipesComponent } from './components/perfil/user-recipes/user-recipes.component';
+import { AdminRecipesComponent } from './components/perfil/admin-recipes/admin-recipes.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +45,11 @@ import { PerfilPageComponent } from './pages/perfil-page/perfil-page.component';
     TextInputComponent,
     NewRecipeComponent,
     PerfilPageComponent,
+    RequestRecipePageComponent,
+    AdminRecipesComponent,
+    AdminPhotosComponent,
+    UserRecipesComponent,
+    UserPhotosComponent,
   ],
   imports: [
     BrowserModule,

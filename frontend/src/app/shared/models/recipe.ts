@@ -21,8 +21,8 @@ interface Foto {
   quemMandou: string;
 }
 
-interface Extra {
-  nomeDaReceitaExtra?: string;
+export interface Extra {
+  nomeDaReceitaExtra: string;
   ingredientes: string[];
   modoDeFazer: string;
 }

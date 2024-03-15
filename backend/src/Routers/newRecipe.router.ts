@@ -12,6 +12,11 @@ const upload = multer({
   fileFilter: fileFilter,
 });
 
+function toArray(ingrediente: string): string[] {
+  const array = ingrediente.split(",").map((item) => item.trim());
+  return array;
+}
+
 router.post(
   "/newRecipe",
   upload.single("file"),
@@ -34,7 +39,6 @@ router.post(
       /"/g,
       ""
     );
-    console.log(`file: ${url}`);
     const recipe = await NewRecipeModel.findOne({ nomeDaReceita });
     if (recipe) {
       res.status(HTTP_BAD_REQUEST).send("Recipe is already exist");
@@ -45,7 +49,7 @@ router.post(
       id: "",
       nomeDaReceita: nomeDaReceita,
       quemMandou: quemMandou,
-      ingredientes: ingredientes,
+      ingredientes: toArray(ingredientes),
       modoDeFazer: modoDeFazer,
       foto: url,
       fotoAutor: fotoAutor,
@@ -60,8 +64,9 @@ router.post(
       copyright: true,
     };
 
-    if (extra !== "") {
-      newRecipe.extra = extra;
+    if (extra !== null) {
+      const objRecipe = JSON.parse(extra);
+      newRecipe.extra = objRecipe;
     }
 
     const dbRecipe = await NewRecipeModel.create(newRecipe);
@@ -72,13 +77,25 @@ router.post(
 router.get(
   "/newRecipe/:quemMandou",
   asyncHandler(async (req, res) => {
-    console.log("entre");
     const quemMandouRegEx = new RegExp(req.params.quemMandou);
     const recipe = await NewRecipeModel.find({
       quemMandou: { $regex: quemMandouRegEx },
     });
-    console.log(recipe);
     res.send(recipe);
   })
 );
+
+router.get(
+  "/newRecipe/idRecipe/:id",
+  asyncHandler(async (req, res) => {
+    try {
+      const recipe = await NewRecipeModel.findById(req.params.id);
+      res.send(recipe);
+    } catch (error) {
+      console.error("Erro ao filtrar por categoria e subcategoria:", error);
+      res.status(500).send("Erro ao filtrar por categoria e subcategoria.");
+    }
+  })
+);
+
 export default router;

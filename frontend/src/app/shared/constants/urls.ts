@@ -20,10 +20,15 @@ export const USER_LOGIN_URL = BASE_URL + '/api/users/login';
 export const USER_REGISTER_URL = BASE_URL + '/api/users/register';
 export const PHOTOS_USER_SEND_URL = BASE_URL + '/api/users/photos/:id';
 export const PHOTOS_SEND_URL = BASE_URL + '/api/users/photos/admin/:status';
+export const RECIPES_SEND_URL =
+  BASE_URL + '/api/users/newrecipes/admin/:status';
+export const USER_DE_QUEM_URL = BASE_URL + '/api/users/admin/:email';
 
 /* Send URls */
 export const NEW_RECIPE_URL = BASE_URL + '/api/ask/newRecipe';
-export const GET_NEW_RECIPE_URL = BASE_URL + '/api/ask/newRecipe/:quemMandou';
+export const GET_NEW_ALL_RECIPE_URL =
+  BASE_URL + '/api/ask/newRecipe/:quemMandou';
 
 export const NEW_UPLOAD_URL = BASE_URL + '/api/upload';
 export const GET_PHOTO_URL = BASE_URL + '/api/files';
+export const GET_NEW_RECIPE_URL = BASE_URL + '/api/ask/newRecipe/idRecipe/:id';

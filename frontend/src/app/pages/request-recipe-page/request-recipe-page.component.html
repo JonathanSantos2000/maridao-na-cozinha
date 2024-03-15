@@ -4,62 +4,39 @@
       <h1>{{ recipes.nomeDaReceita }}</h1>
     </div>
     <div class="recipe__header__photo">
-      <ngx-slick-carousel
-        class="carousel"
-        #slickModalCarne="slick-carousel"
-        [config]="slideConfig"
-      >
-        <div ngxSlickItem *ngFor="let photos of recipes.foto">
-          <div class="slide">
-            <ng-container
-              *ngIf="photos.urlFoto === 'Foto-NI'; else normalImage"
-            >
-              <img
-                src="../../../assets/IMG/img-receitas/{{ photos.urlFoto }}.jpg"
-                alt=""
-              />
-            </ng-container>
-            <ng-template #normalImage>
-              <img [src]="startUrl + photos.urlFoto" alt="" />
-            </ng-template>
-            <div class="autorPhoto">
-              <h1>{{ photos.quemMandou }}</h1>
-            </div>
-          </div>
+      <div class="photo">
+        <img [src]="startUrl + recipes.foto" alt="" />
+        <div class="quemMandou">
+          <h1 *ngIf="user.isAdmin">{{ recipes.quemMandou }}</h1>
+          <h1 *ngIf="!user.isAdmin">{{ user.name }}</h1>
         </div>
-      </ngx-slick-carousel>
+        <h5
+          class="status"
+          *ngIf="recipes.resposta == 'Verificando'"
+          [ngStyle]="{ color: 'white' }"
+        >
+          <i class="bi bi-chevron-down"></i>
+        </h5>
+        <h5
+          class="status"
+          *ngIf="recipes.resposta == 'Aprovado'"
+          [ngStyle]="{ color: 'green' }"
+        >
+          <i class="bi bi-check2"></i>
+        </h5>
+        <h5
+          class="status"
+          *ngIf="recipes.resposta == 'Negado'"
+          [ngStyle]="{ color: 'red' }"
+        >
+          <i class="bi bi-x-lg"></i>
+        </h5>
+      </div>
 
       <h5 class="notificacoes">
         * Essas estimativas podem variar dependendo das técnicas de cozinha
         individuais e dos ingredientes específicos utilizados.
       </h5>
-      <div class="new_photo">
-        <div class="new_photo-header">
-          <div class="title">
-            <h1>Envie sua foto:</h1>
-          </div>
-          <div class="send-more">
-            <button (click)="showFormContent()" *ngIf="showBtnShow">
-              <i class="bi bi-plus-lg"></i>
-            </button>
-            <button (click)="showFormContent()" *ngIf="showBtnHide">
-              <i class="bi bi-dash-lg"></i>
-            </button>
-          </div>
-        </div>
-        <div class="content" *ngIf="showForm">
-          <form (submit)="uploadFile()">
-            <input
-              type="file"
-              (change)="handleFileInput($event)"
-              name="file"
-              id="file"
-            />
-            <br />
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
-      </div>
     </div>
   </div>
   <div class="recipe__description">
@@ -86,6 +63,7 @@
         <img src="../../../assets/IMG/Icons/icon-ingredientes.png" alt="" />
         <h5>Ingredientes:</h5>
       </div>
+      <!-- ### Lista Ingredientes ### -->
       <div class="ingredient__list">
         <div class="mainlist">
           <ul>
@@ -151,30 +129,27 @@
           </div>
         </div>
       </div>
-    </div>
-    <br />
-    <hr />
-    <div class="recipe__method-of-preparation">
-      <div class="method-of-preparation__icon">
-        <img src="../../../assets/IMG/Icons/icon-preparo.png" alt="" />
-        <h5>Modo de fazer:</h5>
-      </div>
-      <div class="method-of-preparation">
-        <p>{{ recipes.modoDeFazer }}</p>
-        <!-- extra recipe Modo de fazer -->
-        <div class="extra-recipe" *ngIf="hasExtra">
-          <div *ngFor="let extra of recipes.extra">
-            <hr />
-            <h5>{{ extra.nomeDaReceitaExtra }}:</h5>
-            <div class="method-of-preparation">
-              <p>{{ extra.modoDeFazer }}</p>
+      <br />
+      <hr />
+      <div class="recipe__method-of-preparation">
+        <div class="method-of-preparation__icon">
+          <img src="../../../assets/IMG/Icons/icon-preparo.png" alt="" />
+          <h5>Modo de fazer:</h5>
+        </div>
+        <div class="method-of-preparation">
+          <p>{{ recipes.modoDeFazer }}</p>
+          <!-- extra recipe Modo de fazer -->
+          <div class="extra-recipe" *ngIf="hasExtra">
+            <div *ngFor="let extra of recipes.extra">
+              <hr />
+              <h5>{{ extra.nomeDaReceitaExtra }}:</h5>
+              <div class="method-of-preparation">
+                <p>{{ extra.modoDeFazer }}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <br />
-    <hr />
-    <div class="autor">Enviado Por: {{ recipes.quemMandou }}</div>
   </div>
 </div>

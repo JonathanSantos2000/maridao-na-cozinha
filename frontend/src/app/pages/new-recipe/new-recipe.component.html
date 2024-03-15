@@ -31,34 +31,48 @@
     <button type="button" (click)="openModal()">Adicionar Extra</button>
 
     <!-- Lista Extras add -->
-    <ul class="lista-extra-recipe" *ngFor="let extra of extras; let i = index">
-      <li class="item-list">
-        <strong>Nome:</strong> {{ extra.nome }}
-        <br />
-        <strong>Ingredientes:</strong>
-        <span *ngIf="isArray(extra.ingredientes)">
-          {{ extra.ingredientes.join(", ") }}
-        </span>
-        <span *ngIf="!isArray(extra.ingredientes)">
-          {{ extra.ingredientes }}
-        </span>
-        <br />
-        <strong>Modo de fazer:</strong> {{ extra.modoDeFazer }}
-        <br />
-      </li>
-      <li class="list-btn">
-        <button type="button" (click)="removeExtra(i)">
-          <i class="bi bi-trash3"></i>
-        </button>
-      </li>
-    </ul>
+    <table *ngIf="extras.length > 0">
+      <thead>
+        <tr>
+          <th class="coluna1">Nome:</th>
+          <th class="coluna2">Ingredientes:</th>
+          <th class="coluna3">Modo de fazer:</th>
+          <th class="coluna4">Deletar:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="lista-extra-recipe"
+          *ngFor="let extra of extras; let i = index"
+        >
+          <td>{{ extra.nomeDaReceitaExtra }}</td>
+          <td class="coluna2">
+            <ul *ngFor="let ingrediente of extra.ingredientes">
+              <li>{{ ingrediente }}</li>
+            </ul>
+          </td>
+          <td class="coluna3">{{ extra.modoDeFazer }}</td>
+          <td class="list-btn">
+            <button type="button" (click)="removeExtra(i)">
+              <i class="bi bi-trash3"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <!-- Fim lista Extra -->
 
     <div class="column-inputs">
       <div class="left-column">
         <div class="input-file">
           <label for="arquivo">Enviar foto:</label>
-          <input type="file" id="photo" formControlName="foto" (change)="handleFileInput($event)" required />
+          <input
+            type="file"
+            id="photo"
+            formControlName="foto"
+            (change)="handleFileInput($event)"
+            required
+          />
         </div>
         <div class="categoria">
           <label for="arquivo">Selecione a categoria:</label><br />
@@ -148,5 +162,37 @@
     <input type="checkbox" required />
     <label for="copyright">Todas as informações-lhe pertence?</label>
     <button type="submit">Enviar</button>
+  </form>
+  <form
+    [formGroup]="extraForm"
+    *ngIf="showExtra"
+    class="flex-all-collun-center"
+  >
+    <h1>Extra:</h1>
+    <text-input
+      [control]="efc.nomeDaReceitaExtra"
+      [showErrorWhen]="isSubmittedExtra"
+      type="text"
+      label="Digite o que é (Ex. Molho, Cobertura, recheio...):"
+    ></text-input>
+
+    <text-input
+      [control]="efc.ingredientes"
+      [showErrorWhen]="isSubmittedExtra"
+      type="text"
+      label="Digite os ingredientes separados por virgula:"
+    ></text-input>
+
+    <text-input
+      [control]="efc.modoDeFazer"
+      [showErrorWhen]="isSubmittedExtra"
+      type="text"
+      label="Digite o modo de fazer:"
+    ></text-input>
+    <div class="bts">
+      <button type="submit" (click)="closeModal()">Cancelar</button>
+
+      <button type="submit" (click)="saveExtra()">Salvar</button>
+    </div>
   </form>
 </div>

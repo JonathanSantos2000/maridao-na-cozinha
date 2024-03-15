@@ -1,0 +1,33 @@
+<div class="recipes_header">
+  <div class="title">
+    <h1>Receitas:</h1>
+    <div class="btnsShowHide">
+      <button (click)="showRecipesContent()" *ngIf="showRecipesBtnShow">
+        <i class="bi bi-plus-lg"></i>
+      </button>
+      <button (click)="showRecipesContent()" *ngIf="showRecipesBtnHide">
+        <i class="bi bi-dash-lg"></i>
+      </button>
+    </div>
+  </div>
+  <div class="btns">
+    <button (click)="showRecipesList('Verificando')">Verificando</button>
+    <button (click)="showRecipesList('Aprovado')">Aprovado</button>
+    <button (click)="showRecipesList('Negado')">Negado</button>
+  </div>
+</div>
+<div class="recipes_content" *ngIf="showRecipes">
+  <div class="hasPhoto" *ngIf="hasRecipe">
+    <div class="recipe" *ngFor="let recipe of userNewRecipes">
+      <img [src]="startUrl + recipe.foto" alt="" />
+      <a routerLink="/request/{{ recipe.id }}" class="control">
+        <h1 class="title_recipe">{{ recipe.nomeDaReceita }}</h1>
+        <h1>Quem enviou: {{ recipe.quemMandou }}</h1>
+        <h1>Status atual: {{ recipe.resposta }}</h1>
+      </a>
+    </div>
+  </div>
+  <div class="hasNoPhoto" *ngIf="!hasRecipe">
+    <h1>Não Há fotos com esse Status...</h1>
+  </div>
+</div>

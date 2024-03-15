@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { UserService } from 'src/app/services/user.service';
-import { Category } from 'src/app/shared/models/recipe';
+import { Category, Extra } from 'src/app/shared/models/recipe';
 import { User } from 'src/app/shared/models/user';
 
 @Component({
@@ -13,15 +13,20 @@ import { User } from 'src/app/shared/models/user';
 })
 export class NewRecipeComponent implements OnInit {
   recipeForm!: FormGroup;
+  extraForm!: FormGroup;
+  showExtra: boolean = false;
+
   isSubmitted: boolean = false;
+  isSubmittedExtra: boolean = false;
   returnUrl: string = '';
 
   user!: User;
 
-  nomeExtra: string = '';
+  /* nomeExtra: string = '';
   ingredientesExtra: string[] = [];
-  modoDeFazerExtra: string = '';
-  extras: any[] = [];
+  modoDeFazerExtra: string = ''; */
+
+  extras: Extra[] = [];
 
   categorias: Category[] = [];
   subcategorias: string[] = [];
@@ -58,6 +63,12 @@ export class NewRecipeComponent implements OnInit {
       porcoes: ['', Validators.required],
       nivelDeDificuldade: ['', Validators.required],
     });
+    this.extraForm = this.formBuilder.group({
+      nomeDaReceitaExtra: ['', Validators.required],
+      ingredientes: ['', Validators.required],
+      modoDeFazer: ['', Validators.required],
+    });
+
     this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl;
 
     this.getAllCategories();
@@ -65,6 +76,10 @@ export class NewRecipeComponent implements OnInit {
 
   get fc() {
     return this.recipeForm.controls;
+  }
+
+  get efc() {
+    return this.extraForm.controls;
   }
 
   handleFileInput(event: any) {
@@ -142,7 +157,7 @@ export class NewRecipeComponent implements OnInit {
         type: this.fileToUpload.type,
       });
     }
-    
+
     this.processIngredients();
 
     this.recipeService
@@ -163,43 +178,42 @@ export class NewRecipeComponent implements OnInit {
         fv.extra
       )
       .subscribe((_) => {
-        window.location.reload();
+        /* window.location.reload(); */
       });
   }
 
   /* Fim Submit */
   openModal() {
-    const modal = document.getElementById('myModal');
-    if (modal) {
-      modal.style.display = 'block';
-    }
+    this.isSubmittedExtra = false;
+    this.extraForm.reset();
+    this.showExtra = true;
   }
 
   closeModal() {
-    const modal = document.getElementById('myModal');
-    if (modal) {
-      modal.style.display = 'none';
-    }
+    this.showExtra = false;
   }
 
   saveExtra() {
+    this.isSubmittedExtra = true;
+    if (this.extraForm.invalid) return;
+
+    const efv = this.extraForm.value;
+
     const novoExtra = {
-      nome: this.nomeExtra,
-      ingredientes: this.ingredientesExtra,
-      modoDeFazer: this.modoDeFazerExtra,
+      nomeDaReceitaExtra: efv.nomeDaReceitaExtra,
+      ingredientes: this.toArray(efv.ingredientes),
+      modoDeFazer: efv.modoDeFazer,
     };
 
     this.extras.push(novoExtra);
 
-    this.nomeExtra = '';
-    this.ingredientesExtra = [];
-    this.modoDeFazerExtra = '';
-
     this.closeModal();
   }
 
-  isArray(value: any): boolean {
-    return Array.isArray(value);
+  toArray(ingrediente: string): string[] {
+    // Divida o texto usando a vírgula como separador e remova os espaços em branco
+    const array = ingrediente.split(',').map((item) => item.trim());
+    return array;
   }
 
   removeExtra(index: number) {

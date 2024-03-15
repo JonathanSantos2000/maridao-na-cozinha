@@ -1,0 +1,109 @@
+.photos_header {
+  width: 100%;
+  margin: .5rem 0;
+  border: 1px solid #808080;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #00340C;
+
+  & .title {
+    border-bottom: 1px solid #808080;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & .btnsShowHide {
+      & button {
+        width: 38px;
+        height: 38px;
+        font-size: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    & button {
+      width: 150px;
+      height: 36px;
+    }
+  }
+}
+
+.photos_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+
+  & .photo {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #808080;
+    width: 100%;
+    margin-bottom: .5rem;
+
+    & img {
+      width: 418px;
+      height: 280px;
+    }
+
+    & .control {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 56%;
+      margin: 0.5rem;
+
+      & h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #00340C;
+      }
+
+      & .title_recipe {
+        text-align: center;
+      }
+
+      & .btns {
+        width: 100%;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & button {
+          width: 260px;
+          height: 100%;
+          font-size: 28px;
+          padding: .2rem;
+          cursor: pointer;
+        }
+
+      }
+    }
+  }
+}
+
+.hasNoPhoto {
+  border: 1px solid #808080;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & h1 {
+    font-size: 36px;
+  }
+}

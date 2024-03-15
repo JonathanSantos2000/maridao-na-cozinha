@@ -2,9 +2,11 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { User } from '../shared/models/user';
 import {
-  GET_NEW_RECIPE_URL,
+  GET_NEW_ALL_RECIPE_URL,
   PHOTOS_SEND_URL,
   PHOTOS_USER_SEND_URL,
+  RECIPES_SEND_URL,
+  USER_DE_QUEM_URL,
   USER_LOGIN_URL,
   USER_REGISTER_URL,
 } from '../shared/constants/urls';
@@ -78,16 +80,19 @@ export class UserService {
     );
   }
 
-  getPhotosbyStatus(status: string) {
+  getPhotosByStatus(status: string) {
     return this.http.get<Foto[]>(
       `${PHOTOS_SEND_URL.replace(':status', status)}`
     );
   }
-
-  getNewRecipeByUser(quemMandou: string) {
-    console.log(quemMandou);
+  getRecipesByStatus(status: string) {
     return this.http.get<NewRecipe[]>(
-      `${GET_NEW_RECIPE_URL.replace(':quemMandou', quemMandou)}`
+      `${RECIPES_SEND_URL.replace(':status', status)}`
+    );
+  }
+  getNewRecipeByUser(quemMandou: string) {
+    return this.http.get<NewRecipe[]>(
+      `${GET_NEW_ALL_RECIPE_URL.replace(':quemMandou', quemMandou)}`
     );
   }
 

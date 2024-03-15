@@ -1,0 +1,40 @@
+.photo_send-title {
+  border-top: 1px solid #808080;
+  border-right: 1px solid #808080;
+  border-left: 1px solid #808080;
+  padding-left: 10px;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #00340C;
+}
+
+.photo_send-content {
+  border: 1px solid #808080;
+}
+
+
+.slide {
+  width: 100%;
+  position: relative;
+
+  & img {
+    width: 229px;
+    height: 172px;
+  }
+
+  & h5 {
+    font-family: "Dancing Script", cursive;
+    margin: 0 5px;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .status {
+    background: rgba(256, 256, 256, .5);
+    position: absolute;
+    top: 0;
+    right: .7rem;
+    font-size: 43px;
+  }
+}

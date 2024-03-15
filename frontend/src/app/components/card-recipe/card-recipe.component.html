@@ -5,7 +5,7 @@
         <img src="../../../assets/IMG/img-receitas/{{ urlImg }}.jpg" alt="" />
       </ng-container>
       <ng-template #normalImage>
-        <img src="../../../assets/IMG/img-receitas/{{ urlImg }}" alt="Normal" />
+        <img [src]="startUrl + urlImg" alt="Normal" />
       </ng-template>
     </div>
     <div class="card-recipe__title">

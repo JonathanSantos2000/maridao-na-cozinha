@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GET_PHOTO_URL } from 'src/app/shared/constants/urls';
 
 @Component({
   selector: 'app-card-recipe',
@@ -19,6 +20,8 @@ export class CardRecipeComponent implements OnInit {
 
   @Input()
   idRecipe: string = '';
+
+  startUrl: string = `${GET_PHOTO_URL}/`;
 
   constructor() {}
 

@@ -1,21 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { Router } from '@angular/router';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { UserService } from 'src/app/services/user.service';
 import { GET_PHOTO_URL } from 'src/app/shared/constants/urls';
-import { NewRecipe } from 'src/app/shared/models/newRecipe';
 import { User } from 'src/app/shared/models/user';
 
 @Component({
-  selector: 'app-perfil-page',
-  templateUrl: './perfil-page.component.html',
-  styleUrl: './perfil-page.component.css',
+  selector: 'app-user-photos',
+  templateUrl: './user-photos.component.html',
+  styleUrl: './user-photos.component.css',
 })
-export class PerfilPageComponent implements OnInit {
+export class UserPhotosComponent implements OnInit {
   startUrl: string = `${GET_PHOTO_URL}/`;
+  userPhotos: any[] = [];
+
   user!: User;
 
+  slideConfig = {
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+  };
   constructor(
     private router: Router,
     private userService: UserService,
@@ -28,17 +33,14 @@ export class PerfilPageComponent implements OnInit {
         window.location.href = '/login';
       }
     });
+    this.userService.getPhotosByUser(this.user.id).subscribe(
+      (photos) => {
+        this.userPhotos = photos;
+      },
+      (error) => {
+        console.error('Erro ao obter fotos do usuário:', error);
+      }
+    );
   }
-
-  ngOnInit(): void {
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
-        window.scrollTo(0, 0);
-      });
-  }
-
-  get isAdm() {
-    return this.user.isAdmin;
-  }
+  ngOnInit(): void {}
 }
