@@ -43,16 +43,28 @@ var express_1 = require("express");
 var express_async_handler_1 = __importDefault(require("express-async-handler"));
 var http_status_1 = require("../constants/http_status");
 var newRecipe_model_1 = require("../models/newRecipe.model");
+var multer_1 = __importDefault(require("multer"));
+var multer_2 = require("../configs/multer");
 var router = (0, express_1.Router)();
-router.post("/newRecipe", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var _a, nomeDaReceita, quemMandou, ingredientes, modoDeFazer, foto, fotoAutor, categoria, subcategoria, tempoDePreparo, porcoes, nivelDeDificuldade, extra, recipe, newRecipe, dbRecipe;
-    return __generator(this, function (_b) {
-        switch (_b.label) {
+var upload = (0, multer_1.default)({
+    storage: multer_2.storage,
+    fileFilter: multer_2.fileFilter,
+});
+function toArray(ingrediente) {
+    var array = ingrediente.split(",").map(function (item) { return item.trim(); });
+    return array;
+}
+router.post("/newRecipe", upload.single("file"), (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var _a, nomeDaReceita, quemMandou, ingredientes, modoDeFazer, file, fotoAutor, categoria, subcategoria, tempoDePreparo, porcoes, nivelDeDificuldade, extra, url, recipe, newRecipe, objRecipe, dbRecipe;
+    var _b;
+    return __generator(this, function (_c) {
+        switch (_c.label) {
             case 0:
-                _a = req.body, nomeDaReceita = _a.nomeDaReceita, quemMandou = _a.quemMandou, ingredientes = _a.ingredientes, modoDeFazer = _a.modoDeFazer, foto = _a.foto, fotoAutor = _a.fotoAutor, categoria = _a.categoria, subcategoria = _a.subcategoria, tempoDePreparo = _a.tempoDePreparo, porcoes = _a.porcoes, nivelDeDificuldade = _a.nivelDeDificuldade, extra = _a.extra;
+                _a = req.body, nomeDaReceita = _a.nomeDaReceita, quemMandou = _a.quemMandou, ingredientes = _a.ingredientes, modoDeFazer = _a.modoDeFazer, file = _a.file, fotoAutor = _a.fotoAutor, categoria = _a.categoria, subcategoria = _a.subcategoria, tempoDePreparo = _a.tempoDePreparo, porcoes = _a.porcoes, nivelDeDificuldade = _a.nivelDeDificuldade, extra = _a.extra;
+                url = "".concat(categoria, "/").concat(JSON.stringify((_b = req.file) === null || _b === void 0 ? void 0 : _b.filename)).replace(/"/g, "");
                 return [4 /*yield*/, newRecipe_model_1.NewRecipeModel.findOne({ nomeDaReceita: nomeDaReceita })];
             case 1:
-                recipe = _b.sent();
+                recipe = _c.sent();
                 if (recipe) {
                     res.status(http_status_1.HTTP_BAD_REQUEST).send("Recipe is already exist");
                     return [2 /*return*/];
@@ -61,9 +73,9 @@ router.post("/newRecipe", (0, express_async_handler_1.default)(function (req, re
                     id: "",
                     nomeDaReceita: nomeDaReceita,
                     quemMandou: quemMandou,
-                    ingredientes: ingredientes,
+                    ingredientes: toArray(ingredientes),
                     modoDeFazer: modoDeFazer,
-                    foto: foto,
+                    foto: url,
                     fotoAutor: fotoAutor,
                     categoria: categoria,
                     subcategoria: subcategoria,
@@ -72,16 +84,54 @@ router.post("/newRecipe", (0, express_async_handler_1.default)(function (req, re
                     nivelDeDificuldade: nivelDeDificuldade,
                     stars: 0,
                     favorite: false,
-                    extra: extra,
                     resposta: "Verificando",
-                    copyright: false,
+                    copyright: true,
                 };
+                if (extra !== null) {
+                    objRecipe = JSON.parse(extra);
+                    newRecipe.extra = objRecipe;
+                }
                 return [4 /*yield*/, newRecipe_model_1.NewRecipeModel.create(newRecipe)];
             case 2:
-                dbRecipe = _b.sent();
-                console.log(dbRecipe);
+                dbRecipe = _c.sent();
                 res.send(dbRecipe);
                 return [2 /*return*/];
+        }
+    });
+}); }));
+router.get("/newRecipe/:quemMandou", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var quemMandouRegEx, recipe;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                quemMandouRegEx = new RegExp(req.params.quemMandou);
+                return [4 /*yield*/, newRecipe_model_1.NewRecipeModel.find({
+                        quemMandou: { $regex: quemMandouRegEx },
+                    })];
+            case 1:
+                recipe = _a.sent();
+                res.send(recipe);
+                return [2 /*return*/];
+        }
+    });
+}); }));
+router.get("/newRecipe/idRecipe/:id", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var recipe, error_1;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, newRecipe_model_1.NewRecipeModel.findById(req.params.id)];
+            case 1:
+                recipe = _a.sent();
+                res.send(recipe);
+                return [3 /*break*/, 3];
+            case 2:
+                error_1 = _a.sent();
+                console.error("Erro ao filtrar por categoria e subcategoria:", error_1);
+                res.status(500).send("Erro ao filtrar por categoria e subcategoria.");
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
         }
     });
 }); }));

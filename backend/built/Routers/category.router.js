@@ -65,6 +65,19 @@ router.get("/seed", (0, express_async_handler_1.default)(function (req, res) { r
         }
     });
 }); }));
+/* Pegar todas as CATEGORIAS No MongoD */
+router.get("/", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var categoria;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, category_model_1.CategoryModel.find()];
+            case 1:
+                categoria = _a.sent();
+                res.send(categoria);
+                return [2 /*return*/];
+        }
+    });
+}); }));
 /* Filtrar categoria*/
 router.get("/:categoria", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var categoryRegEx, category;

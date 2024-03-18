@@ -7,8 +7,12 @@ exports.RecipeSchema = new mongoose_1.Schema({
     quemMandou: { type: String, required: true },
     ingredientes: { type: [String], required: true },
     modoDeFazer: { type: String, required: true },
-    foto: { type: [String], required: true },
-    fotoAutor: { type: [String], required: true },
+    foto: [
+        {
+            urlFoto: { type: String, required: true },
+            quemMandou: { type: String, required: true },
+        },
+    ],
     categoria: { type: String, required: true },
     subcategoria: { type: String, required: true },
     tempoDePreparo: { type: String, required: true },

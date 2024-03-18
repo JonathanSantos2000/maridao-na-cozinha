@@ -43,6 +43,7 @@ var express_1 = require("express");
 var recipe_1 = require("../data/recipe");
 var express_async_handler_1 = __importDefault(require("express-async-handler"));
 var recipe_model_1 = require("../models/recipe.model");
+var photo_model_1 = require("../models/photo.model");
 var router = (0, express_1.Router)();
 /* Seed popular Database Mongo */
 router.get("/seed", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
@@ -107,4 +108,36 @@ router.get("/categoria/:categoria", (0, express_async_handler_1.default)(functio
         }
     });
 }); }));
+router.post("/photo/status", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var _a, idPhoto, url, status, nomeDaReceita, user, photo, updatedPhoto, updatedRecipe, error_1;
+    return __generator(this, function (_b) {
+        switch (_b.label) {
+            case 0:
+                _a = req.body, idPhoto = _a.idPhoto, url = _a.url, status = _a.status, nomeDaReceita = _a.nomeDaReceita, user = _a.user;
+                photo = {
+                    urlFoto: url,
+                    quemMandou: user,
+                };
+                _b.label = 1;
+            case 1:
+                _b.trys.push([1, 4, , 5]);
+                return [4 /*yield*/, photo_model_1.NewPhotoModel.updateOne({ _id: idPhoto }, // Filter: Find the document with the given id
+                    { $set: { resposta: status } } // Update: Set the resposta field to the provided status
+                    )];
+            case 2:
+                updatedPhoto = _b.sent();
+                return [4 /*yield*/, recipe_model_1.ReceipeModel.updateOne({ nomeDaReceita: nomeDaReceita }, { $push: { foto: photo } })];
+            case 3:
+                updatedRecipe = _b.sent();
+                res.send({ updatedPhoto: updatedPhoto, updatedRecipe: updatedRecipe });
+                return [3 /*break*/, 5];
+            case 4:
+                error_1 = _b.sent();
+                console.error("Error updating photo status:", error_1);
+                res.status(500).send("Internal Server Error");
+                return [3 /*break*/, 5];
+            case 5: return [2 /*return*/];
+        }
+    });
+}); });
 exports.default = router;

@@ -12,18 +12,23 @@ var recipe_router_1 = __importDefault(require("./Routers/recipe.router"));
 var category_router_1 = __importDefault(require("./Routers/category.router"));
 var user_router_1 = __importDefault(require("./Routers/user.router"));
 var newRecipe_router_1 = __importDefault(require("./Routers/newRecipe.router"));
+var upload_router_1 = __importDefault(require("./Routers/upload.router"));
 var database_config_1 = require("./configs/database.config");
 (0, database_config_1.dpConnect)();
 var app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)({
     credentials: true,
-    origin: ["http://localhost:4200"],
+    origin: [
+        "http://localhost:4200",
+        "https://maridao-na-cozinha.onrender.com",
+    ],
 }));
 app.use("/api/recipe", recipe_router_1.default);
 app.use("/api/categoria", category_router_1.default);
 app.use("/api/users", user_router_1.default);
 app.use("/api/ask", newRecipe_router_1.default);
+app.use("/api", upload_router_1.default);
 app.use(express_1.default.static("public"));
 app.get("*", function (req, res) {
     res.sendFile(path_1.default.join(__dirname, "public", "index.html"));

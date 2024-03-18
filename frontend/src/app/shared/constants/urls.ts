@@ -31,4 +31,5 @@ export const GET_NEW_ALL_RECIPE_URL =
 
 export const NEW_UPLOAD_URL = BASE_URL + '/api/upload';
 export const GET_PHOTO_URL = BASE_URL + '/api/files';
+
 export const GET_NEW_RECIPE_URL = BASE_URL + '/api/ask/newRecipe/idRecipe/:id';

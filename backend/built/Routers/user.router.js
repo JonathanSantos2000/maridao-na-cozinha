@@ -46,6 +46,8 @@ var user_model_1 = require("../models/user.model");
 /* import { client_user } from "../data/user"; */
 var http_status_1 = require("../constants/http_status");
 var bcryptjs_1 = __importDefault(require("bcryptjs"));
+var photo_model_1 = require("../models/photo.model");
+var newRecipe_model_1 = require("../models/newRecipe.model");
 var router = (0, express_1.Router)();
 /* router.get(
   "/seed",
@@ -107,7 +109,7 @@ router.post("/register", (0, express_async_handler_1.default)(function (req, res
                     name: name,
                     email: email.toLowerCase(),
                     password: encryptedPassWord,
-                    isAdmin: false,
+                    isAdmin: true,
                 };
                 return [4 /*yield*/, user_model_1.UserModel.create(newUser)];
             case 3:
@@ -132,4 +134,53 @@ var generateTokenReponse = function (user) {
         token: token,
     };
 };
+router.get("/photos/:id", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var quemMandouRegEx, photo;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                quemMandouRegEx = new RegExp(req.params.id);
+                return [4 /*yield*/, photo_model_1.NewPhotoModel.find({
+                        idQuemMandou: { $regex: quemMandouRegEx },
+                    })];
+            case 1:
+                photo = _a.sent();
+                res.send(photo);
+                return [2 /*return*/];
+        }
+    });
+}); }));
+/* Get photos by status */
+router.get("/photos/admin/:status", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var statusRegEx, status;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                statusRegEx = new RegExp(req.params.status);
+                return [4 /*yield*/, photo_model_1.NewPhotoModel.find({
+                        resposta: { $regex: statusRegEx },
+                    })];
+            case 1:
+                status = _a.sent();
+                res.send(status);
+                return [2 /*return*/];
+        }
+    });
+}); }));
+router.get("/newrecipes/admin/:status", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var statusRegEx, status;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                statusRegEx = new RegExp(req.params.status);
+                return [4 /*yield*/, newRecipe_model_1.NewRecipeModel.find({
+                        resposta: { $regex: statusRegEx },
+                    })];
+            case 1:
+                status = _a.sent();
+                res.send(status);
+                return [2 /*return*/];
+        }
+    });
+}); }));
 exports.default = router;
