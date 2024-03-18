@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cd src && nodemon server.ts ",
-    "build": "npm install && tsc && xcopy /s src\\uploads built\\uploads"
+    "build": "npm install && tsc && cp -r src/uploads built/uploads"
 
   },
   "keywords": [],
