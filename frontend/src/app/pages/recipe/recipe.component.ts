@@ -44,8 +44,7 @@ export class RecipeComponent implements OnInit {
       if (params.id)
         recipeService.getRecipebyId(params.id).subscribe((serverRecipe) => {
           this.recipes = serverRecipe;
-          if (this.recipes?.foto && this.recipes.foto.length > 1) {
-            // Se houver mais de uma foto, ajuste a configuração do carrossel
+          if (this.recipes.foto && this.recipes.foto.length > 1) {
             this.slideConfig = {
               slidesToShow: 1,
               slidesToScroll: 1,

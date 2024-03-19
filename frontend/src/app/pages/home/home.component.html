@@ -7,7 +7,7 @@
       <div *ngFor="let recipe of recipes">
         <app-card-recipe
           typeCategoria="{{ recipe.categoria }}"
-          idRecipe="{{ recipe.id }}"
+          idRecipe="{{ recipe._id }}"
           urlImg="{{ recipe.foto[0].urlFoto }}"
           titleReceita="{{ recipe.nomeDaReceita }}"
         ></app-card-recipe>

@@ -1,5 +1,5 @@
 export class Recipe {
-  id!: number;
+  _id!: string;
   nomeDaReceita!: string;
   quemMandou!: string;
   ingredientes!: string[];
