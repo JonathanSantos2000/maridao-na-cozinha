@@ -49,6 +49,8 @@ export class AdminPhotosComponent implements OnInit {
   ngOnInit(): void {}
 
   showPhotoList(status: string) {
+    this.status = status;
+
     this.userService.getPhotosByStatus(status).subscribe(
       (photos) => {
         this.userPhotos = photos;
@@ -79,5 +81,17 @@ export class AdminPhotosComponent implements OnInit {
       );
   }
 
-  denie() {}
+  denie(idPhoto: string, url: string, nomeRecipe: string, user: string) {
+    this.recipeService
+      .updatePhotoStatus(idPhoto, url, 'Negado', nomeRecipe, user)
+      .subscribe(
+        (response) => {
+          window.location.reload();
+        },
+        (error) => {
+          console.error('Erro ao aprovar a foto:', error);
+          // Aqui você pode exibir uma mensagem de erro para o usuário, se necessário
+        }
+      );
+  }
 }

@@ -1,145 +1,42 @@
-.conteiner__recipe {
-  max-width: 980px;
-  margin: .5rem auto;
-  background-color: rgba(222, 194, 194, 0.5);
+@media only screen and (max-width: 900px) {
+  .recipe__header {
+    flex-direction: column-reverse;
+    padding-left: 0;
 
-}
-
-.recipe__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Dancing Script", cursive;
-
-  padding-left: 15px;
-  margin-bottom: 15px;
-
-  & .recipe__header__photo {
-    width: 474px;
-
-    & img {
+    & .recipe__header__photo {
       width: 100%;
-      height: 100%;
-      padding: 0.2rem 0.8rem 0.8rem;
-      border-radius: 25px;
-    }
 
-    & .navigation-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 0.8rem;
-    }
+      & .photo {
+        .quemMandou {
+          background: rgba(171, 156, 156, .5);
+          position: absolute;
+          bottom: 16px;
+          left: 16px;
 
-    & .new_photo {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      margin: .2rem 0.8rem;
-
-      & .new_photo-header {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        & .send-more {
-          & button {
-            width: 38px;
-            height: 38px;
-            font-size: 32px;
-            background: none;
-            border: none;
-            cursor: pointer;
+          & h1 {
+            font-size: 29px;
           }
         }
       }
-
-    }
-
-    & h5 {
-      font-size: 15px;
     }
   }
-}
 
-.recipe__description {
-  margin-top: .5rem;
+  .recipe__description {
+    & ul {
+      & li {
+        font-size: 20px;
 
-  & ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 50px;
+        & img {
+          width: 32px;
+          height: 32px;
+          margin-right: 10px;
+        }
 
-    & li {
-      list-style: none;
-      display: flex;
-      align-items: center;
+        & h5 {
+          text-align: center;
+          font-size: 20px;
+        }
+      }
     }
   }
-}
-
-.recipe__description>ul>li>img {
-  width: 64px;
-  margin-right: 10px;
-}
-
-.recipe__description>ul>li {
-  font-family: "Dancing Script", cursive;
-  font-size: 32px;
-}
-
-.recipe {
-  margin: 2rem 0;
-}
-
-.ingredient__icon,
-.method-of-preparation__icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: 32px;
-}
-
-.ingredient__icon>img,
-.method-of-preparation__icon>img {
-  width: 64px;
-}
-
-.mainlist,
-.secondaryList {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 50px;
-}
-
-.mainlist>ul>li,
-.secondaryList>ul>li {
-  list-style: none;
-  font-size: 20px;
-}
-
-.method-of-preparation>p {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 22px;
-  margin: 0 50px;
-  text-align: justify;
-
-}
-
-.extra-recipe {
-  margin: 15px 0;
-}
-
-.extra-recipe>div>h5 {
-  margin: 10px 50px;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-hr {
-  margin: .5rem 50px;
 }

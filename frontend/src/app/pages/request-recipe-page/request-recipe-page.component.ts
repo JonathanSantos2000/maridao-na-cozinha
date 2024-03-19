@@ -11,7 +11,7 @@ import { User } from 'src/app/shared/models/user';
   templateUrl: './request-recipe-page.component.html',
   styleUrls: [
     './request-recipe-page.component.css',
-    './request-recipe-page.component.css',
+    './request-recipe-page.responsive.component.css',
   ],
 })
 export class RequestRecipePageComponent implements OnInit {
@@ -55,5 +55,28 @@ export class RequestRecipePageComponent implements OnInit {
 
   getSecondColumnIndex(n: number): number {
     return Math.floor(n / 2 + 1);
+  }
+
+  approve(idPhoto: string) {
+    this.recipeService.updateNewRecipeStatus(idPhoto, 'Aprovado').subscribe(
+      (response) => {
+        window.location.reload();
+      },
+      (error) => {
+        console.error('Erro ao aprovar a foto:', error);
+        // Aqui você pode exibir uma mensagem de erro para o usuário, se necessário
+      }
+    );
+  }
+  denie(idPhoto: string) {
+    this.recipeService.updateNewRecipeStatus(idPhoto, 'Negado').subscribe(
+      (response) => {
+        window.location.reload();
+      },
+      (error) => {
+        console.error('Erro ao aprovar a foto:', error);
+        // Aqui você pode exibir uma mensagem de erro para o usuário, se necessário
+      }
+    );
   }
 }

@@ -46,41 +46,23 @@
 
     }
 
-    & .navigation-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 0.8rem;
-    }
-
-    & .new_photo {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      margin: .2rem 0.8rem;
-
-      & .new_photo-header {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        & .send-more {
-          & button {
-            width: 38px;
-            height: 38px;
-            font-size: 32px;
-            background: none;
-            border: none;
-            cursor: pointer;
-          }
-        }
-      }
-
-    }
-
     & h5 {
       font-size: 15px;
+    }
+  }
+}
+
+.consoleAdmin {
+  & .btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    & button {
+      width: 40%;
+      height: 64px;
+      line-height: 32px;
+      font-size: 32px;
     }
   }
 }
@@ -98,18 +80,19 @@
       list-style: none;
       display: flex;
       align-items: center;
+
+      & img {
+        width: 64px;
+        margin-right: 10px;
+      }
+
+      & h5 {
+        font-family: "Dancing Script", cursive;
+        font-size: 32px;
+      }
+
     }
   }
-}
-
-.recipe__description>ul>li>img {
-  width: 64px;
-  margin-right: 10px;
-}
-
-.recipe__description>ul>li {
-  font-family: "Dancing Script", cursive;
-  font-size: 32px;
 }
 
 .recipe {

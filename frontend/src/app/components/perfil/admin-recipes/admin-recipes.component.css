@@ -93,6 +93,13 @@
 
       }
     }
+
+    & .control:hover {
+
+      & h1 {
+        text-decoration: underline #808080;
+      }
+    }
   }
 }
 

@@ -14,11 +14,10 @@ import {
   NEW_UPLOAD_URL,
   UPDATE_PHOTO_STATUS_URL,
   GET_NEW_RECIPE_URL,
+  UPDATE_NEW_RECIPE_STATUS_URL,
 } from '../shared/constants/urls';
-import { INewRecipe } from '../shared/interfaces/INewRecipe';
 import { NewRecipe } from '../shared/models/newRecipe';
 import { Foto } from '../shared/models/photos';
-import { forEachChild } from 'typescript';
 
 @Injectable({
   providedIn: 'root',
@@ -164,5 +163,18 @@ export class RecipeService {
   getNewRecipeByid(idRecipe: string) {
     const url = `${GET_NEW_RECIPE_URL.replace(':id', idRecipe)}`;
     return this.http.get<NewRecipe>(url);
+  }
+
+  updateNewRecipeStatus(
+    idNewrecipe: string,
+    status: string
+  ): Observable<NewRecipe> {
+    const statusData = {
+      idNewrecipe: idNewrecipe,
+      status: status,
+    };
+
+    // Enviando a solicitação HTTP com os dados como JSON
+    return this.http.post<NewRecipe>(UPDATE_NEW_RECIPE_STATUS_URL, statusData);
   }
 }

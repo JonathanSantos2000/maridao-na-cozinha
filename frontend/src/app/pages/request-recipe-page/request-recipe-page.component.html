@@ -39,6 +39,22 @@
       </h5>
     </div>
   </div>
+  <div
+    class="consoleAdmin"
+    *ngIf="user.isAdmin && recipes.resposta === 'Verificando'"
+  >
+    <div class="btns">
+      <div class="btns">
+        <button (click)="approve(recipes.id)">
+          <i class="bi bi-check2" [ngStyle]="{ color: 'green' }"></i>
+        </button>
+
+        <button (click)="denie(recipes.id)">
+          <i class="bi bi-x-lg" [ngStyle]="{ color: 'red' }"></i>
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="recipe__description">
     <ul>
       <li>

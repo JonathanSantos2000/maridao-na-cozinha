@@ -11,7 +11,6 @@ import { User } from 'src/app/shared/models/user';
   templateUrl: './admin-recipes.component.html',
   styleUrls: ['./admin-recipes.component.css'],
 })
-
 export class AdminRecipesComponent implements OnInit {
   startUrl: string = `${GET_PHOTO_URL}/`;
 
@@ -55,7 +54,6 @@ export class AdminRecipesComponent implements OnInit {
     } else {
       this.hasRecipe = false;
     }
-    console.log(this.hasRecipe);
   }
 
   showRecipesList(status: string) {

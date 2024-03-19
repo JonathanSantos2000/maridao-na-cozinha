@@ -90,6 +90,7 @@ export class UserService {
       `${RECIPES_SEND_URL.replace(':status', status)}`
     );
   }
+  
   getNewRecipeByUser(quemMandou: string) {
     return this.http.get<NewRecipe[]>(
       `${GET_NEW_ALL_RECIPE_URL.replace(':quemMandou', quemMandou)}`

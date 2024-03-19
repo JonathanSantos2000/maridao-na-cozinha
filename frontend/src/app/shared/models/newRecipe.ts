@@ -1,5 +1,5 @@
 export class NewRecipe {
-  id!: number;
+  id!: string;
   nomeDaReceita!: string;
   quemMandou!: string;
   ingredientes!: string[];

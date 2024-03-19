@@ -7,6 +7,7 @@ export const RECIPE_URL = BASE_URL + '/api/recipe';
 export const RECIPE_ID_URL = RECIPE_URL + '/id/:id';
 export const RECIPE_CATEGORY_URL = RECIPE_URL + '/categoria/:categoria';
 export const UPDATE_PHOTO_STATUS_URL = BASE_URL + '/api/recipe/photo/status';
+export const UPDATE_NEW_RECIPE_STATUS_URL = BASE_URL + '/api/recipe/newRecipe/status';
 
 /* Category URls */
 export const CATEGORY_URL = BASE_URL + '/api/categoria';
