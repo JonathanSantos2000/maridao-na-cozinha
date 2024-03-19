@@ -30,6 +30,16 @@ router.get(
   })
 );
 
+
+router.get(
+  "/home",
+  asyncHandler(async (req, res) => {
+    const recipes = await ReceipeModel.aggregate([
+      { $sample: { size: 8 } }
+    ]);
+    res.send(recipes);
+  })
+);
 /* Filtra receitas por id */
 router.get(
   "/id/:id",

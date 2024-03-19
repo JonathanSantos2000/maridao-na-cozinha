@@ -4,10 +4,12 @@ const BASE_URL = environment.production ? '' : 'http://localhost:5000';
 
 export const RECIPE_URL = BASE_URL + '/api/recipe';
 /* Recipes URls */
+export const HOME_RECIPE_URL = RECIPE_URL + '/home';
 export const RECIPE_ID_URL = RECIPE_URL + '/id/:id';
 export const RECIPE_CATEGORY_URL = RECIPE_URL + '/categoria/:categoria';
 export const UPDATE_PHOTO_STATUS_URL = BASE_URL + '/api/recipe/photo/status';
-export const UPDATE_NEW_RECIPE_STATUS_URL = BASE_URL + '/api/recipe/newRecipe/status';
+export const UPDATE_NEW_RECIPE_STATUS_URL =
+  BASE_URL + '/api/recipe/newRecipe/status';
 
 /* Category URls */
 export const CATEGORY_URL = BASE_URL + '/api/categoria';
@@ -15,7 +17,7 @@ export const CATEGORY_NAME_URL = BASE_URL + '/api/categoria/:categoria';
 export const RECIPE_CATEGORY_SUBCATEGORY_URL =
   BASE_URL + '/api/categoria/:categoria/subcategoria/:subcategoria';
 
-/* User URls */
+/* User URls  */
 
 export const USER_LOGIN_URL = BASE_URL + '/api/users/login';
 export const USER_REGISTER_URL = BASE_URL + '/api/users/register';

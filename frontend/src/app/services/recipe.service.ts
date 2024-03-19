@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Category, Recipe } from '../shared/models/recipe';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators'; // Importar o operador map
 import {
   CATEGORY_NAME_URL,
   CATEGORY_URL,
@@ -15,6 +14,7 @@ import {
   UPDATE_PHOTO_STATUS_URL,
   GET_NEW_RECIPE_URL,
   UPDATE_NEW_RECIPE_STATUS_URL,
+  HOME_RECIPE_URL,
 } from '../shared/constants/urls';
 import { NewRecipe } from '../shared/models/newRecipe';
 import { Foto } from '../shared/models/photos';
@@ -29,7 +29,10 @@ export class RecipeService {
   getAll(): Observable<Recipe[]> {
     return this.http.get<Recipe[]>(RECIPE_URL);
   }
-
+  /* Recipes for home */
+  getHomeRecipes(): Observable<Recipe[]> {
+    return this.http.get<Recipe[]>(HOME_RECIPE_URL);
+  }
   /* Filtrar por id */
   getRecipebyId(id: number): Observable<Recipe> {
     return this.http.get<Recipe>(
@@ -67,22 +70,6 @@ export class RecipeService {
     ).replace(':subcategoria', subCategory)}`;
 
     return this.http.get<Recipe[]>(url);
-  }
-
-  /* Filtrar 5 receitas aleatorias de uma categoria */
-  getFiveRecipes(category: string): Observable<Recipe[]> {
-    return this.getAllRecipeByCategory(category).pipe(
-      map((recipes: Recipe[]) => this.shuffleArray(recipes).slice(0, 5))
-    );
-  }
-
-  // Função para embaralhar um array
-  private shuffleArray(array: any[]): any[] {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
   }
 
   newRecipe(
