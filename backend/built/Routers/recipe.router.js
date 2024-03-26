@@ -44,6 +44,7 @@ var recipe_1 = require("../data/recipe");
 var express_async_handler_1 = __importDefault(require("express-async-handler"));
 var recipe_model_1 = require("../models/recipe.model");
 var photo_model_1 = require("../models/photo.model");
+var newRecipe_model_1 = require("../models/newRecipe.model");
 var router = (0, express_1.Router)();
 /* Seed popular Database Mongo */
 router.get("/seed", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
@@ -71,6 +72,18 @@ router.get("/", (0, express_async_handler_1.default)(function (req, res) { retur
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, recipe_model_1.ReceipeModel.find()];
+            case 1:
+                recipes = _a.sent();
+                res.send(recipes);
+                return [2 /*return*/];
+        }
+    });
+}); }));
+router.get("/home", (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var recipes;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, recipe_model_1.ReceipeModel.aggregate([{ $sample: { size: 8 } }])];
             case 1:
                 recipes = _a.sent();
                 res.send(recipes);
@@ -120,23 +133,83 @@ router.post("/photo/status", function (req, res) { return __awaiter(void 0, void
                 };
                 _b.label = 1;
             case 1:
-                _b.trys.push([1, 4, , 5]);
+                _b.trys.push([1, 6, , 7]);
                 return [4 /*yield*/, photo_model_1.NewPhotoModel.updateOne({ _id: idPhoto }, // Filter: Find the document with the given id
                     { $set: { resposta: status } } // Update: Set the resposta field to the provided status
                     )];
             case 2:
                 updatedPhoto = _b.sent();
+                if (!(status == "Aprovado")) return [3 /*break*/, 4];
                 return [4 /*yield*/, recipe_model_1.ReceipeModel.updateOne({ nomeDaReceita: nomeDaReceita }, { $push: { foto: photo } })];
             case 3:
                 updatedRecipe = _b.sent();
                 res.send({ updatedPhoto: updatedPhoto, updatedRecipe: updatedRecipe });
                 return [3 /*break*/, 5];
             case 4:
+                res.send({ updatedPhoto: updatedPhoto });
+                _b.label = 5;
+            case 5: return [3 /*break*/, 7];
+            case 6:
                 error_1 = _b.sent();
                 console.error("Error updating photo status:", error_1);
                 res.status(500).send("Internal Server Error");
-                return [3 /*break*/, 5];
-            case 5: return [2 /*return*/];
+                return [3 /*break*/, 7];
+            case 7: return [2 /*return*/];
+        }
+    });
+}); });
+router.post("/newRecipe/status", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var _a, idNewrecipe, status, updatedRecipe, foundRecipe, recipe, dbRecipe, error_2;
+    return __generator(this, function (_b) {
+        switch (_b.label) {
+            case 0:
+                console.log("passei aqui");
+                _a = req.body, idNewrecipe = _a.idNewrecipe, status = _a.status;
+                console.log(idNewrecipe);
+                _b.label = 1;
+            case 1:
+                _b.trys.push([1, 6, , 7]);
+                return [4 /*yield*/, newRecipe_model_1.NewRecipeModel.updateOne({ _id: idNewrecipe }, // Filter: Find the document with the given id
+                    { $set: { resposta: status } } // Update: Set the resposta field to the provided status
+                    )];
+            case 2:
+                updatedRecipe = _b.sent();
+                return [4 /*yield*/, newRecipe_model_1.NewRecipeModel.findById(idNewrecipe)];
+            case 3:
+                foundRecipe = _b.sent();
+                if (!(status === "Aprovado" && foundRecipe)) return [3 /*break*/, 5];
+                recipe = {
+                    id: "foundRecipe.id",
+                    quemMandou: foundRecipe.quemMandou,
+                    nomeDaReceita: foundRecipe.nomeDaReceita,
+                    ingredientes: foundRecipe.ingredientes,
+                    modoDeFazer: foundRecipe.modoDeFazer,
+                    foto: [
+                        { urlFoto: foundRecipe.foto, quemMandou: foundRecipe.fotoAutor },
+                    ],
+                    categoria: foundRecipe.categoria,
+                    subcategoria: foundRecipe.subcategoria,
+                    tempoDePreparo: foundRecipe.tempoDePreparo,
+                    porcoes: foundRecipe.porcoes,
+                    nivelDeDificuldade: foundRecipe.nivelDeDificuldade,
+                    stars: foundRecipe.stars,
+                    favorite: foundRecipe.favorite,
+                    extra: foundRecipe.extra,
+                };
+                return [4 /*yield*/, recipe_model_1.ReceipeModel.create(recipe)];
+            case 4:
+                dbRecipe = _b.sent();
+                res.send({ updatedRecipe: updatedRecipe, dbRecipe: dbRecipe });
+                _b.label = 5;
+            case 5:
+                res.send({ updatedRecipe: updatedRecipe });
+                return [3 /*break*/, 7];
+            case 6:
+                error_2 = _b.sent();
+                console.error("Error updating Recipe status:", error_2);
+                res.status(500).send("Internal Server Error");
+                return [3 /*break*/, 7];
+            case 7: return [2 /*return*/];
         }
     });
 }); });

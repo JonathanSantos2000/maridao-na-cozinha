@@ -30,13 +30,10 @@ router.get(
   })
 );
 
-
 router.get(
   "/home",
   asyncHandler(async (req, res) => {
-    const recipes = await ReceipeModel.aggregate([
-      { $sample: { size: 8 } }
-    ]);
+    const recipes = await ReceipeModel.aggregate([{ $sample: { size: 8 } }]);
     res.send(recipes);
   })
 );
@@ -79,8 +76,9 @@ router.post("/photo/status", async (req, res) => {
         { $push: { foto: photo } }
       );
       res.send({ updatedPhoto, updatedRecipe });
+    } else {
+      res.send({ updatedPhoto });
     }
-    res.send({ updatedPhoto });
   } catch (error) {
     console.error("Error updating photo status:", error);
     res.status(500).send("Internal Server Error");

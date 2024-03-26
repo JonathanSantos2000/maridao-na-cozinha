@@ -55,7 +55,7 @@ router.post(
       name,
       email: email.toLowerCase(),
       password: encryptedPassWord,
-      isAdmin: true,
+      isAdmin: false,
     };
     const dbUser = await UserModel.create(newUser);
     res.send(generateTokenReponse(dbUser));

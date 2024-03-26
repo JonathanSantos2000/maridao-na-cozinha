@@ -112,8 +112,7 @@ export class RecipeComponent implements OnInit {
               )
               .subscribe({
                 next: (response) => {
-                  console.log('File uploaded successfully:', response);
-                  // Aqui você pode lidar com a resposta do servidor, como atualizar a interface do usuário com a nova imagem carregada
+                  window.location.reload();
                 },
                 error: (error) => {
                   console.error('Error uploading file:', error);

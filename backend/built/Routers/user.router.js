@@ -109,7 +109,7 @@ router.post("/register", (0, express_async_handler_1.default)(function (req, res
                     name: name,
                     email: email.toLowerCase(),
                     password: encryptedPassWord,
-                    isAdmin: true,
+                    isAdmin: false,
                 };
                 return [4 /*yield*/, user_model_1.UserModel.create(newUser)];
             case 3:
