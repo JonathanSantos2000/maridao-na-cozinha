@@ -21,6 +21,7 @@ export class RegisterPageComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router
   ) {}
+
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group(
       {
@@ -35,6 +36,7 @@ export class RegisterPageComponent implements OnInit {
     );
     this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl;
   }
+  
   get fc() {
     return this.registerForm.controls;
   }

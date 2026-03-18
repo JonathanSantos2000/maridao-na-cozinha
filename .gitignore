@@ -1,3 +1,4 @@
 node_modules
 .env
 backend/src/data/user.ts
+frontend/src/assets/receitas

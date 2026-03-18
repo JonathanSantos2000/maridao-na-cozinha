@@ -19,6 +19,6 @@ export class TextInputComponent implements OnInit {
   get formControl() {
     return this.control as FormControl;
   }
-  
+
   ngOnInit(): void {}
 }

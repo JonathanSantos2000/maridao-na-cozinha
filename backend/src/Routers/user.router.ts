@@ -93,6 +93,7 @@ router.get(
     res.send(photo);
   })
 );
+
 /* Get photos by status */
 router.get(
   "/photos/admin/:status",

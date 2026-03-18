@@ -63,6 +63,7 @@ export class NewRecipeComponent implements OnInit {
       porcoes: ['', Validators.required],
       nivelDeDificuldade: ['', Validators.required],
     });
+    
     this.extraForm = this.formBuilder.group({
       nomeDaReceitaExtra: ['', Validators.required],
       ingredientes: ['', Validators.required],

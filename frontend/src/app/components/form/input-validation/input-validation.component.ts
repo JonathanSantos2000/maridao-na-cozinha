@@ -31,6 +31,7 @@ export class InputValidationComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     this.checkValidation();
   }
+  
   ngOnInit(): void {
     this.control.statusChanges.subscribe(() => {
       this.checkValidation();
